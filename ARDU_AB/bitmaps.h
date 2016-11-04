@@ -93,9 +93,11 @@ PROGMEM const unsigned char aTeamArgGame[] = {
 PROGMEM const unsigned char font[] = {
   // width, height
   5, 8,
-  // CHARACTER A on PLACE 0
+  // SAPCE on PLACE 0
+  0x00, 0x00, 0x00, 0x00, 0x00,
+  // CHARACTER A on PLACE 1
   0x1E, 0x05, 0x05, 0x05, 0x1E,
-  // CHARACTER B on PLACE 1
+  // CHARACTER B on PLACE 2
   0x1F, 0x15, 0x15, 0x15, 0x0A,
   // CHARACTER C on PLACE 2
   0x0E, 0x11, 0x11, 0x11, 0x0A,

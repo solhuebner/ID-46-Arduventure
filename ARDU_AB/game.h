@@ -18,7 +18,7 @@ void stateGameNew()
   
   for (byte i = 0; i < 36; i++)
   {
-    sprites.drawErase( alphabetX, alphabetY, font, i);
+    sprites.drawErase( alphabetX, alphabetY, font, i+1);
     alphabetX += 12;
     if (alphabetX > 119)
     {
@@ -69,10 +69,10 @@ void stateGameNew()
     }
   }
   
-  //drawText(labelYourName, 12, 4, BLACK, ALIGN_LEFT, ROM);
-  //drawText(player.name, 84, 4, BLACK, ALIGN_LEFT, RAM);
+  drawText(TEXT_YOUR_NAME, 12, 4, BLACK, ALIGN_LEFT);
+  //drawText(player.name, 84, 4, BLACK, ALIGN_LEFT);
   sprites.drawErase(6 + (cursorX * 12), 16 + (cursorY * 10), font, 43);
-  //drawText(labelEnd, 96, 56, BLACK, ALIGN_LEFT, ROM);
+  drawText(TEXT_END, 96, 56, BLACK, ALIGN_LEFT);
 };
 
 void stateGamePlaying()

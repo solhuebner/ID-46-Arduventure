@@ -69,10 +69,10 @@ void stateGameNew()
     }
   }
   
-  drawText(TEXT_YOUR_NAME, 12, 4, BLACK, ALIGN_LEFT);
+  drawSentence(3, 12, 4, BLACK, ALIGN_LEFT);
   drawName(84, 4, BLACK);
   sprites.drawErase(6 + (cursorX * 12), 16 + (cursorY * 10), font, 44);
-  drawText(TEXT_END, 96, 56, BLACK, ALIGN_LEFT);
+  drawWord(9, 96, 56, BLACK, ALIGN_LEFT);
 };
 
 void stateGamePlaying()

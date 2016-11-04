@@ -17,10 +17,10 @@ void stateMenuMain()
 {
   sprites.drawSelfMasked(36, 3, aTeamArgGame, 0);
   sprites.drawSelfMasked(10, 10, titleScreen, 0);
-  drawText(TEXT_CONTINUE, 40, 37, WHITE, ALIGN_LEFT);
-  drawText(TEXT_NEW_GAME, 40, 46, WHITE, ALIGN_LEFT);
-  if (arduboy.audio.enabled()) drawText(TEXT_SND___ON, 40, 55, WHITE, ALIGN_LEFT);
-  else drawText(TEXT_SND__OFF, 40, 55, WHITE, ALIGN_LEFT);
+  drawWord(1, 40, 37, WHITE, ALIGN_LEFT);
+  drawSentence(0, 40, 46, WHITE, ALIGN_LEFT);
+  if (arduboy.audio.enabled()) drawSentence(1, 40, 55, WHITE, ALIGN_LEFT);
+  else drawSentence(2, 40, 55, WHITE, ALIGN_LEFT);
   sprites.drawSelfMasked( 32, 37 + (menuSelection - 2) * 9, font, 44);
   sprites.drawSelfMasked( 90, 37 + (menuSelection - 2) * 9, font, 45);
   if (arduboy.justPressed(DOWN_BUTTON) && (menuSelection < 4)) menuSelection++;

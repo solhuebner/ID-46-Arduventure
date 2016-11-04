@@ -33,5 +33,17 @@ void drawPlayer()
   sprites.drawPlusMask(player.x, player.y, player_plus_mask, pgm_read_byte(&animSeq[player.frame]) + 3 * player.direction);
 }
 
+void drawName(byte x, byte y, byte color)
+{
+  byte xOffset = 0;
+  byte sizeText = player.name[0] ;
+
+  for (byte i = 1; i < sizeText + 1; i++)
+  {
+    if (color)sprites.drawSelfMasked(x + xOffset, y, font, player.name[i]);
+    else sprites.drawErase(x + xOffset, y, font, player.name[i]);
+    xOffset += 6;
+  }
+}
 
 #endif

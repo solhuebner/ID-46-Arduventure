@@ -32,7 +32,7 @@ PROGMEM const unsigned char library[] =
   // YOUR NAME
   10, 25, 15, 21, 18, SPACE, 14, 1, 13, 5, 42, END,
   // END
-  3, 5, 14, 4, END,
+  3, 5, 14, 3, END,
 };
 
 int findStart(byte searchWord)
@@ -55,50 +55,22 @@ void drawText(byte wordOfLibrary, byte x, byte y, byte color, byte alignment)
   byte xOffset = 0;
   byte yOffset = 0;
   int startText = findStart(wordOfLibrary);
-  byte sizeText = pgm_read_byte(&library[findStart(wordOfLibrary)]);
-  //Serial.print(startText);
-  //Serial.print(" : ");
-  //Serial.println(sizeText);
+  byte sizeText = pgm_read_byte(&library[startText]);
 
-  for (int i = startText+1; i < startText + sizeText+1; i++)
+  for (int i = startText + 1; i < startText + sizeText + 1; i++)
   {
-    
+
     if (pgm_read_byte(&library[i]) == NEWLINE)
     {
       yOffset += 6;
       xOffset = -6;
     }
     
-    if (pgm_read_byte(&library[i]) != SPACE)
-    {
-      if (color) sprites.drawSelfMasked(x - ((alignment == ALIGN_RIGHT) ? ((sizeText - 1) * 6) : 0) + xOffset, y + yOffset, font, pgm_read_byte(&library[i]));
-      else sprites.drawErase(x - ((alignment == ALIGN_RIGHT) ? ((sizeText - 1) * 6) : 0) + xOffset, y + yOffset, font, pgm_read_byte(&library[i]));
-    }
+    if (color) sprites.drawSelfMasked(x - ((alignment == ALIGN_RIGHT) ? ((sizeText - 1) * 6) : 0) + xOffset, y + yOffset, font, pgm_read_byte(&library[i]));
+    else sprites.drawErase(x - ((alignment == ALIGN_RIGHT) ? ((sizeText - 1) * 6) : 0) + xOffset, y + yOffset, font, pgm_read_byte(&library[i]));
+
     xOffset += 6;
   }
 }
-
-void drawName(const unsigned char *text, byte x, byte y, byte color, byte alignment)
-{
-  byte xOffset = 0;
-  byte yOffset = 0;
-  byte sizeText = text[0] ;
-
-  for (byte i = 1; i < sizeText + 1; i++)
-  {
-    if ((text[i]) == NEWLINE)
-    {
-      yOffset += 6;
-      xOffset = -6;
-    }
-    else if ((text[i]) != SPACE)
-    {
-      if (color)sprites.drawSelfMasked(x - ((alignment == ALIGN_RIGHT) ? ((sizeText - 1) * 6) : 0) + xOffset, y + yOffset, font, text[i]);
-      if (!color)sprites.drawErase(x - ((alignment == ALIGN_RIGHT) ? ((sizeText - 1) * 6) : 0) + xOffset, y + yOffset, font, text[i]);
-    }
-    xOffset += 6;
-  }
-}
-
 
 #endif

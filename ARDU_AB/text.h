@@ -13,24 +13,33 @@
 #define ROM                           1
 
 #define TEXT_CONTINUE                 0
-#define TEXT_NEW_GAME                 1
-#define TEXT_SND__OFF                 2
-#define TEXT_SND___ON                 3
-#define TEXT_YOUR_NAME                4
-#define TEXT_END                      5
+#define TEXT_NEW                      1
+#define TEXT_GAME                     2
+#define TEXT_SND                      3
+#define TEXT_OFF                      4
+#define TEXT_ON                       5
+#define TEXT_YOUR                     6
+#define TEXT_NAME                     7
+#define TEXT_END                      8
 
 PROGMEM const unsigned char library[] =
 {
   // CONTINUE
   8, 3, 15, 14, 20, 9, 14, 21, 5, END,
-  // NEW GAME
-  8, 14, 5, 23, SPACE, 7, 1, 13, 5, END,
-  // SND  OFF
-  8, 19, 14, 4, SPACE, SPACE, 15, 6, 6, END,
-  // SND   ON
-  8, 19, 14, 4, SPACE, SPACE, SPACE, 15, 14, END,
-  // YOUR NAME
-  10, 25, 15, 21, 18, SPACE, 14, 1, 13, 5, 42, END,
+  // NEW
+  3, 14, 5, 23, END,
+  // GAME
+  4, 7, 1, 13, 5, END,
+  // SND
+  3, 19, 14, 4, END,
+  // OFF
+  3, 15, 6, 6, END,
+  // ON
+  2, 15, 14, END,
+  // YOUR
+  4, 25, 15, 21, 18, END,
+  // NAME
+  4, 14, 1, 13, 5, END,
   // END
   3, 5, 14, 3, END,
 };
@@ -65,7 +74,7 @@ void drawText(byte wordOfLibrary, byte x, byte y, byte color, byte alignment)
       yOffset += 6;
       xOffset = -6;
     }
-    
+
     if (color) sprites.drawSelfMasked(x - ((alignment == ALIGN_RIGHT) ? ((sizeText - 1) * 6) : 0) + xOffset, y + yOffset, font, pgm_read_byte(&library[i]));
     else sprites.drawErase(x - ((alignment == ALIGN_RIGHT) ? ((sizeText - 1) * 6) : 0) + xOffset, y + yOffset, font, pgm_read_byte(&library[i]));
 

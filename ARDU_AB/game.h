@@ -64,7 +64,7 @@ void stateGameNew()
   {
     if (currentLetter > 0)
     {
-      player.name[currentLetter] = 49;
+      player.name[currentLetter] = SPACE;
       currentLetter--;
     }
   }

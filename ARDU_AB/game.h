@@ -69,16 +69,16 @@ void stateGameNew()
     }
   }
   
-  drawText(labelYourName, 12, 4, BLACK, ALIGN_LEFT, ROM);
-  drawText(player.name, 84, 4, BLACK, ALIGN_LEFT, RAM);
+  //drawText(labelYourName, 12, 4, BLACK, ALIGN_LEFT, ROM);
+  //drawText(player.name, 84, 4, BLACK, ALIGN_LEFT, RAM);
   sprites.drawErase(6 + (cursorX * 12), 16 + (cursorY * 10), font, 43);
-  drawText(labelEnd, 96, 56, BLACK, ALIGN_LEFT, ROM);
+  //drawText(labelEnd, 96, 56, BLACK, ALIGN_LEFT, ROM);
 };
 
 void stateGamePlaying()
 {
   arduboy.fillScreen(1);
-  drawText(player.name, 46, 12, BLACK, ALIGN_LEFT, RAM);
+  //drawText(player.name, 46, 12, BLACK, ALIGN_LEFT, RAM);
   checkMapInputs();
   drawPlayer();
   if (arduboy.justPressed(B_BUTTON)) gameState = STATE_MENU_MAIN;

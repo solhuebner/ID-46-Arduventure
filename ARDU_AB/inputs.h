@@ -37,5 +37,11 @@ void checkMapInputs()
   if (arduboy.justPressed(B_BUTTON));
 }
 
+void checkInventoryInputs()
+{
+  
+  if (arduboy.justPressed(A_BUTTON)) gameState = STATE_GAME_PLAYING;
+}
+
 
 #endif

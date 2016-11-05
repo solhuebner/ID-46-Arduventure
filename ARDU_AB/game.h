@@ -13,10 +13,10 @@ void stateGameNew()
   byte alphabetX = 12;
   byte alphabetY = 16;
   arduboy.fillScreen(1);
-  
+
   for (byte i = 0; i < 36; i++)
   {
-    sprites.drawErase( alphabetX, alphabetY, font, i+1);
+    sprites.drawErase( alphabetX, alphabetY, font, i + 1);
     alphabetX += 12;
     if (alphabetX > 119)
     {
@@ -24,9 +24,9 @@ void stateGameNew()
       alphabetX = 12;
     }
   }
-  
+
   if (arduboy.justPressed(UP_BUTTON)) cursorY += (cursorY > 0) ? -1 : 4;
-  else if (arduboy.justPressed(DOWN_BUTTON)) cursorY += (cursorY < 4) ? 1 : -4; 
+  else if (arduboy.justPressed(DOWN_BUTTON)) cursorY += (cursorY < 4) ? 1 : -4;
   else if (arduboy.justPressed(LEFT_BUTTON))cursorX += (cursorX > 0) ? -1 : 8;
   else if (arduboy.justPressed(RIGHT_BUTTON)) cursorX += (cursorX < 8) ? 1 : -8;
   if (cursorY == 4) cursorX = 7;
@@ -66,7 +66,7 @@ void stateGameNew()
       currentLetter--;
     }
   }
-  
+
   drawSentence(3, 12, 4, BLACK, ALIGN_LEFT);
   drawName(84, 4, BLACK);
   sprites.drawErase(6 + (cursorX * 12), 16 + (cursorY * 10), font, 44);
@@ -85,8 +85,11 @@ void stateGamePlaying()
 
 void stateGameInventory()
 {
-  showInventory();
-  if (arduboy.justPressed(A_BUTTON)) gameState = STATE_GAME_PLAYING;
+  arduboy.fillScreen(1);
+  drawName(46, 12, BLACK);
+  drawPlayer();
+  drawSentence(4, 96, 2, WHITE, ALIGN_LEFT);
+  checkInventoryInputs();
 };
 
 void stateGameOver()

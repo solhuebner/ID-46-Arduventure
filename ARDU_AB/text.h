@@ -59,21 +59,14 @@ byte findSentenceSize(int searchSizeOfSentence)
 void drawWord(byte wordOfLibrary, byte x, byte y, byte color, byte alignment)
 {
   byte xOffset = 0;
-  byte yOffset = 0;
   int startWord = findWordBegin(wordOfLibrary);
   byte sizeWord = findWordSize(startWord);
 
   for (int i = startWord; i < startWord + sizeWord; i++)
   {
 
-    if (pgm_read_byte(&library[i]) == NEWLINE)
-    {
-      yOffset += 6;
-      xOffset = -6;
-    }
-
-    if (color) sprites.drawSelfMasked(x - ((alignment == ALIGN_RIGHT) ? ((sizeWord - 1) * 6) : 0) + xOffset, y + yOffset, font, pgm_read_byte(&library[i]));
-    else sprites.drawErase(x - ((alignment == ALIGN_RIGHT) ? ((sizeWord - 1) * 6) : 0) + xOffset, y + yOffset, font, pgm_read_byte(&library[i]));
+    if (color) sprites.drawSelfMasked(x - ((alignment == ALIGN_RIGHT) ? ((sizeWord) * 6) : 0) + xOffset, y, font, pgm_read_byte(&library[i]));
+    else sprites.drawErase(x - ((alignment == ALIGN_RIGHT) ? ((sizeWord) * 6) : 0) + xOffset, y, font, pgm_read_byte(&library[i]));
 
     xOffset += 6;
   }
@@ -81,14 +74,23 @@ void drawWord(byte wordOfLibrary, byte x, byte y, byte color, byte alignment)
 
 void drawSentence(byte sentenceOfLibrary, byte x, byte y, byte color, byte alignement)
 {
+  byte yOffset = 0;
   int startSentence = findSentenceBegin(sentenceOfLibrary);
   byte sizeSentence = findSentenceSize(startSentence);
-  byte sizing = 0;
+  byte wordSpacing = 0;
   for (int i = startSentence; i < startSentence + sizeSentence; i++)
   {
-    drawWord(pgm_read_byte(&sentences[i]), x + (6 * sizing),  y, color, alignement);
-    int startWord = findWordBegin(pgm_read_byte(&sentences[i]));
-    sizing += findWordSize(startWord);
+    byte wordToDraw = pgm_read_byte(&sentences[i]);
+    if (wordToDraw == NEWLINE)
+    {
+      yOffset += 6;
+      wordSpacing = 0;
+    }
+    else {
+      drawWord(wordToDraw, x + (6 * wordSpacing),  y + yOffset, color, alignement);
+      int startWord = findWordBegin(pgm_read_byte(&sentences[i]));
+      wordSpacing += findWordSize(startWord);
+    }
   }
 }
 

@@ -6,7 +6,7 @@
 
 void showInventory()
 {
-  drawSentence(4, 100, 2, WHITE, ALIGN_LEFT);
+  drawSentence(4, 96, 2, WHITE, ALIGN_LEFT);
 }
 
 #endif

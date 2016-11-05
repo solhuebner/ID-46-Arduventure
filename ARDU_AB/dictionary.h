@@ -190,7 +190,7 @@ PROGMEM const unsigned char library[] =
 
 PROGMEM const unsigned char sentences[] =
 {
-  // 0 : NEW GAME
+  // 0 : CONTINUE NEW GAME
   2, SPACE, 3, END,
   // 1 : SND  OFF
   4, SPACE, SPACE, 5, END,
@@ -199,7 +199,7 @@ PROGMEM const unsigned char sentences[] =
   // 3 : WHAT IS YOUR NAME
   7, SPACE, 8, END,
   // 4 : ITEMS STATS SAVE
-  83, NEWLINE, NEWLINE, 84, NEWLINE, NEWLINE, 69,
+  83, NEWLINE, NEWLINE, 84, NEWLINE, NEWLINE, 69, END,
 };
 
 

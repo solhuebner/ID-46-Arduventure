@@ -33,13 +33,14 @@ void checkMapInputs()
     player.walking = true;
   }
 
-  if (arduboy.justPressed(A_BUTTON));
-  if (arduboy.justPressed(B_BUTTON));
+  if (arduboy.justPressed(B_BUTTON)) gameState = STATE_MENU_MAIN;
+  if (arduboy.justPressed(A_BUTTON)) gameState = STATE_GAME_INVENTORY;
 }
 
 void checkInventoryInputs()
 {
-  
+  if (arduboy.justPressed(UP_BUTTON)) cursorY += (cursorY > 0) ? -1 : 2;
+  else if (arduboy.justPressed(DOWN_BUTTON)) cursorY += (cursorY < 2) ? 1 : -2;
   if (arduboy.justPressed(A_BUTTON)) gameState = STATE_GAME_PLAYING;
 }
 

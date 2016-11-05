@@ -36,6 +36,9 @@ const FunctionPointer PROGMEM mainGameLoop[] = {
   stateGameNew,
   stateGamePlaying,
   stateGameInventory,
+  stateGameItems,
+  stateGameStats,
+  stateGameSave,
   stateGameOver,
 };
 

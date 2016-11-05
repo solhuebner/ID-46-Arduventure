@@ -73,24 +73,54 @@ void stateGameNew()
   drawWord(9, 96, 56, BLACK, ALIGN_LEFT);
 };
 
-void stateGamePlaying()
+void showPlayField()
 {
   arduboy.fillScreen(1);
   drawName(46, 12, BLACK);
-  checkMapInputs();
   drawPlayer();
-  if (arduboy.justPressed(B_BUTTON)) gameState = STATE_MENU_MAIN;
-  if (arduboy.justPressed(A_BUTTON)) gameState = STATE_GAME_INVENTORY;
+}
+
+
+void stateGamePlaying()
+{
+  showPlayField();
+  checkMapInputs();
 };
 
 void stateGameInventory()
 {
-  arduboy.fillScreen(1);
-  drawName(46, 12, BLACK);
-  drawPlayer();
+  showPlayField();
+  byte rectangleX = 85;
+  byte rectangleY = 0;
+  while(rectangleY < 64)
+  {
+    sprites.drawErase(rectangleX, rectangleY, font, 56);
+    rectangleX += 5;
+    if (rectangleX > 125)
+    {
+      rectangleY += 8;
+      rectangleX = 85;
+    }
+  }
   drawSentence(4, 96, 2, WHITE, ALIGN_LEFT);
+  sprites.drawSelfMasked(90, 2 + (cursorY * 12), font, 44);
   checkInventoryInputs();
 };
+
+void stateGameItems()
+{
+
+}
+
+void stateGameStats()
+{
+
+}
+
+void stateGameSave()
+{
+
+}
 
 void stateGameOver()
 {

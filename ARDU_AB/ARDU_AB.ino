@@ -19,6 +19,7 @@
 #include "game.h"
 #include "inputs.h"
 #include "text.h"
+#include "inventory.h"
 #include "item.h"
 #include "player.h"
 

@@ -3,8 +3,8 @@
 
 #include <Arduino.h>
 #include "globals.h"
-#include "text.h"
 #include "player.h"
+#include "text.h"
 
 void stateMenuIntro()
 {
@@ -30,12 +30,12 @@ void stateMenuMain()
 
 void stateMenuContinue()
 {
-
+  gameState = STATE_GAME_PLAYING;
 }
 
 void stateMenuNew()
 {
-  for (byte i = 0; i < 6; i++) player.name[i] = (i == 0) ? 5:SPACE;
+  for (byte i = 0; i < 6; i++) player.name[i] = (i == 0) ? 5:50;
   gameState = STATE_GAME_NEW;
 }
 

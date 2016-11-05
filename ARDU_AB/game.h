@@ -4,11 +4,9 @@
 #include <Arduino.h>
 #include "globals.h"
 #include "inputs.h"
+#include "text.h"
+#include "inventory.h"
 
-void stateGameLoading()
-{
-
-};
 
 void stateGameNew()
 {
@@ -64,7 +62,7 @@ void stateGameNew()
   {
     if (currentLetter > 0)
     {
-      player.name[currentLetter] = SPACE;
+      player.name[currentLetter] = 50;
       currentLetter--;
     }
   }
@@ -82,10 +80,12 @@ void stateGamePlaying()
   checkMapInputs();
   drawPlayer();
   if (arduboy.justPressed(B_BUTTON)) gameState = STATE_MENU_MAIN;
+  if (arduboy.justPressed(A_BUTTON)) gameState = STATE_GAME_INVENTORY;
 };
 
 void stateGameInventory()
 {
+  showInventory();
   if (arduboy.justPressed(A_BUTTON)) gameState = STATE_GAME_PLAYING;
 };
 

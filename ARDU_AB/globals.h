@@ -45,4 +45,22 @@ byte currentLetter = 0;
 byte cursorX = 0;
 byte cursorY = 0;
 
+
+void drawRectangle(byte startX, byte startY, byte endX, byte endY, byte color )
+{
+  byte rectangleX = startX;
+  while (startY < endY)
+  {
+    if (!color)sprites.drawErase(rectangleX, startY, font, 56);
+    else sprites.drawSelfMasked(rectangleX, startY, font, 56);
+    rectangleX += 5;
+    if (rectangleX > endX -5)
+    {
+      startY += 8;
+      rectangleX = startX;
+    }
+  }
+}
+
+
 #endif

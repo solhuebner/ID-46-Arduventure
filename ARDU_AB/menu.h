@@ -23,9 +23,10 @@ void stateMenuMain()
   else drawSentence(2, 40, 55, WHITE, ALIGN_LEFT);
   sprites.drawSelfMasked( 32, 37 + (menuSelection - 2) * 9, font, 44);
   sprites.drawSelfMasked( 90, 37 + (menuSelection - 2) * 9, font, 45);
-  if (arduboy.justPressed(DOWN_BUTTON) && (menuSelection < 4)) menuSelection++;
+  
   if (arduboy.justPressed(UP_BUTTON) && (menuSelection > 2)) menuSelection--;
-  if (arduboy.justPressed(B_BUTTON)) gameState = menuSelection;
+  else if (arduboy.justPressed(DOWN_BUTTON) && (menuSelection < 4)) menuSelection++;
+  else if (arduboy.justPressed(B_BUTTON)) gameState = menuSelection;
 }
 
 void stateMenuContinue()

@@ -39,9 +39,26 @@ void checkMapInputs()
 
 void checkInventoryInputs()
 {
-  if (arduboy.justPressed(UP_BUTTON)) cursorY += (cursorY > 0) ? -1 : 2;
-  else if (arduboy.justPressed(DOWN_BUTTON)) cursorY += (cursorY < 2) ? 1 : -2;
-  if (arduboy.justPressed(A_BUTTON)) gameState = STATE_GAME_PLAYING;
+  if (arduboy.justPressed(UP_BUTTON) && (cursorY > 0)) cursorY--;
+  else if (arduboy.justPressed(DOWN_BUTTON) && (cursorY < 2)) cursorY++;
+  
+  if (arduboy.justPressed(B_BUTTON)) gameState = STATE_GAME_ITEMS + cursorY;
+  else if (arduboy.justPressed(A_BUTTON)) gameState = STATE_GAME_PLAYING;
+}
+
+void checkItemsInputs()
+{
+  if (arduboy.justPressed(A_BUTTON)) gameState = STATE_GAME_INVENTORY;
+}
+
+void checkStatsInputs()
+{
+  if (arduboy.justPressed(A_BUTTON)) gameState = STATE_GAME_INVENTORY;
+}
+
+void checkSaveInputs()
+{
+  if (arduboy.justPressed(A_BUTTON)) gameState = STATE_GAME_INVENTORY;
 }
 
 

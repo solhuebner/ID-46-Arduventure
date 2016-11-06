@@ -67,8 +67,6 @@ PROGMEM const unsigned char library[] =
   20, 15, END,
   // PLACE 26 : SELL
   19, 5, 12, 12, END,
-
- 
   // PLACE 27 : CHARACTER 0
   27, END,
   // PLACE 28 : CHARACTER 1
@@ -115,7 +113,7 @@ PROGMEM const unsigned char library[] =
   48, END,
   // place 49 : €
   49, END,
-  // place 50 : _           
+  // place 50 : _
   50, END,
   // place 51 : *
   51, END,
@@ -129,7 +127,6 @@ PROGMEM const unsigned char library[] =
   55, END,
   // place 56 : full
   56, END,
-  
   // PLACE 57 : CAN
   3, 1, 14, END,
   // PLACE 58 : NOT
@@ -186,6 +183,20 @@ PROGMEM const unsigned char library[] =
   9, 20, 5, 13, 19, END,
   // PLACE 84 : STATS
   19, 20, 1, 20, 19, END,
+  // PLACE 85 : GOLD
+  7, 15, 12, 4, END,
+  // PLACE 86 : HP
+  8, 16, END,
+  // PLACE 87 : EXP
+  5, 24, 16, END,
+  // PLACE 88 : LV
+  12, 22, END,
+  // PALCE 89 : ATK
+  1, 20, 11, END,
+  // PLACE 90 : DEF
+  4, 5, 6, END,
+  // PLACE 91 : SPD
+  19, 16, 4, END,
 };
 
 PROGMEM const unsigned char sentences[] =
@@ -200,6 +211,13 @@ PROGMEM const unsigned char sentences[] =
   7, SPACE, 8, END,
   // 4 : ITEMS STATS SAVE
   83, NEWLINE, NEWLINE, 84, NEWLINE, NEWLINE, 69, END,
+  // 5 : SAVE PROGRESS ?
+  69, SPACE, 70, SPACE, 40, END,
+  // 6 : NAME: GOLD: € HP: EXP TO LEVEL UP:
+  8, 42, NEWLINE, 85, 42, 49, NEWLINE, NEWLINE, 86, 42, NEWLINE, NEWLINE, NEWLINE, 87, SPACE, 11, SPACE, 88, SPACE, 75, 42, END,
+  // 7 : LV: ATK: DEF: SPD:
+  88, SPACE, 42, NEWLINE, NEWLINE, 89, 42, NEWLINE, 90, 42, NEWLINE, 91, 42, END,
+
 };
 
 

@@ -10,10 +10,10 @@
 
 void stateGameNew()
 {
-  byte alphabetX = 12;
-  byte alphabetY = 16;
   arduboy.fillScreen(1);
 
+  byte alphabetX = 12;
+  byte alphabetY = 16;
   for (byte i = 0; i < 36; i++)
   {
     sprites.drawErase( alphabetX, alphabetY, font, i + 1);
@@ -90,18 +90,7 @@ void stateGamePlaying()
 void stateGameInventory()
 {
   showPlayField();
-  byte rectangleX = 85;
-  byte rectangleY = 0;
-  while(rectangleY < 64)
-  {
-    sprites.drawErase(rectangleX, rectangleY, font, 56);
-    rectangleX += 5;
-    if (rectangleX > 125)
-    {
-      rectangleY += 8;
-      rectangleX = 85;
-    }
-  }
+  drawRectangle(85, 0, 130, 64, BLACK);
   drawSentence(4, 96, 2, WHITE, ALIGN_LEFT);
   sprites.drawSelfMasked(90, 2 + (cursorY * 12), font, 44);
   checkInventoryInputs();
@@ -109,17 +98,28 @@ void stateGameInventory()
 
 void stateGameItems()
 {
-
+  drawWord(83, 6, 2, WHITE, ALIGN_LEFT);
+  drawRectangle(0, 10, 130, 48, WHITE);
+  checkItemsInputs();
 }
 
 void stateGameStats()
 {
+  drawWord(84, 6, 2, WHITE, ALIGN_LEFT);
+  drawRectangle(0, 10, 130, 64, WHITE);
+  drawSentence(6, 6, 14, BLACK, ALIGN_LEFT);
+  drawName(36, 14, BLACK);
+  drawSentence(7, 90, 14, BLACK, ALIGN_LEFT);
 
+  checkStatsInputs();
 }
 
 void stateGameSave()
 {
-
+  showPlayField();
+  drawRectangle(0, 48, 130, 64, BLACK);
+  drawSentence(5, 6, 50, WHITE, ALIGN_LEFT);
+  checkSaveInputs();
 }
 
 void stateGameOver()

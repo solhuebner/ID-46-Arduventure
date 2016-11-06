@@ -71,7 +71,7 @@ void checkInputs()
 void drawYesNo ()
 {
   drawRectangle(95, 32, 130, 48, BLACK);
-  drawSentence(8, 106, 34, WHITE, ALIGN_LEFT);
+  drawSentence(9, 106, 34, WHITE, ALIGN_LEFT);
   if (arduboy.justPressed(UP_BUTTON)) cursorY = 0;
   else if (arduboy.justPressed(DOWN_BUTTON)) cursorY = 1;
   sprites.drawSelfMasked( 98, 34 + (6 * cursorY), font, 44);

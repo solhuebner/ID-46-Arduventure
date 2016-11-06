@@ -103,11 +103,32 @@ void stateGameItems()
 
 void stateGameStats()
 {
-  drawWord(84, 6, 2, WHITE, ALIGN_LEFT);
+  byte xOffset;
+  drawSentence(8, 6, 2, WHITE, ALIGN_LEFT);
+  drawWordRam(60, 2, WHITE);
   drawRectangle(0, 10, 130, 64, WHITE);
   drawSentence(6, 6, 14, BLACK, ALIGN_LEFT);
-  drawWordRam(36, 14, BLACK);
   drawSentence(7, 90, 14, BLACK, ALIGN_LEFT);
+  drawNumbersRam(player.gold, 42 , 14, BLACK, ALIGN_LEFT);
+  drawNumbersRam(player.level, 36 , 20, BLACK, ALIGN_LEFT);
+
+  drawNumbersRam(player.health, 36, 26, BLACK, ALIGN_LEFT);
+  xOffset = 6 * countDigitsInInt(player.health);
+  drawWord(43, 36 + xOffset, 26, BLACK, ALIGN_LEFT);
+  drawNumbersRam(player.healthTotal, 42 + xOffset, 26, BLACK, ALIGN_LEFT);
+
+
+  drawNumbersRam(player.experience, 84, 44, BLACK, ALIGN_LEFT);
+  xOffset = 6 * countDigitsInInt(player.experience);
+  drawWord(43, 84 + xOffset, 44, BLACK, ALIGN_LEFT);
+  drawNumbersRam(player.experienceForNextLevel, 90 + xOffset, 44, BLACK, ALIGN_LEFT);
+
+  drawNumbersRam(player.attack, 126 , 14, BLACK, ALIGN_RIGHT);
+  drawNumbersRam(player.defense, 126 , 20, BLACK, ALIGN_RIGHT);
+  drawNumbersRam(player.speed, 126 , 26, BLACK, ALIGN_RIGHT);
+
+
+
   checkInputs();
 }
 

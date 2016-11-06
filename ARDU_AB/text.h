@@ -63,10 +63,8 @@ void drawWord(byte wordOfLibrary, byte x, byte y, byte color, byte alignment)
 
   for (int i = startWord; i < startWord + sizeWord; i++)
   {
-
     if (color) sprites.drawSelfMasked(x - ((alignment == ALIGN_RIGHT) ? ((sizeWord) * 6) : 0) + xOffset, y, font, pgm_read_byte(&library[i]));
     else sprites.drawErase(x - ((alignment == ALIGN_RIGHT) ? ((sizeWord) * 6) : 0) + xOffset, y, font, pgm_read_byte(&library[i]));
-
     xOffset += 6;
   }
 }
@@ -108,7 +106,41 @@ void drawWordRam(byte x, byte y, byte color)
 
 void drawSentenceRam()
 {
-  
+
+}
+
+int countDigitsInInt(int number)
+{
+  char buf[5];
+  itoa(number, buf, 10);
+  return strlen(buf);
+}
+
+void drawNumbersRam(int number, byte x, byte y, byte color, byte alignment)
+{
+  char buf[5];
+  itoa(number, buf, 10);
+  char charLen = strlen(buf);
+  for (byte i = 0; i < charLen; i++)
+  {
+    char digit = buf[i];
+    byte j;
+    if (digit <= 48)
+    {
+      digit = 0;
+    }
+    else {
+      digit -= 48;
+      if (digit > 9) digit = 0;
+    }
+
+    for (byte z = 0; z < 10; z++)
+    {
+      if (digit == z) j = z;
+    }
+    if (color)sprites.drawSelfMasked(x - ((alignment == ALIGN_RIGHT) ? ((charLen) * 6) : 0) + (6 * i), y, font, digit +27);
+    else sprites.drawErase(x - ((alignment == ALIGN_RIGHT) ? ((charLen) * 6) : 0) + (6 * i), y, font, digit+27);
+  }
 }
 
 #endif

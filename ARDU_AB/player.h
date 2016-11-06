@@ -4,6 +4,8 @@
 #include <Arduino.h>
 #include "globals.h"
 
+#define ITEMAMOUNT                   6
+
 PROGMEM const unsigned char animSeq[] = { 0, 1, 2, 1 };
 
 struct Player
@@ -12,7 +14,7 @@ struct Player
   byte frame, currentMap, direction, level, attack, attackAddition, defense, defenseAddition, speed, speedAddition, weapon, armor, other;
   unsigned char name[6];
   byte items[ITEMAMOUNT];
-  boolean tags[1];
+  boolean tags;
   boolean walking;
 };
 
@@ -20,11 +22,27 @@ Player player;
 
 void setPlayer()
 {
-  player.x = 64;
-  player.y = 24;
-  player.walking = false;
-  player.direction = FACING_SOUTH;
-  player.frame = 0;
+  player =
+  {
+    64, 24,                                 // position
+    20, 20,                                 // health
+    100,                                    // gold
+    0, 50,                                  // experience
+    0,                                      // frame
+    0,                                      // currentMap
+    FACING_SOUTH,                           // direction
+    1,                                      // level
+    5, 0,                                   // attack
+    5, 0,                                   // defence
+    5, 0,                                   // speed
+    NONE,                                   // weapon
+    NONE,                                   // armor
+    NONE,                                   // other
+    {5, 50, 50, 50, 50, 50},                // name
+    {NONE, NONE, NONE, NONE, NONE, NONE},   // items
+    true,
+    false,
+  };
 }
 
 void drawPlayer()
@@ -33,17 +51,5 @@ void drawPlayer()
   sprites.drawPlusMask(player.x, player.y, player_plus_mask, pgm_read_byte(&animSeq[player.frame]) + 3 * player.direction);
 }
 
-void drawName(byte x, byte y, byte color)
-{
-  byte xOffset = 0;
-  byte sizeText = player.name[0] ;
-
-  for (byte i = 1; i < sizeText + 1; i++)
-  {
-    if (color)sprites.drawSelfMasked(x + xOffset, y, font, player.name[i]);
-    else sprites.drawErase(x + xOffset, y, font, player.name[i]);
-    xOffset += 6;
-  }
-}
 
 #endif

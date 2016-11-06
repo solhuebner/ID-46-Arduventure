@@ -4,12 +4,6 @@
 #include <Arduino.h>
 #include "globals.h"
 
-#define SPACE                         0
-#define NEWLINE                       254
-#define END                           255
-#define ALIGN_LEFT                    0
-#define ALIGN_RIGHT                   1
-
 
 PROGMEM const unsigned char library[] =
 {
@@ -217,10 +211,10 @@ PROGMEM const unsigned char sentences[] =
   83, NEWLINE, NEWLINE, 84, NEWLINE, NEWLINE, 69, END,
   // 5 : SAVE PROGRESS ?
   69, SPACE, 70, SPACE, 40, END,
-  // 6 : NAME: GOLD: € HP: EXP TO LEVEL UP:
-  8, 42, NEWLINE, 85, 42, 49, NEWLINE, NEWLINE, 86, 42, NEWLINE, NEWLINE, NEWLINE, 87, SPACE, 11, SPACE, 88, SPACE, 75, 42, END,
+  // 6 : NAME: GOLD: € HP: LV: EXP TO LEVEL UP:
+  8, 42, NEWLINE, 85, 42, 49, NEWLINE, NEWLINE, 86, SPACE, SPACE, 42, NEWLINE, 88, SPACE, SPACE, 42, NEWLINE, NEWLINE, 87, SPACE, 11, SPACE, 88, SPACE, 75, 42, END,
   // 7 : LV: ATK: DEF: SPD:
-  88, SPACE, 42, NEWLINE, NEWLINE, 89, 42, NEWLINE, 90, 42, NEWLINE, 91, 42, END,
+  89, 42, NEWLINE, 90, 42, NEWLINE, 91, 42, END,
   // 8 : YES
   92, NEWLINE, 93, END,
 

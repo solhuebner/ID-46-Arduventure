@@ -11,7 +11,6 @@
 void stateGameNew()
 {
   arduboy.fillScreen(1);
-
   byte alphabetX = 12;
   byte alphabetY = 16;
   for (byte i = 0; i < 36; i++)
@@ -48,7 +47,6 @@ void stateGameNew()
       cursorX = 0;
       cursorY = 0;
       gameState = STATE_GAME_PLAYING;
-      setPlayer();
       return;
     }
     else
@@ -68,7 +66,7 @@ void stateGameNew()
   }
 
   drawSentence(3, 12, 4, BLACK, ALIGN_LEFT);
-  drawName(84, 4, BLACK);
+  drawWordRam(84, 4, BLACK);
   sprites.drawErase(6 + (cursorX * 12), 16 + (cursorY * 10), font, 44);
   drawWord(9, 96, 56, BLACK, ALIGN_LEFT);
 };
@@ -76,7 +74,7 @@ void stateGameNew()
 void showPlayField()
 {
   arduboy.fillScreen(1);
-  drawName(46, 12, BLACK);
+  drawWordRam(46, 12, BLACK);
   drawPlayer();
 }
 
@@ -84,7 +82,7 @@ void showPlayField()
 void stateGamePlaying()
 {
   showPlayField();
-  checkMapInputs();
+  checkInputs();
 };
 
 void stateGameInventory()
@@ -93,14 +91,14 @@ void stateGameInventory()
   drawRectangle(85, 0, 130, 64, BLACK);
   drawSentence(4, 96, 2, WHITE, ALIGN_LEFT);
   sprites.drawSelfMasked(90, 2 + (cursorY * 12), font, 44);
-  checkInventoryInputs();
+  checkInputs();
 };
 
 void stateGameItems()
 {
   drawWord(83, 6, 2, WHITE, ALIGN_LEFT);
   drawRectangle(0, 10, 130, 48, WHITE);
-  checkItemsInputs();
+  checkInputs();
 }
 
 void stateGameStats()
@@ -108,10 +106,9 @@ void stateGameStats()
   drawWord(84, 6, 2, WHITE, ALIGN_LEFT);
   drawRectangle(0, 10, 130, 64, WHITE);
   drawSentence(6, 6, 14, BLACK, ALIGN_LEFT);
-  drawName(36, 14, BLACK);
+  drawWordRam(36, 14, BLACK);
   drawSentence(7, 90, 14, BLACK, ALIGN_LEFT);
-
-  checkStatsInputs();
+  checkInputs();
 }
 
 void stateGameSave()
@@ -120,7 +117,7 @@ void stateGameSave()
   drawRectangle(0, 48, 130, 64, BLACK);
   drawSentence(5, 6, 50, WHITE, ALIGN_LEFT);
   drawYesNo ();
-  checkSaveInputs();
+  checkInputs();
 }
 
 void stateGameOver()

@@ -5,78 +5,76 @@
 #include "globals.h"
 #include "player.h"
 
-void checkMapInputs()
+void checkInputs()
 {
-  player.walking = false;
-  if (arduboy.pressed(DOWN_BUTTON) && (player.y < GAME_BOTTOM))
+  switch (gameState)
   {
-    player.direction = FACING_SOUTH;
-    player.y++;
-    player.walking = true;
+    case STATE_GAME_PLAYING:
+      player.walking = false;
+      if (arduboy.pressed(DOWN_BUTTON) && (player.y < GAME_BOTTOM))
+      {
+        player.direction = FACING_SOUTH;
+        player.y++;
+        player.walking = true;
+      }
+      else if (arduboy.pressed(LEFT_BUTTON) && (player.x > GAME_LEFT))
+      {
+        player.direction = FACING_WEST;
+        player.x--;
+        player.walking = true;
+      }
+      else if (arduboy.pressed(UP_BUTTON) && (player.y > GAME_TOP))
+      {
+        player.direction = FACING_NORTH;
+        player.y--;
+        player.walking = true;
+      }
+      else if (arduboy.pressed(RIGHT_BUTTON) && (player.x < GAME_RIGHT))
+      {
+        player.direction = FACING_EAST;
+        player.x++;
+        player.walking = true;
+      }
+      if (arduboy.justPressed(A_BUTTON)) gameState = STATE_GAME_INVENTORY;
+      else if (arduboy.justPressed(B_BUTTON)) gameState = STATE_MENU_MAIN;
+      break;
+    case STATE_GAME_INVENTORY:
+      if (arduboy.justPressed(UP_BUTTON) && (cursorY > 0)) cursorY--;
+      else if (arduboy.justPressed(DOWN_BUTTON) && (cursorY < 2)) cursorY++;
+      if (arduboy.justPressed(A_BUTTON)) gameState = STATE_GAME_PLAYING;
+      else if (arduboy.justPressed(B_BUTTON)) gameState = STATE_GAME_ITEMS + cursorY;
+      break;
+    case STATE_GAME_ITEMS:
+      if (arduboy.justPressed(A_BUTTON)) gameState = STATE_GAME_INVENTORY;
+      break;
+    case STATE_GAME_STATS:
+      if (arduboy.justPressed(A_BUTTON)) gameState = STATE_GAME_INVENTORY;
+      else if (arduboy.justPressed(B_BUTTON)) gameState = STATE_GAME_PLAYING;
+      break;
+    case STATE_GAME_SAVE:
+      if (arduboy.justPressed(A_BUTTON)) gameState = STATE_GAME_INVENTORY;
+      else if (arduboy.justPressed(B_BUTTON))
+      {
+        if (!cursorY) saveGame();
+        gameState = STATE_GAME_PLAYING;
+      }
+      break;
   }
-  else if (arduboy.pressed(LEFT_BUTTON) && (player.x > GAME_LEFT))
+  if (gameStatePrevious != gameState)
   {
-    player.direction = FACING_WEST;
-    player.x--;
-    player.walking = true;
+    gameStatePrevious = gameState;
+    cursorY = 0;
+    cursorX = 0;
   }
-  else if (arduboy.pressed(UP_BUTTON) && (player.y > GAME_TOP))
-  {
-    player.direction = FACING_NORTH;
-    player.y--;
-    player.walking = true;
-  }
-  else if (arduboy.pressed(RIGHT_BUTTON) && (player.x < GAME_RIGHT))
-  {
-    player.direction = FACING_EAST;
-    player.x++;
-    player.walking = true;
-  }
-
-  if (arduboy.justPressed(B_BUTTON)) gameState = STATE_MENU_MAIN;
-  if (arduboy.justPressed(A_BUTTON)) gameState = STATE_GAME_INVENTORY;
-}
-
-void checkInventoryInputs()
-{
-  if (arduboy.justPressed(UP_BUTTON) && (cursorY > 0)) cursorY--;
-  else if (arduboy.justPressed(DOWN_BUTTON) && (cursorY < 2)) cursorY++;
-
-  if (arduboy.justPressed(B_BUTTON))
-  {
-    gameState = STATE_GAME_ITEMS + cursorY;
-    cursorY = 1;
-  }
-  else if (arduboy.justPressed(A_BUTTON)) gameState = STATE_GAME_PLAYING;
-}
-
-void checkItemsInputs()
-{
-  if (arduboy.justPressed(A_BUTTON)) gameState = STATE_GAME_INVENTORY;
-}
-
-void checkStatsInputs()
-{
-  if (arduboy.justPressed(A_BUTTON)) gameState = STATE_GAME_INVENTORY;
-}
-
-void checkSaveInputs()
-{
-  if (arduboy.justPressed(B_BUTTON))
-  {
-    if (cursorY) saveGame();
-    gameState = STATE_GAME_PLAYING;
-  }
-  if (arduboy.justPressed(A_BUTTON)) gameState = STATE_GAME_INVENTORY;
 }
 
 void drawYesNo ()
 {
   drawRectangle(95, 32, 130, 48, BLACK);
   drawSentence(8, 106, 34, WHITE, ALIGN_LEFT);
-  if (arduboy.justPressed(UP_BUTTON)) cursorY = 1;
-  else if (arduboy.justPressed(DOWN_BUTTON)) cursorY = 0;
-  sprites.drawSelfMasked( 98, 40 - (6 * cursorY), font, 44);
+  if (arduboy.justPressed(UP_BUTTON)) cursorY = 0;
+  else if (arduboy.justPressed(DOWN_BUTTON)) cursorY = 1;
+  sprites.drawSelfMasked( 98, 34 + (6 * cursorY), font, 44);
 }
 
 

@@ -93,4 +93,22 @@ void drawSentence(byte sentenceOfLibrary, byte x, byte y, byte color, byte align
   }
 }
 
+void drawWordRam(byte x, byte y, byte color)
+{
+  byte xOffset = 0;
+  byte sizeText = player.name[0] ;
+
+  for (byte i = 1; i < sizeText + 1; i++)
+  {
+    if (color)sprites.drawSelfMasked(x + xOffset, y, font, player.name[i]);
+    else sprites.drawErase(x + xOffset, y, font, player.name[i]);
+    xOffset += 6;
+  }
+}
+
+void drawSentenceRam()
+{
+  
+}
+
 #endif

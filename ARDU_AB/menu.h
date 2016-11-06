@@ -36,7 +36,7 @@ void stateMenuContinue()
 
 void stateMenuNew()
 {
-  for (byte i = 0; i < 6; i++) player.name[i] = (i == 0) ? 5:50;
+  setPlayer();
   gameState = STATE_GAME_NEW;
 }
 

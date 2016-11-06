@@ -197,6 +197,10 @@ PROGMEM const unsigned char library[] =
   4, 5, 6, END,
   // PLACE 91 : SPD
   19, 16, 4, END,
+  // PLACE 92 : YES
+  25, 5, 19, END,
+  // PLACE 93 : NO
+  14, 15, END,
 };
 
 PROGMEM const unsigned char sentences[] =
@@ -217,6 +221,8 @@ PROGMEM const unsigned char sentences[] =
   8, 42, NEWLINE, 85, 42, 49, NEWLINE, NEWLINE, 86, 42, NEWLINE, NEWLINE, NEWLINE, 87, SPACE, 11, SPACE, 88, SPACE, 75, 42, END,
   // 7 : LV: ATK: DEF: SPD:
   88, SPACE, 42, NEWLINE, NEWLINE, 89, 42, NEWLINE, 90, 42, NEWLINE, 91, 42, END,
+  // 8 : YES
+  92, NEWLINE, 93, END,
 
 };
 

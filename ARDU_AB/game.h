@@ -119,6 +119,7 @@ void stateGameSave()
   showPlayField();
   drawRectangle(0, 48, 130, 64, BLACK);
   drawSentence(5, 6, 50, WHITE, ALIGN_LEFT);
+  drawYesNo ();
   checkSaveInputs();
 }
 

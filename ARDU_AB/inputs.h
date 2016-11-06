@@ -41,8 +41,12 @@ void checkInventoryInputs()
 {
   if (arduboy.justPressed(UP_BUTTON) && (cursorY > 0)) cursorY--;
   else if (arduboy.justPressed(DOWN_BUTTON) && (cursorY < 2)) cursorY++;
-  
-  if (arduboy.justPressed(B_BUTTON)) gameState = STATE_GAME_ITEMS + cursorY;
+
+  if (arduboy.justPressed(B_BUTTON))
+  {
+    gameState = STATE_GAME_ITEMS + cursorY;
+    cursorY = 1;
+  }
   else if (arduboy.justPressed(A_BUTTON)) gameState = STATE_GAME_PLAYING;
 }
 
@@ -58,7 +62,21 @@ void checkStatsInputs()
 
 void checkSaveInputs()
 {
+  if (arduboy.justPressed(B_BUTTON))
+  {
+    if (cursorY) saveGame();
+    gameState = STATE_GAME_PLAYING;
+  }
   if (arduboy.justPressed(A_BUTTON)) gameState = STATE_GAME_INVENTORY;
+}
+
+void drawYesNo ()
+{
+  drawRectangle(95, 32, 130, 48, BLACK);
+  drawSentence(8, 106, 34, WHITE, ALIGN_LEFT);
+  if (arduboy.justPressed(UP_BUTTON)) cursorY = 1;
+  else if (arduboy.justPressed(DOWN_BUTTON)) cursorY = 0;
+  sprites.drawSelfMasked( 98, 40 - (6 * cursorY), font, 44);
 }
 
 

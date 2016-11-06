@@ -62,5 +62,10 @@ void drawRectangle(byte startX, byte startY, byte endX, byte endY, byte color )
   }
 }
 
+void saveGame()
+{
+  
+}
+
 
 #endif

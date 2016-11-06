@@ -5,7 +5,6 @@
 #include "globals.h"
 #include "dictionary.h"
 
-
 int findWordBegin(byte searchWord)
 {
   int i = 0;

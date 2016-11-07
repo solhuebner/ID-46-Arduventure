@@ -55,7 +55,7 @@ byte findSentenceSize(int searchSizeOfSentence)
   return i;
 }
 
-void drawWord(byte wordOfLibrary, byte x, byte y, byte color, byte alignment)
+void drawWord(byte wordOfLibrary, byte x, byte y, boolean color, boolean alignment)
 {
   byte xOffset = 0;
   int startWord = findWordBegin(wordOfLibrary);
@@ -69,7 +69,7 @@ void drawWord(byte wordOfLibrary, byte x, byte y, byte color, byte alignment)
   }
 }
 
-void drawSentence(byte sentenceOfLibrary, byte x, byte y, byte color, byte alignement)
+void drawSentence(byte sentenceOfLibrary, byte x, byte y, boolean color, boolean alignement)
 {
   byte yOffset = 0;
   int startSentence = findSentenceBegin(sentenceOfLibrary);
@@ -91,18 +91,18 @@ void drawSentence(byte sentenceOfLibrary, byte x, byte y, byte color, byte align
   }
 }
 
-void drawWordRam(byte x, byte y, byte color)
+void drawWordRam(const unsigned char *text, byte x, byte y, boolean color, byte alignment)
 {
   byte xOffset = 0;
-  byte sizeText = player.name[0] ;
-
+  byte sizeText = text[0] ;
   for (byte i = 1; i < sizeText + 1; i++)
   {
-    if (color)sprites.drawSelfMasked(x + xOffset, y, font, player.name[i]);
-    else sprites.drawErase(x + xOffset, y, font, player.name[i]);
+    if (color)sprites.drawSelfMasked(x - ((alignment == ALIGN_RIGHT) ? ((sizeText - 1) * 6) : 0) + xOffset, y, font, text[i]);
+    else sprites.drawErase(x - ((alignment == ALIGN_RIGHT) ? ((sizeText - 1) * 6) : 0) + xOffset, y, font, text[i]);
     xOffset += 6;
   }
 }
+
 
 void drawSentenceRam()
 {
@@ -116,7 +116,7 @@ int countDigitsInInt(int number)
   return strlen(buf);
 }
 
-void drawNumbersRam(int number, byte x, byte y, byte color, byte alignment)
+void drawNumbersRam(int number, byte x, byte y, boolean color, boolean alignment)
 {
   char buf[5];
   itoa(number, buf, 10);
@@ -138,8 +138,8 @@ void drawNumbersRam(int number, byte x, byte y, byte color, byte alignment)
     {
       if (digit == z) j = z;
     }
-    if (color)sprites.drawSelfMasked(x - ((alignment == ALIGN_RIGHT) ? ((charLen) * 6) : 0) + (6 * i), y, font, digit +27);
-    else sprites.drawErase(x - ((alignment == ALIGN_RIGHT) ? ((charLen) * 6) : 0) + (6 * i), y, font, digit+27);
+    if (color)sprites.drawSelfMasked(x - ((alignment == ALIGN_RIGHT) ? ((charLen) * 6) : 0) + (6 * i), y, font, digit + 27);
+    else sprites.drawErase(x - ((alignment == ALIGN_RIGHT) ? ((charLen) * 6) : 0) + (6 * i), y, font, digit + 27);
   }
 }
 

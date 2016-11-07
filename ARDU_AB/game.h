@@ -66,7 +66,7 @@ void stateGameNew()
   }
 
   drawSentence(3, 12, 4, BLACK, ALIGN_LEFT);
-  drawWordRam(84, 4, BLACK);
+  drawWordRam(player.name,84, 4, BLACK, ALIGN_LEFT);
   sprites.drawErase(6 + (cursorX * 12), 16 + (cursorY * 10), font, 44);
   drawWord(9, 96, 56, BLACK, ALIGN_LEFT);
 };
@@ -74,7 +74,7 @@ void stateGameNew()
 void showPlayField()
 {
   arduboy.fillScreen(1);
-  drawWordRam(46, 12, BLACK);
+  drawWordRam(player.name,46, 12, BLACK, ALIGN_LEFT);
   drawPlayer();
 }
 
@@ -105,7 +105,7 @@ void stateGameStats()
 {
   byte xOffset;
   drawSentence(8, 6, 2, WHITE, ALIGN_LEFT);
-  drawWordRam(60, 2, WHITE);
+  drawWordRam(player.name, 60, 2, WHITE, ALIGN_LEFT);
   drawRectangle(0, 10, 130, 64, WHITE);
   drawSentence(6, 6, 14, BLACK, ALIGN_LEFT);
   drawSentence(7, 90, 14, BLACK, ALIGN_LEFT);

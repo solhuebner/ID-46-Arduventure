@@ -8,219 +8,355 @@
 PROGMEM const unsigned char library[] =
 {
   // PLACE  0 : empty
-  SPACE, END,
+  1,
+  SPACE,
   // PLACE  1 : CONTINUE
-  3, 15, 14, 20, 9, 14, 21, 5, END,
+  8,
+  3, 15, 14, 20, 9, 14, 21, 5,
   // PLACE  2 : NEW
-  14, 5, 23, END,
+  3,
+  14, 5, 23,
   // PLACE  3 : GAME
-  7, 1, 13, 5, END,
+  4,
+  7, 1, 13, 5,
   // PLACE  4 : SND
-  19, 14, 4, END,
+  3,
+  19, 14, 4,
   // PLACE  5 : OFF
-  15, 6, 6, END,
+  3,
+  15, 6, 6,
   // PLACE  6 : ON
-  15, 14, END,
+  2,
+  15, 14,
   // PLACE  7 : YOUR
-  25, 15, 21, 18, END,
+  4,
+  25, 15, 21, 18,
   // PLACE  8 : NAME
-  14, 1, 13, 5, END,
+  4,
+  14, 1, 13, 5,
   // PLACE  9 : END
-  5, 14, 4, END,
+  3,
+  5, 14, 4,
   // PLACE 10 : WELCOME
-  23, 5, 12, 3, 15, 13, 5, END,
+  7,
+  23, 5, 12, 3, 15, 13, 5,
   // PLACE 11 : TO
-  20, 15, END,
+  2,
+  20, 15,
   // PLACE 12 : ARDUVILLAGE
-  1, 18, 4, 21, 22, 9, 12, 12, 1, 7, 5, END,
+  11,
+  1, 18, 4, 21, 22, 9, 12, 12, 1, 7, 5,
   // PLACE 13 : I
-  9, END,
+  1,
+  9,
   // PLACE 14 : WISH
-  23, 9, 19, 8, END,
+  4,
+  23, 9, 19, 8,
   // PLACE 15 : HAD
-  8, 1, 4, END,
+  3,
+  8, 1, 4,
   // PLACE 16 : A
-  1, END,
+  1,
+  1,
   // PLACE 17 : FISHING
-  6, 9, 19, 8, 9, 14, 7, END,
+  7,
+  6, 9, 19, 8, 9, 14, 7,
   // PLACE 18 : ROD
-  18, 15, 4, END,
+  3,
+  18, 15, 4,
   // PLACE 19 : WHAT
-  23, 8, 1, 20, END,
+  4,
+  23, 8, 1, 20,
   // PLACE 20 : DO
-  4, 15, END,
+  2,
+  4, 15,
   // PLACE 21 : YOU
-  25, 15, 21, END,
+  3,
+  25, 15, 21,
   // PLACE 22 : BUY
-  2, 21, 25, END,
+  3,
+  2, 21, 25,
   // PLACE 23 : WOULD
-  23, 15, 21, 12, 4, END,
+  5,
+  23, 15, 21, 12, 4,
   // PLACE 24 : LIKE
-  12, 9, 11, 5, END,
+  4,
+  12, 9, 11, 5,
   // PLACE 25 : TO
-  20, 15, END,
+  2,
+  20, 15,
   // PLACE 26 : SELL
-  19, 5, 12, 12, END,
+  4,
+  19, 5, 12, 12,
   // PLACE 27 : CHARACTER 0
-  27, END,
+  1,
+  27,
   // PLACE 28 : CHARACTER 1
-  28, END,
+  1,
+  28,
   // PLACE 29 : CHARACTER 2
-  29, END,
+  1,
+  29,
   // PLACE 30 : CHARACTER 3
-  30, END,
+  1,
+  30,
   // PLACE 31 : CHARACTER 4
-  31, END,
+  1,
+  31,
   // PLACE 32 : CHARACTER 5
-  32, END,
+  1,
+  32,
   // PLACE 33 : CHARACTER 6
-  33, END,
+  1,
+  33,
   // PLACE 34 : CHARACTER 7
-  34, END,
+  1,
+  34,
   // PLACE 35 : CHARACTER 8
-  35, END,
+  1,
+  35,
   // PLACE 36 : CHARACTER 9
-  36, END,
+  1,
+  36,
   // PLACE 37 : CHARACTER .
-  37, END,
+  1,
+  37,
   // PLACE 38 : CHARACTER ,
-  38, END,
+  1,
+  38,
   // PLACE 39 : CHARACTER !
-  39, END,
+  1,
+  39,
   // PLACE 40 : CHARACTER ?
-  40, END,
+  1,
+  40,
   // PLACE 41 : CHARACTER '
-  41, END,
+  1,
+  41,
   // PLACE 42 : CHARACTER :
-  42, END,
+  1,
+  42,
   // PLACE 43 : CHARACTER /
-  43, END,
+  1,
+  43,
   // PLACE 44 : arrow right
-  44, END,
+  1,
+  44,
   // PLACE 45 : arrow left
-  45, END,
+  1,
+  45,
   // PLACE 46 : arrow up
-  46, END,
+  1,
+  46,
   // PLACE 47 : arrow down
-  47, END,
+  1,
+  47,
   // place 48 : diamond
-  48, END,
+  1,
+  48,
   // place 49 : €
-  49, END,
+  1,
+  49,
   // place 50 : _
-  50, END,
+  1,
+  50,
   // place 51 : *
-  51, END,
+  1,
+  51,
   // place 52 : (
-  52, END,
+  1,
+  52,
   // place 53 : )
-  53, END,
+  1,
+  53,
   // place 54 : +
-  54, END,
+  1,
+  54,
   // place 55 : -
-  55, END,
+  1,
+  55,
   // place 56 : full
-  56, END,
+  1,
+  56,
   // PLACE 57 : CAN
-  3, 1, 14, END,
+  3,
+  3, 1, 14,
   // PLACE 58 : NOT
-  5, 14, 4, END,
+  3,
+  14, 15, 20,
   // PLACE 59 : ESCAPE
-  5, 19, 3, 1, 16, 5, END,
+  6,
+  5, 19, 3, 1, 16, 5,
   // PLACE 60 : GOT
-  7, 15, 20, END,
+  3,
+  7, 15, 20,
   // PLACE 61 : AWAY
-  1, 23, 1, 25, END,
+  4,
+  1, 23, 1, 25,
   // PLACE 62 : SAFELY
-  19, 1, 6, 5, 12, 25, END,
+  6,
+  19, 1, 6, 5, 12, 25,
   // PLACE 63 : YOU
-  25, 15, 21, END,
+  3,
+  25, 15, 21,
   // PLACE 64 : WIN
-  23, 9, 14, END,
+  3,
+  23, 9, 14,
   // PLACE 65 : SLEEP
-  19, 12, 5, 5, 16, END,
+  5,
+  19, 12, 5, 5, 16,
   // PLACE 66 : RESTORE
-  18, 5, 19, 20, 15, 18, 5, END,
+  7,
+  18, 5, 19, 20, 15, 18, 5,
   // PLACE 67 : ALL
-  1, 12, 12, END,
+  3,
+  1, 12, 12,
   // PLACE 68 : HEALTH
-  8, 5, 1, 12, 20, 8, END,
+  6,
+  8, 5, 1, 12, 20, 8,
   // PLACE 69 : SAVE
-  19, 1, 22, 5, END,
+  4,
+  19, 1, 22, 5,
   // PLACE 70 : PROGRESS
-  16, 18, 15, 7, 18, 5, 19, 19, END,
+  8,
+  16, 18, 15, 7, 18, 5, 19, 19,
   // PLACE 71 : USE
-  21, 19, 5, END,
+  3,
+  21, 19, 5,
   // PLACE 72 : EQUIP
-  5, 17, 21, 9, 16, END,
+  5,
+  5, 17, 21, 9, 16,
   // PLACE 73 : UN
-  21, 14, END,
+  2,
+  21, 14,
   // PLACE 74 : LEVEL
-  12, 5, 22, 5, 12, END,
+  5,
+  12, 5, 22, 5, 12,
   // PLACE 75 : UP
-  21, 16, END,
+  2,
+  21, 16,
   // PLACE 76 : THE
-  20, 8, 5, END,
+  3,
+  20, 8, 5,
   // PLACE 77 : BRIDGE
-  2, 18, 9, 4, 7, 5, END,
+  6,
+  2, 18, 9, 4, 7, 5,
   // PLACE 78 : IS
-  9, 19, END,
+  2,
+  9, 19,
   // PLACE 79 : BROKEN
-  2, 18, 15 , 11, 5, 14, END,
+  6,
+  2, 18, 15 , 11, 5, 14,
   // PLACE 80 : ENDLESS
-  5, 14, 4, 12, 5, 19, 19, END,
+  7,
+  5, 14, 4, 12, 5, 19, 19,
   // PLACE 81 : WOODS
-  23, 15, 15, 4, 19, END,
+  5,
+  23, 15, 15, 4, 19,
   // PLACE 82 : AHEAD
-  1, 8, 5, 1, 4, END,
+  5,
+  1, 8, 5, 1, 4,
   // PLACE 83 : ITEMS
-  9, 20, 5, 13, 19, END,
+  5,
+  9, 20, 5, 13, 19,
   // PLACE 84 : STATS
-  19, 20, 1, 20, 19, END,
+  5,
+  19, 20, 1, 20, 19,
   // PLACE 85 : GOLD
-  7, 15, 12, 4, END,
+  4,
+  7, 15, 12, 4,
   // PLACE 86 : HP
-  8, 16, END,
+  2,
+  8, 16,
   // PLACE 87 : EXP
-  5, 24, 16, END,
+  3,
+  5, 24, 16,
   // PLACE 88 : LV
-  12, 22, END,
+  2,
+  12, 22,
   // PALCE 89 : ATK
-  1, 20, 11, END,
+  3,
+  1, 20, 11,
   // PLACE 90 : DEF
-  4, 5, 6, END,
+  3,
+  4, 5, 6,
   // PLACE 91 : SPD
-  19, 16, 4, END,
+  3,
+  19, 16, 4,
   // PLACE 92 : YES
-  25, 5, 19, END,
+  3,
+  25, 5, 19,
   // PLACE 93 : NO
-  14, 15, END,
+  2,
+  14, 15,
   // PLACE 94 : OF
-  15, 6, END,
+  2,
+  15, 6,
+  // PLACE 95 : APPLE
+  5,
+  1, 16, 16, 12, 5,
+  // PLACE 96 : POTION
+  6,
+  16, 15, 20, 9, 15, 14,
+  // PLACE 97 : HEALING
+  7,
+  8, 5, 1, 12, 9, 14, 7,
+  // PLACE 98 : STONE
+  5,
+  19, 20, 15, 14, 5,
+  // PLACE 99 : KNIFE
+  5,
+  11,14,9,6,5,
+  // PLACE 100 : DAGGER
+  6,
+  4, 1, 7, 7, 5, 18,
+  // PLACE 101 : SWORD
+  5,
+  19,23,15,18,4,
+  // PLACE 102 : ARMOR
+  5,
+  1,18,13,15,18,
+  // PLACE 103 : WOODEN
+
+  // PLACE 104 : BRONS
+
+  // PLACE 105 : IRON 
+
 };
+
 
 PROGMEM const unsigned char sentences[] =
 {
-  // PLACE 0 : CONTINUE NEW GAME
-  2, SPACE, 3, END,
+  // PLACE 0 : NEW GAME
+  3,
+  2, SPACE, 3,
   // PLACE 1 : SND  OFF
-  4, SPACE, SPACE, 5, END,
+  4,
+  4, SPACE, SPACE, 5,
   // PLACE  2 : SND   ON
-  4, SPACE, SPACE, SPACE, 6, END,
+  5,
+  4, SPACE, SPACE, SPACE, 6,
   // PLACE  3 : WHAT IS YOUR NAME
-  7, SPACE, 8, END,
+  3,
+  7, SPACE, 8,
   // PLACE  4 : ITEMS STATS SAVE
-  83, NEWLINE, NEWLINE, 84, NEWLINE, NEWLINE, 69, END,
+  7,
+  83, NEWLINE, NEWLINE, 84, NEWLINE, NEWLINE, 69,
   // PLACE  5 : SAVE PROGRESS ?
-  69, SPACE, 70, SPACE, 40, END,
+  5,
+  69, SPACE, 70, SPACE, 40,
   // PLACE  6 : GOLD: € LV: HP: EXP TO LEVEL UP:
-  85, 42, 49, NEWLINE, 88, SPACE, SPACE, 42, NEWLINE, 86, SPACE, SPACE, 42, NEWLINE, NEWLINE, NEWLINE, 87, SPACE, 11, SPACE, 88, SPACE, 75, 42, END,
+  26,
+  85, 42, 49, NEWLINE, NEWLINE, 88, SPACE, SPACE, 42, NEWLINE, NEWLINE, 86, SPACE, SPACE, 42, NEWLINE, NEWLINE, NEWLINE, 87, SPACE, 11, SPACE, 88, SPACE, 75, 42,
   // PLACE  7 : LV: ATK: DEF: SPD:
-  89, 42, NEWLINE, 90, 42, NEWLINE, 91, 42, END,
+  10,
+  89, 42, NEWLINE, NEWLINE, 90, 42, NEWLINE, NEWLINE, 91, 42,
   // PLACE  8 : STATS OF
-  84, SPACE, 94, END,
+  3,
+  84, SPACE, 94,
   // PLACE  9 : YES NO
-  92, NEWLINE, 93, END,
+  3,
+  92, NEWLINE, 93,
 
 };
 

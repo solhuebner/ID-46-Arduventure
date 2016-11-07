@@ -34,7 +34,6 @@
 
 #define SPACE                         0
 #define NEWLINE                       254
-#define END                           255
 #define NONE                          255
 #define ALIGN_LEFT                    0
 #define ALIGN_RIGHT                   1
@@ -43,9 +42,9 @@ Arduboy arduboy;
 Sprites sprites(arduboy);
 
 //byte gameState = STATE_MENU_INTRO;           // start the game with the TEAM a.r.g. logo
-byte gameState = STATE_MENU_MAIN;           // start the game with the TEAM a.r.g. logo
+byte gameState = STATE_MENU_MAIN;              
 byte gameStatePrevious = gameState;
-byte menuSelection = STATE_MENU_CONTINUE;    // PLAY menu item is pre-selected
+byte menuSelection = STATE_MENU_CONTINUE;      // PLAY menu item is pre-selected
 byte globalCounter = 0;
 byte currentLetter = 0;
 byte cursorX = 0;

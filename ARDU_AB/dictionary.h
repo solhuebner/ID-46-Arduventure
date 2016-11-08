@@ -268,59 +268,69 @@ PROGMEM const unsigned char library[] =
   // PLACE 86 : HP
   2,
   8, 16,
-  // PLACE 87 : EXP
+  // PLACE 87 : MP
+  2,
+  13, 16,
+
+
+
+  // PLACE 88 : EXP
   3,
   5, 24, 16,
-  // PLACE 88 : LV
+  // PLACE 89 : LV
   2,
   12, 22,
-  // PALCE 89 : ATK
+  // PALCE 90 : ATK
   3,
   1, 20, 11,
-  // PLACE 90 : DEF
+  // PLACE 91 : DEF
   3,
   4, 5, 6,
-  // PLACE 91 : SPD
+  // PLACE 92 : SPD
   3,
   19, 16, 4,
-  // PLACE 92 : YES
+  // PLACE 93 : YES
   3,
   25, 5, 19,
-  // PLACE 93 : NO
+  // PLACE 94 : NO
   2,
   14, 15,
-  // PLACE 94 : OF
+  // PLACE 95 : OF
   2,
   15, 6,
-  // PLACE 95 : APPLE
+  // PLACE 96 : APPLE
   5,
   1, 16, 16, 12, 5,
-  // PLACE 96 : POTION
+  // PLACE 97 : POTION
   6,
   16, 15, 20, 9, 15, 14,
-  // PLACE 97 : HEALING
+  // PLACE 98 : HEALING
   7,
   8, 5, 1, 12, 9, 14, 7,
-  // PLACE 98 : STONE
+  // PLACE 99 : STONE
   5,
   19, 20, 15, 14, 5,
-  // PLACE 99 : KNIFE
+  // PLACE 100 : KNIFE
   5,
-  11,14,9,6,5,
-  // PLACE 100 : DAGGER
+  11, 14, 9, 6, 5,
+  // PLACE 101 : DAGGER
   6,
   4, 1, 7, 7, 5, 18,
-  // PLACE 101 : SWORD
+  // PLACE 102 : SWORD
   5,
-  19,23,15,18,4,
-  // PLACE 102 : ARMOR
+  19, 23, 15, 18, 4,
+  // PLACE 103 : ARMOR
   5,
-  1,18,13,15,18,
-  // PLACE 103 : WOODEN
-
-  // PLACE 104 : BRONS
-
-  // PLACE 105 : IRON 
+  1, 18, 13, 15, 18,
+  // PLACE 104 : WOODEN
+  6,
+  23, 15, 15, 4, 5, 14,
+  // PLACE 105 : BRONZE
+  6,
+  2, 18, 15, 14, 26, 5,
+  // PLACE 106 : IRON
+  4,
+  9, 18, 15, 14,
 
 };
 
@@ -345,18 +355,18 @@ PROGMEM const unsigned char sentences[] =
   // PLACE  5 : SAVE PROGRESS ?
   5,
   69, SPACE, 70, SPACE, 40,
-  // PLACE  6 : GOLD: € LV: HP: EXP TO LEVEL UP:
+  // PLACE  6 : GOLD: € MV: HP: EXP TO LEVEL UP:
   26,
-  85, 42, 49, NEWLINE, NEWLINE, 88, SPACE, SPACE, 42, NEWLINE, NEWLINE, 86, SPACE, SPACE, 42, NEWLINE, NEWLINE, NEWLINE, 87, SPACE, 11, SPACE, 88, SPACE, 75, 42,
+  85, 42, 49, NEWLINE, NEWLINE, 86, SPACE, SPACE, 42, NEWLINE, NEWLINE, 87, SPACE, SPACE, 42, NEWLINE, NEWLINE, NEWLINE, 87, SPACE, 11, SPACE, 89, SPACE, 75, 42,
   // PLACE  7 : LV: ATK: DEF: SPD:
-  10,
-  89, 42, NEWLINE, NEWLINE, 90, 42, NEWLINE, NEWLINE, 91, 42,
+  13,
+  89, SPACE, 42, NEWLINE, NEWLINE, 90, 42, NEWLINE, 91, 42, NEWLINE, 92, 42,
   // PLACE  8 : STATS OF
   3,
-  84, SPACE, 94,
+  84, SPACE, 95,
   // PLACE  9 : YES NO
   3,
-  92, NEWLINE, 93,
+  93, NEWLINE, 94,
 
 };
 

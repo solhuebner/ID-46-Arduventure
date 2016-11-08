@@ -10,7 +10,7 @@ PROGMEM const unsigned char animSeq[] = { 0, 1, 2, 1 };
 
 struct Player
 {
-  int x, y, health, healthTotal, gold, experience, experienceForNextLevel;
+  int x, y, health, healthTotal, magic, magicTotal, gold, experience, experienceForNextLevel;
   byte frame, currentMap, direction, level, attack, attackAddition, defense, defenseAddition, speed, speedAddition, weapon, armor, other;
   unsigned char name[6];
   byte items[ITEMAMOUNT];
@@ -26,6 +26,7 @@ void setPlayer()
   {
     64, 24,                                 // position
     20, 20,                                 // health
+    0, 10,                                  // magic
     100,                                    // gold
     0, 50,                                  // experience
     0,                                      // frame

@@ -45,6 +45,8 @@ void checkInputs()
       else if (arduboy.justPressed(B_BUTTON)) gameState = STATE_GAME_ITEMS + cursorY;
       break;
     case STATE_GAME_ITEMS:
+      if (arduboy.justPressed(UP_BUTTON) && (cursorY > 0)) cursorY--;
+      else if (arduboy.justPressed(DOWN_BUTTON) && (cursorY < 2)) cursorY++;
       if (arduboy.justPressed(A_BUTTON)) gameState = STATE_GAME_INVENTORY;
       break;
     case STATE_GAME_STATS:

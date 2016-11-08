@@ -4,6 +4,7 @@
 #include <Arduino.h>
 #include "globals.h"
 
+unsigned char dynamicTextbox[44];
 
 PROGMEM const unsigned char library[] =
 {
@@ -271,9 +272,6 @@ PROGMEM const unsigned char library[] =
   // PLACE 87 : MP
   2,
   13, 16,
-
-
-
   // PLACE 88 : EXP
   3,
   5, 24, 16,
@@ -331,7 +329,7 @@ PROGMEM const unsigned char library[] =
   // PLACE 106 : IRON
   4,
   9, 18, 15, 14,
-
+  
 };
 
 

@@ -20,7 +20,7 @@
 #include "inputs.h"
 #include "text.h"
 #include "inventory.h"
-#include "item.h"
+#include "items.h"
 #include "player.h"
 
 

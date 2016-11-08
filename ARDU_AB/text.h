@@ -71,8 +71,8 @@ void drawWordRam(const unsigned char *text, byte x, byte y, boolean color, byte 
 void drawSentenceRam(const unsigned char *text, byte x, byte y, boolean color, byte alignment)
 {
   byte yOffset = 0;
-  byte sizeSentence = text[0];
   byte wordSpacing = 0;
+  byte sizeSentence = text[0];
   for (byte i = 1; i < sizeSentence + 1; i++)
   {
     byte wordToDraw = text[i];
@@ -81,9 +81,11 @@ void drawSentenceRam(const unsigned char *text, byte x, byte y, boolean color, b
       yOffset += 6;
       wordSpacing = 0;
     }
-    drawWord(wordToDraw, x + (6 * wordSpacing),  y + yOffset, color, alignment);
-    int startWord = findBegin(wordToDraw, WORD);
-    wordSpacing += pgm_read_byte(&library[startWord]);
+    else {
+      drawWord(wordToDraw, x + (6 * wordSpacing),  y + yOffset, color, alignment);
+      int startWord = findBegin(wordToDraw, WORD);
+      wordSpacing += pgm_read_byte(&library[startWord]);
+    }
   }
 }
 
@@ -106,6 +108,18 @@ void drawNumbersRam(int number, byte x, byte y, boolean color, boolean alignment
     if (color)sprites.drawSelfMasked(x - ((alignment == ALIGN_RIGHT) ? ((charLen) * 6) : 0) + (6 * i), y, font, digit);
     else sprites.drawErase(x - ((alignment == ALIGN_RIGHT) ? ((charLen) * 6) : 0) + (6 * i), y, font, digit);
   }
+}
+
+void clearDynamicTextbox()
+{
+  dynamicTextbox[0] = 0;
+  //memset (dynamicTextbox,0,sizeof(dynamicTextbox));
+  /*
+    for(int i = 0; i < 44; i++)
+    {
+    dynamicTextbox[i] = NONE;
+    }
+  */
 }
 
 #endif

@@ -296,40 +296,46 @@ PROGMEM const unsigned char library[] =
   // PLACE 95 : OF
   2,
   15, 6,
-  // PLACE 96 : APPLE
-  5,
-  1, 16, 16, 12, 5,
-  // PLACE 97 : POTION
+  // PLACE 96 : WEAPON
   6,
-  16, 15, 20, 9, 15, 14,
-  // PLACE 98 : HEALING
-  7,
-  8, 5, 1, 12, 9, 14, 7,
-  // PLACE 99 : STONE
-  5,
-  19, 20, 15, 14, 5,
-  // PLACE 100 : KNIFE
-  5,
-  11, 14, 9, 6, 5,
-  // PLACE 101 : DAGGER
-  6,
-  4, 1, 7, 7, 5, 18,
-  // PLACE 102 : SWORD
-  5,
-  19, 23, 15, 18, 4,
-  // PLACE 103 : ARMOR
+  23, 5, 1, 16, 15, 14,
+  // PLACE 97 : ARMOR
   5,
   1, 18, 13, 15, 18,
-  // PLACE 104 : WOODEN
+  // PLACE 98 : EXTRA
+  5,
+  5, 24, 20, 18, 1,
+  // PLACE 99 : APPLE
+  5,
+  1, 16, 16, 12, 5,
+  // PLACE 100 : POTION
+  6,
+  16, 15, 20, 9, 15, 14,
+  // PLACE 101 : HEALING
+  7,
+  8, 5, 1, 12, 9, 14, 7,
+  // PLACE 102 : STONE
+  5,
+  19, 20, 15, 14, 5,
+  // PLACE 103 : KNIFE
+  5,
+  11, 14, 9, 6, 5,
+  // PLACE 104 : DAGGER
+  6,
+  4, 1, 7, 7, 5, 18,
+  // PLACE 105 : SWORD
+  5,
+  19, 23, 15, 18, 4,
+  // PLACE 106 : WOODEN
   6,
   23, 15, 15, 4, 5, 14,
-  // PLACE 105 : BRONZE
+  // PLACE 107 : BRONZE
   6,
   2, 18, 15, 14, 26, 5,
-  // PLACE 106 : IRON
+  // PLACE 108 : IRON
   4,
   9, 18, 15, 14,
-  
+
 };
 
 
@@ -365,6 +371,9 @@ PROGMEM const unsigned char sentences[] =
   // PLACE  9 : YES NO
   3,
   93, NEWLINE, 94,
+  // PLACE 10 : WEAPON ARMOR EXTRA
+  7,
+  96, NEWLINE, NEWLINE, 97, NEWLINE, NEWLINE, 98,
 
 };
 

@@ -19,9 +19,12 @@
 #define STATE_GAME_INVENTORY          7
 #define STATE_GAME_ITEMS              8
 #define STATE_GAME_EQUIP              9
-#define STATE_GAME_STATS              10
-#define STATE_GAME_SAVE               11
-#define STATE_GAME_OVER               12
+#define STATE_GAME_WEAPON             10
+#define STATE_GAME_ARMOR              11
+#define STATE_GAME_EXTRA              12
+#define STATE_GAME_STATS              13
+#define STATE_GAME_SAVE               14
+#define STATE_GAME_OVER               15
 
 #define GAME_TOP                      0
 #define GAME_BOTTOM                   48
@@ -43,7 +46,7 @@ Arduboy arduboy;
 Sprites sprites(arduboy);
 
 //byte gameState = STATE_MENU_INTRO;           // start the game with the TEAM a.r.g. logo
-byte gameState = STATE_MENU_MAIN;              
+byte gameState = STATE_MENU_MAIN;
 byte gameStatePrevious = gameState;
 byte menuSelection = STATE_MENU_CONTINUE;      // PLAY menu item is pre-selected
 byte globalCounter = 0;
@@ -60,7 +63,7 @@ void drawRectangle(byte startX, byte startY, byte endX, byte endY, byte color )
     if (!color)sprites.drawErase(rectangleX, startY, font, 56);
     else sprites.drawSelfMasked(rectangleX, startY, font, 56);
     rectangleX += 5;
-    if (rectangleX > endX -5)
+    if (rectangleX > endX - 5)
     {
       startY += 8;
       rectangleX = startX;
@@ -70,7 +73,7 @@ void drawRectangle(byte startX, byte startY, byte endX, byte endY, byte color )
 
 void saveGame()
 {
-  
+
 }
 
 

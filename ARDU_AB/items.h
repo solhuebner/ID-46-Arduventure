@@ -14,28 +14,29 @@
 
 void getItems()
 {
+  Serial.println (cursorY);
   byte dynamicTextBoxSize = 0;
   switch (cursorY)
   {
     case 0:
       dynamicTextBoxSize++;
-      dynamicTextbox[dynamicTextBoxSize - cursorY] = 96;
+      dynamicTextbox[dynamicTextBoxSize] = 96;
       dynamicTextBoxSize++;
-      dynamicTextbox[dynamicTextBoxSize - cursorY] = NEWLINE;
+      dynamicTextbox[dynamicTextBoxSize] = NEWLINE;
     case 1:
       dynamicTextBoxSize++;
-      dynamicTextbox[dynamicTextBoxSize - cursorY] = 97;
+      dynamicTextbox[dynamicTextBoxSize] = 97;
       dynamicTextBoxSize++;
-      dynamicTextbox[dynamicTextBoxSize - cursorY] = NEWLINE;
+      dynamicTextbox[dynamicTextBoxSize] = NEWLINE;
     case 2:
       dynamicTextBoxSize++;
-      dynamicTextbox[dynamicTextBoxSize - cursorY] = 98;
+      dynamicTextbox[dynamicTextBoxSize] = 98;
       dynamicTextBoxSize++;
-      dynamicTextbox[dynamicTextBoxSize - cursorY] = SPACE;
+      dynamicTextbox[dynamicTextBoxSize] = SPACE;
       dynamicTextBoxSize++;
-      dynamicTextbox[dynamicTextBoxSize - cursorY] = 99;
+      dynamicTextbox[dynamicTextBoxSize] = 99;
       dynamicTextBoxSize++;
-      dynamicTextbox[dynamicTextBoxSize - cursorY] = NEWLINE;
+      dynamicTextbox[dynamicTextBoxSize] = NEWLINE;
   }
   dynamicTextbox[0] = dynamicTextBoxSize;
 }

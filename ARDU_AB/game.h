@@ -103,6 +103,11 @@ void stateGameItems()
   checkInputs();
 }
 
+void stateGameEquip()
+{
+  checkInputs();
+}
+
 void stateGameStats()
 {
   drawPlayerStats();

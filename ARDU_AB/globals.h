@@ -18,9 +18,10 @@
 #define STATE_GAME_PLAYING            6
 #define STATE_GAME_INVENTORY          7
 #define STATE_GAME_ITEMS              8
-#define STATE_GAME_STATS              9
-#define STATE_GAME_SAVE               10
-#define STATE_GAME_OVER               11
+#define STATE_GAME_EQUIP              9
+#define STATE_GAME_STATS              10
+#define STATE_GAME_SAVE               11
+#define STATE_GAME_OVER               12
 
 #define GAME_TOP                      0
 #define GAME_BOTTOM                   48

@@ -4,7 +4,7 @@ depending on the shop, selling price is a percentage of the buying price
 
 ### Type of weapons and their characteristics
 
-| **name** 		| **description		 	| **damage** | **buy price** |
+| name 	 		| description		 	| damage	 | 	buy price	 |
 | ---      		| ---				 	| ---        | ---           |
 | sling    		| slings stones		 	| 1		  	 | 10		     |
 | knife    		| slice your enemy	 	| 2		  	 | 20		     |
@@ -17,7 +17,7 @@ depending on the shop, selling price is a percentage of the buying price
 
 ### Type of armory and their characteristics
 
-| **name** 		| **description	| **deflect** | **buy price** |
+| name	 		| description	| deflect	  | buy price 	  |
 | ---      		| ---			| ---         | ---           |
 | wool			|				| 1			  | 10			  |
 | silk			|				| 2			  | 20			  |
@@ -30,7 +30,7 @@ depending on the shop, selling price is a percentage of the buying price
 
 ### Type of magic spells and their characteristics
 
-| **name** 		| **description	| **magic power** | **buy price** |
+| name	 		|  description	| magic power	  | buy price	  |
 | ---      		| ---			| ---        	  | ---           |
 | earth			|				| 1			 	  | 10			  |
 | water			|				| 2				  | 20			  |
@@ -40,7 +40,7 @@ depending on the shop, selling price is a percentage of the buying price
 
 ### Type of extra accessories and their characteristics
 
-| **name** 		| **description	| **magic power** | **buy price** |
+| 	name	 		| 	description	| 	magic power	 | 	buy price	 |
 | ---      		| ---			| ---        	  | ---           |
 | 				|				| 1			 	  | 10			  |
 | 				|				| 2				  | 20			  |

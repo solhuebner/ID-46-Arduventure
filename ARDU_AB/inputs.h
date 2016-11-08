@@ -36,11 +36,11 @@ void checkInputs()
         player.walking = true;
       }
       if (arduboy.justPressed(A_BUTTON)) gameState = STATE_GAME_INVENTORY;
-      else if (arduboy.justPressed(B_BUTTON)) gameState = STATE_MENU_MAIN;
+      else if (arduboy.justPressed(B_BUTTON));
       break;
     case STATE_GAME_INVENTORY:
       if (arduboy.justPressed(UP_BUTTON) && (cursorY > 0)) cursorY--;
-      else if (arduboy.justPressed(DOWN_BUTTON) && (cursorY < 3)) cursorY++;
+      else if (arduboy.justPressed(DOWN_BUTTON) && (cursorY < 4)) cursorY++;
       if (arduboy.justPressed(A_BUTTON)) gameState = STATE_GAME_PLAYING;
       else if (arduboy.justPressed(B_BUTTON)) gameState = STATE_GAME_ITEMS + cursorY;
       break;

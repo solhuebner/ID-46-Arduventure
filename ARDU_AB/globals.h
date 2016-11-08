@@ -19,12 +19,13 @@
 #define STATE_GAME_INVENTORY          7
 #define STATE_GAME_ITEMS              8
 #define STATE_GAME_EQUIP              9
-#define STATE_GAME_WEAPON             10
-#define STATE_GAME_ARMOR              11
-#define STATE_GAME_EXTRA              12
-#define STATE_GAME_STATS              13
-#define STATE_GAME_SAVE               14
-#define STATE_GAME_OVER               15
+#define STATE_GAME_STATS              10
+#define STATE_GAME_SAVE               11
+#define STATE_GAME_END                12
+#define STATE_GAME_WEAPON             13
+#define STATE_GAME_ARMOR              14
+#define STATE_GAME_EXTRA              15
+#define STATE_GAME_OVER               16
 
 #define GAME_TOP                      0
 #define GAME_BOTTOM                   48

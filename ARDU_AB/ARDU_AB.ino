@@ -1,12 +1,12 @@
 /*
   ARDUVENTURE: http://www.team-arg.org/ardu-manual.html
-  
+
   Arduboy version 0.1:  http://www.team-arg.org/ardu-downloads.html
-  
+
   MADE by TEAM a.r.g. : http://www.team-arg.org/more-about.html
-  
+
   2016 - SIEGFRIED CROES - JO3RI
-  
+
   License: MIT : https://opensource.org/licenses/MIT
 */
 
@@ -38,11 +38,12 @@ const FunctionPointer PROGMEM mainGameLoop[] = {
   stateGameInventory,
   stateGameItems,
   stateGameEquip,
+  stateGameStats,
+  stateGameSave,
+  stateGameEnd,
   stateGameWeapon,
   stateGameArmor,
   stateGameExtra,
-  stateGameStats,
-  stateGameSave,
   stateGameOver,
 };
 

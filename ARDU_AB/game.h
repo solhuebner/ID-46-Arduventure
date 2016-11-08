@@ -112,6 +112,26 @@ void stateGameEquip()
   checkInputs();
 }
 
+void stateGameStats()
+{
+  drawPlayerStats();
+  checkInputs();
+}
+
+void stateGameSave()
+{
+  showPlayField();
+  drawRectangle(0, 48, 130, 64, BLACK);
+  drawSentence(5, 6, 50, WHITE, ALIGN_LEFT);
+  drawYesNo ();
+  checkInputs();
+}
+
+void stateGameEnd()
+{
+  gameState = STATE_MENU_MAIN;
+}
+
 void stateGameWeapon()
 {
   showPlayField();
@@ -131,20 +151,6 @@ void stateGameExtra()
   checkInputs();
 }
 
-void stateGameStats()
-{
-  drawPlayerStats();
-  checkInputs();
-}
-
-void stateGameSave()
-{
-  showPlayField();
-  drawRectangle(0, 48, 130, 64, BLACK);
-  drawSentence(5, 6, 50, WHITE, ALIGN_LEFT);
-  drawYesNo ();
-  checkInputs();
-}
 
 void stateGameOver()
 {

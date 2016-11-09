@@ -1,4 +1,4 @@
-# WEAPONS, ARMORY, MAGIC, ITEMS & STUFF
+# WEAPONS, ARMORY, MAGIC, EXTRAS & ITEMS
 
 depending on the shop, selling price is a percentage of the buying price
 
@@ -10,16 +10,17 @@ depending on the shop, selling price is a percentage of the buying price
 | knife    		| slice your enemy	 	| 2		  	 | 20		     |
 | rapier   		| stab your enemy 	 	| 3		  	 | 100		     |
 | sword    		| slay your enemy	 	| 4		  	 | 400		     |
-| claymore 		| cosh your enemey	 	| 5		  	 | 800		     |
-| axe      		| splice your enemy	 	| 6		  	 | 1500		  	 |
-| bow      		| pierce your enemy	 	| 7		  	 | 2000	      	 |
-| crossbow 		| perforate your enemy  | 8		  	 | 4000	      	 |
+| axe      		| splice your enemy	 	| 5		  	 | 800		  	 |
+| lance 		| puncture your enemey	| 6		  	 | 1500		     |
+| spear			| pierce your enemy	 	| 7		  	 | 4000	      	 |
+| bow      		| perforate your enemy	| 8		  	 | 4000	      	 |
+
 
 ### Type of armory and their characteristics
 
 | name	 		| description	| deflect	  | buy price 	  |
 | ---      		| ---			| ---         | ---           |
-| wool			|				| 1			  | 10			  |
+| wool			| keeps you warm| 1			  | 10			  |
 | silk			|				| 2			  | 20			  |
 | linen			|				| 3			  | 30			  |
 | leather		|				| 4			  | 40			  |
@@ -40,13 +41,26 @@ depending on the shop, selling price is a percentage of the buying price
 
 ### Type of extra accessories and their characteristics
 
+| 	name	 		| 	description					| 	power		 | 	buy price	 |
+| ---      			| ---							| ---        	 | ---           |
+| amulet of health	| slowly recovers HP			| 1			 	 | 10			 |
+| amulet of magic	| magic recovery goes quicker	| 2				 | 20			 |
+| amulet of speed	| attacks are faster			| 3				 | 30			 |
+| amulet of luck	| more chance of finding items	| 4				 | 40			 |
+| amulet of gold	| doubles the gold you find		| 5				 | 200			 |
+| amulet of cloak	| enemies miss more often 		| 6				 | 400			 |
+| amulet of flee	| you can escape every fight	| 7				 | 1000		  	 |
+| amulet of rubby	| nothing, but very expensive	| 8				 | 8000		  	 |
+
+### Type of items accessories and their characteristics
+
 | 	name	 		| 	description	| 	magic power	 | 	buy price	 |
-| ---      		| ---			| ---        	  | ---           |
-| 				|				| 1			 	  | 10			  |
-| 				|				| 2				  | 20			  |
-| 				|				| 3				  | 30			  |
-| 				|				| 4				  | 40			  |
-| 				|				| 5				  | 200			  |
-| 				|				| 6				  | 400			  |
-| 				|				| 7				  | 1000		  |
-| 				|				| 8				  | 2000		  |
+| ---      			| ---			| ---        	 | ---           |
+| meat				|				| 1			 	 | 10			 |
+| water 			|				| 2				 | 20			 |
+| fruit				|				| 3				 | 30			 |
+| vegetables		|				| 4				 | 40			 |
+| 					|				| 5				 | 200			 |
+| 					|				| 6				 | 400			 |
+| 					|				| 7				 | 1000		  	 |
+| 					|				| 8				 | 2000		  	 |

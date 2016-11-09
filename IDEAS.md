@@ -31,12 +31,12 @@ depending on the shop, selling price is a percentage of the buying price
 
 ### Type of magic spells and their characteristics
 
-| name	 		|  description	| magic power	  | buy price	  |
+| name	 		|  description	| magic power	  | 			  |
 | ---      		| ---			| ---        	  | ---           |
-| earth			|				| 1			 	  | 10			  |
-| water			|				| 2				  | 20			  |
-| air			|				| 3				  | 30			  |
-| fire			|				| 4				  | 40			  |
+| earth			|				| 			 	  | 			  |
+| water			|				| 				  | 			  |
+| air			|				| 				  | 			  |
+| fire			|				| 				  | 			  |
 
 
 ### Type of extra accessories and their characteristics

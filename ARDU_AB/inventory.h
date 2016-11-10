@@ -9,4 +9,9 @@ void showInventory()
   drawSentence(4, 96, 2, WHITE, ALIGN_LEFT);
 }
 
+void drawWeapons()
+{
+  //if (drawWord(byte wordOfLibrary, byte x, byte y, boolean color, boolean alignment)
+}
+
 #endif

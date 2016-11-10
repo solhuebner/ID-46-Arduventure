@@ -12,9 +12,8 @@ PROGMEM const unsigned char animSeq[] = { 0, 1, 2, 1 };
 struct Player
 {
   int x, y, health, healthTotal, magic, magicTotal, gold, experience, experienceForNextLevel;
-  byte frame, currentMap, direction, level, attack, attackAddition, defense, defenseAddition, speed, speedAddition, weapon, armor, other;
+  byte frame, currentMap, direction, level, attack, attackAddition, defense, defenseAddition, speed, speedAddition, hasWeapon, equipedWeapon, hasArmorType, equipedArmorType, hasAmulet, equipedAmulet;
   unsigned char name[6];
-  byte items[ITEMAMOUNT];
   boolean tags;
   boolean walking;
 };
@@ -37,11 +36,37 @@ void setPlayer()
     5, 0,                                   // attack
     5, 0,                                   // defence
     5, 0,                                   // speed
-    NONE,                                   // weapon
-    NONE,                                   // armor
-    NONE,                                   // other
+    0B00000000,                             // hasWeapon
+    //|||||||└-------------------------------> 0 sling
+    //||||||└--------------------------------> 1 knife
+    //|||||└---------------------------------> 2 rapier
+    //||||└----------------------------------> 3 sword
+    //|||└-----------------------------------> 4 axe
+    //||└------------------------------------> 5 lance
+    //|└-------------------------------------> 6 spear
+    //└--------------------------------------> 7 bow
+    NONE,                                   // equipedWaepon
+    0B00000000,                             // hasArmorType
+    //|||||||└-------------------------------> 0 wool
+    //||||||└--------------------------------> 1 linen
+    //|||||└---------------------------------> 2 leathr
+    //||||└----------------------------------> 3 bone
+    //|||└-----------------------------------> 4 copper
+    //||└------------------------------------> 5 bronze
+    //|└-------------------------------------> 6 iron
+    //└--------------------------------------> 7 steel
+    NONE,                                   // equipedArmorType
+    0B00000000,                             // hasAmulet
+    //|||||||└-------------------------------> 0 health
+    //||||||└--------------------------------> 1 magic
+    //|||||└---------------------------------> 2 speed
+    //||||└----------------------------------> 3 luck
+    //|||└-----------------------------------> 4 gold
+    //||└------------------------------------> 5 cloak
+    //|└-------------------------------------> 6 escape
+    //└--------------------------------------> 7 ruby
+    NONE,                                   // equipedAmulet
     {5, 50, 50, 50, 50, 50},                // name
-    {NONE, NONE, NONE, NONE, NONE, NONE},   // items
     true,
     false,
   };

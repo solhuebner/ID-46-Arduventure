@@ -53,6 +53,7 @@ void checkInputs()
       if (arduboy.justPressed(UP_BUTTON) && (cursorY > 0)) cursorY--;
       else if (arduboy.justPressed(DOWN_BUTTON) && (cursorY < 2)) cursorY++;
       if (arduboy.justPressed(A_BUTTON)) gameState = STATE_GAME_INVENTORY;
+      else if (arduboy.justPressed(B_BUTTON)) gameState = STATE_GAME_WEAPON + cursorY;
       break;
     case STATE_GAME_WEAPON:
       if (arduboy.justPressed(A_BUTTON)) gameState = STATE_GAME_EQUIP;

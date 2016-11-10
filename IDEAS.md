@@ -56,11 +56,11 @@ depending on the shop, selling price is a percentage of the buying price
 
 | 	name	 		| 	description	| 	magic power	 | 	buy price	 |
 | ---      			| ---			| ---        	 | ---           |
-| meat				|				| 1			 	 | 10			 |
-| water 			|				| 2				 | 20			 |
-| fruit				|				| 3				 | 30			 |
-| vegetables		|				| 4				 | 40			 |
+| sausage			|				| 1			 	 | 10			 |
+| cider 			|				| 2				 | 20			 |
+| apple				|				| 3				 | 30			 |
+| broccoli			|				| 4				 | 40			 |
 | absinthe 			|				| 5				 | 200			 |
-| gemstone			|				| 6				 | 400			 |
+| emarald			|				| 6				 | 400			 |
 | crystal			|				| 7				 | 1000		  	 |
 | diamond			|				| 8				 | 2000		  	 |

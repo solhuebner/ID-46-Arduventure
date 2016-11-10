@@ -179,162 +179,200 @@ PROGMEM const unsigned char library[] =
   // place 56 : full
   1,
   56,
+
+  
   // PLACE 57 : CAN
   3,
   3, 1, 14,
   // PLACE 58 : NOT
   3,
   14, 15, 20,
-  // PLACE 59 : ESCAPE
-  6,
-  5, 19, 3, 1, 16, 5,
-  // PLACE 60 : GOT
+  // PLACE 59 : GOT
   3,
   7, 15, 20,
-  // PLACE 61 : AWAY
+  // PLACE 60 : AWAY
   4,
   1, 23, 1, 25,
-  // PLACE 62 : SAFELY
+  // PLACE 61 : SAFELY
   6,
   19, 1, 6, 5, 12, 25,
-  // PLACE 63 : YOU
+  // PLACE 62 : YOU
   3,
   25, 15, 21,
-  // PLACE 64 : WIN
+  // PLACE 63 : WIN
   3,
   23, 9, 14,
-  // PLACE 65 : SLEEP
+  // PLACE 64 : SLEEP
   5,
   19, 12, 5, 5, 16,
-  // PLACE 66 : RESTORE
+  // PLACE 65 : RESTORE
   7,
   18, 5, 19, 20, 15, 18, 5,
-  // PLACE 67 : ALL
+  // PLACE 66 : ALL
   3,
   1, 12, 12,
-  // PLACE 68 : HEALTH
-  6,
-  8, 5, 1, 12, 20, 8,
-  // PLACE 69 : SAVE
+  // PLACE 67 : SAVE
   4,
   19, 1, 22, 5,
-  // PLACE 70 : PROGRESS
+  // PLACE 68 : PROGRESS
   8,
   16, 18, 15, 7, 18, 5, 19, 19,
-  // PLACE 71 : USE
+  // PLACE 69 : USE
   3,
   21, 19, 5,
-  // PLACE 72 : EQUIP
+  // PLACE 70 : EQUIP
   5,
   5, 17, 21, 9, 16,
-  // PLACE 73 : UN
+  // PLACE 71 : UN
   2,
   21, 14,
-  // PLACE 74 : LEVEL
+  // PLACE 72 : LEVEL
   5,
   12, 5, 22, 5, 12,
-  // PLACE 75 : UP
+  // PLACE 73 : UP
   2,
   21, 16,
-  // PLACE 76 : THE
+  // PLACE 74 : THE
   3,
   20, 8, 5,
-  // PLACE 77 : BRIDGE
+  // PLACE 75 : BRIDGE
   6,
   2, 18, 9, 4, 7, 5,
-  // PLACE 78 : IS
+  // PLACE 76 : IS
   2,
   9, 19,
-  // PLACE 79 : BROKEN
+  // PLACE 77 : BROKEN
   6,
   2, 18, 15 , 11, 5, 14,
-  // PLACE 80 : ENDLESS
-  7,
-  5, 14, 4, 12, 5, 19, 19,
-  // PLACE 81 : WOODS
+  // PLACE 78 : LESS
+  4,
+  12, 5, 19, 19,
+  // PLACE 79 : WOODS
   5,
   23, 15, 15, 4, 19,
-  // PLACE 82 : AHEAD
+  // PLACE 80 : AHEAD
   5,
   1, 8, 5, 1, 4,
-  // PLACE 83 : ITEMS
+  // PLACE 81 : ITEMS
   5,
   9, 20, 5, 13, 19,
-  // PLACE 84 : STATS
+  // PLACE 82 : STATS
   5,
   19, 20, 1, 20, 19,
-  // PLACE 85 : GOLD
-  4,
-  7, 15, 12, 4,
-  // PLACE 86 : HP
+  // PLACE 83 : HP
   2,
   8, 16,
-  // PLACE 87 : MP
+  // PLACE 84 : MP
   2,
   13, 16,
-  // PLACE 88 : EXP
+  // PLACE 85 : EXP
   3,
   5, 24, 16,
-  // PLACE 89 : LV
+  // PLACE 86 : LV
   2,
   12, 22,
-  // PALCE 90 : ATK
+  // PALCE 87 : ATK
   3,
   1, 20, 11,
-  // PLACE 91 : DEF
+  // PLACE 88 : DEF
   3,
   4, 5, 6,
-  // PLACE 92 : SPD
+  // PLACE 89 : SPD
   3,
   19, 16, 4,
-  // PLACE 93 : YES
+  // PLACE 90 : YES
   3,
   25, 5, 19,
-  // PLACE 94 : NO
+  // PLACE 91 : NO
   2,
   14, 15,
-  // PLACE 95 : OF
+  // PLACE 92 : OF
   2,
   15, 6,
-  // PLACE 96 : WEAPON
+  // PLACE 93 : WEAPON
   6,
   23, 5, 1, 16, 15, 14,
-  // PLACE 97 : ARMOR
+  // PLACE 94 : ARMOR
   5,
   1, 18, 13, 15, 18,
-  // PLACE 98 : EXTRA
-  5,
-  5, 24, 20, 18, 1,
-  // PLACE 99 : APPLE
-  5,
-  1, 16, 16, 12, 5,
-  // PLACE 100 : POTION
+  // PLACE 95 : AMULET
   6,
-  16, 15, 20, 9, 15, 14,
-  // PLACE 101 : HEALING
-  7,
-  8, 5, 1, 12, 9, 14, 7,
-  // PLACE 102 : STONE
+  1, 13, 21, 12, 5, 20,
+  // PLACE 96 : SLING
   5,
-  19, 20, 15, 14, 5,
-  // PLACE 103 : KNIFE
+  19, 12, 9, 14, 7,
+  // PLACE 97 : KNIFE
   5,
   11, 14, 9, 6, 5,
-  // PLACE 104 : DAGGER
+  // PLACE 98 : RAPIER
   6,
-  4, 1, 7, 7, 5, 18,
-  // PLACE 105 : SWORD
+  18, 1, 16, 9, 5, 18,
+  // PLACE 99 : SWORD
   5,
   19, 23, 15, 18, 4,
-  // PLACE 106 : WOODEN
+  // PLACE 100 : AXE
+  3,
+  1, 24, 5,
+  // PLACE 101 : LANCE
+  5,
+  12, 1, 14, 3, 5,
+  // PLACE 102 : SPEAR
+  5,
+  19, 16, 5, 1, 18,
+  // PLACE 103 : BOW
+  3,
+  2, 15, 23,
+  // PLACE 104 : WOOL
+  4,
+  23, 15, 15, 12,
+  // PLACE 105 : LINEN
+  5,
+  12, 9, 14, 5, 14,
+  // PLACE 106 : LEATHR
   6,
-  23, 15, 15, 4, 5, 14,
-  // PLACE 107 : BRONZE
+  12, 5, 1, 20, 8, 18,
+  // PLACE 107 : BONE
+  4,
+  2, 15, 14, 5,
+  // PLACE 108 : COPPER
+  6,
+  3, 15, 16, 16, 5, 18,
+  // PLACE 109 : BRONZE
   6,
   2, 18, 15, 14, 26, 5,
-  // PLACE 108 : IRON
+  // PLACE 110 : IRON
   4,
   9, 18, 15, 14,
+  // PLACE 111 : STEEL
+  5,
+  19, 20, 5, 5, 12,
+  // PLACE 112 : HEALTH
+  6,
+  8, 5, 1, 12, 20, 8,
+  // PLACE 113 : MAGIC
+  5,
+  13, 1, 7, 9, 3,
+  // PLACE 114 : SPEED
+  5,
+  19, 16, 5, 5, 4,
+  // PLACE 115 : LUCK
+  4,
+  12, 21, 3, 11,
+  // PLACE 116 : GOLD
+  4,
+  7, 15, 12, 4,
+  // PLACE 117 : CLOAK
+  5,
+  3, 12, 15, 1, 11,
+  // PLACE 118 : ESCAPE
+  6,
+  5, 19, 3, 1, 16, 5,
+  // PLACE 119 : RUBY
+  4,
+  18, 21, 2, 25,
+
+
+
 
 };
 
@@ -350,30 +388,30 @@ PROGMEM const unsigned char sentences[] =
   // PLACE  2 : SND   ON
   5,
   4, SPACE, SPACE, SPACE, 6,
-  // PLACE  3 : WHAT IS YOUR NAME
-  3,
-  7, SPACE, 8,
+  // PLACE  3 : YOUR NAME ?
+  5,
+  7, SPACE, 8, SPACE, 40,
   // PLACE  4 : ITEMS EQUIP STATS SAVE END
   13,
-  83, NEWLINE, NEWLINE, 72, NEWLINE, NEWLINE, 84, NEWLINE, NEWLINE, 69, NEWLINE, NEWLINE, 9,
+  81, NEWLINE, NEWLINE, 70, NEWLINE, NEWLINE, 82, NEWLINE, NEWLINE, 67, NEWLINE, NEWLINE, 9,
   // PLACE  5 : SAVE PROGRESS ?
   5,
   69, SPACE, 70, SPACE, 40,
-  // PLACE  6 : GOLD: € MV: HP: EXP TO LEVEL UP:
+  // PLACE  6 : GOLD: € MP: HP: EXP TO LV UP:
   26,
-  85, 42, 49, NEWLINE, NEWLINE, 86, SPACE, SPACE, 42, NEWLINE, NEWLINE, 87, SPACE, SPACE, 42, NEWLINE, NEWLINE, NEWLINE, 87, SPACE, 11, SPACE, 89, SPACE, 75, 42,
+  116, 42, 49, NEWLINE, NEWLINE, 84, SPACE, SPACE, 42, NEWLINE, NEWLINE, 83, SPACE, SPACE, 42, NEWLINE, NEWLINE, NEWLINE, 85, SPACE, 11, SPACE, 86, SPACE, 73, 42,
   // PLACE  7 : LV: ATK: DEF: SPD:
   13,
-  89, SPACE, 42, NEWLINE, NEWLINE, 90, 42, NEWLINE, 91, 42, NEWLINE, 92, 42,
+  86, SPACE, 42, NEWLINE, NEWLINE, 87, 42, NEWLINE, 88, 42, NEWLINE, 89, 42,
   // PLACE  8 : STATS OF
   3,
-  84, SPACE, 95,
+  82, SPACE, 92,
   // PLACE  9 : YES NO
   3,
-  93, NEWLINE, 94,
-  // PLACE 10 : WEAPON ARMOR EXTRA
+  90, NEWLINE, 91,
+  // PLACE 10 : WEAPON ARMOR AMULET
   7,
-  96, NEWLINE, NEWLINE, 97, NEWLINE, NEWLINE, 98,
+  93, NEWLINE, NEWLINE, 94, NEWLINE, NEWLINE, 95,
 
 };
 

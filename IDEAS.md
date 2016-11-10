@@ -21,9 +21,9 @@ depending on the shop, selling price is a percentage of the buying price
 | name	 		| description		| deflect	  | buy price 	  |
 | ---      		| ---				| ---         | ---           |
 | wool			| keeps you warm	| 1			  | 10			  |
-| silk			|					| 2			  | 20			  |
-| linen			|					| 3			  | 30			  |
-| leather		|					| 4			  | 40			  |
+| linen			|					| 2			  | 20			  |
+| leathr		|					| 3			  | 30			  |
+| bone			|					| 4			  | 40			  |
 | copper		|					| 5			  | 200			  |
 | bronze		|					| 6			  | 400			  |
 | iron			|					| 7			  | 1000		  |
@@ -49,7 +49,7 @@ depending on the shop, selling price is a percentage of the buying price
 | amulet of luck	| more chance of finding items	| 4				 | 40			 |
 | amulet of gold	| doubles the gold you find		| 5				 | 200			 |
 | amulet of cloak	| enemies miss more often 		| 6				 | 400			 |
-| amulet of flee	| you can escape every fight	| 7				 | 1000		  	 |
+| amulet of escape	| you can escape every fight	| 7				 | 1000		  	 |
 | amulet of ruby	| nothing, but very expensive	| 8				 | 8000		  	 |
 
 ### Type of items accessories and their characteristics
@@ -62,5 +62,5 @@ depending on the shop, selling price is a percentage of the buying price
 | vegetables		|				| 4				 | 40			 |
 | absinthe 			|				| 5				 | 200			 |
 | gemstone			|				| 6				 | 400			 |
-| ruby				|				| 7				 | 1000		  	 |
+| crystal			|				| 7				 | 1000		  	 |
 | diamond			|				| 8				 | 2000		  	 |

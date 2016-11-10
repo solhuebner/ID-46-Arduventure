@@ -72,6 +72,13 @@ void drawRectangle(byte startX, byte startY, byte endX, byte endY, byte color )
   }
 }
 
+byte bitCount(byte toCount)
+{
+  byte amountOfBits = 0;
+  for (byte i=0; i<8; i++) amountOfBits += bitRead(toCount, i);
+  return amountOfBits;
+}
+
 void saveGame()
 {
 

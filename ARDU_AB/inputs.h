@@ -55,15 +55,23 @@ void checkInputs()
       if (arduboy.justPressed(A_BUTTON)) gameState = STATE_GAME_INVENTORY;
       else if (arduboy.justPressed(B_BUTTON)) gameState = STATE_GAME_WEAPON + cursorY;
       break;
+
     case STATE_GAME_WEAPON:
+      if (arduboy.justPressed(UP_BUTTON) && (cursorY > 0)) cursorY--;
+      else if (arduboy.justPressed(DOWN_BUTTON) && (cursorY < bitCount(player.hasWeapon) - 1)) cursorY++;
       if (arduboy.justPressed(A_BUTTON)) gameState = STATE_GAME_EQUIP;
       break;
     case STATE_GAME_ARMOR:
+      if (arduboy.justPressed(UP_BUTTON) && (cursorY > 0)) cursorY--;
+      else if (arduboy.justPressed(DOWN_BUTTON) && (cursorY < bitCount(player.hasArmorType) - 1)) cursorY++;
       if (arduboy.justPressed(A_BUTTON)) gameState = STATE_GAME_EQUIP;
       break;
     case STATE_GAME_AMULET:
+      if (arduboy.justPressed(UP_BUTTON) && (cursorY > 0)) cursorY--;
+      else if (arduboy.justPressed(DOWN_BUTTON) && (cursorY < bitCount(player.hasAmulet) - 1)) cursorY++;
       if (arduboy.justPressed(A_BUTTON)) gameState = STATE_GAME_EQUIP;
       break;
+
     case STATE_GAME_STATS:
       if (arduboy.justPressed(A_BUTTON)) gameState = STATE_GAME_INVENTORY;
       else if (arduboy.justPressed(B_BUTTON)) gameState = STATE_GAME_PLAYING;

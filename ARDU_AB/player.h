@@ -36,7 +36,7 @@ void setPlayer()
     5, 0,                                   // attack
     5, 0,                                   // defence
     5, 0,                                   // speed
-    0B11111111,                             // hasWeapon
+    0B10111111,                             // hasWeapon
     0B00001000,                             // equipedWaepon
     //|||||||└-------------------------------> 0 sling
     //||||||└--------------------------------> 1 knife

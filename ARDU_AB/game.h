@@ -136,18 +136,21 @@ void stateGameWeapon()
 {
   showPlayField();
   drawRectangle(83, 0, 130, 64, BLACK);
+  drawWeapons();
   checkInputs();
 }
 void stateGameArmor()
 {
   showPlayField();
   drawRectangle(83, 0, 130, 64, BLACK);
+  drawArmor();
   checkInputs();
 }
-void stateGameExtra()
+void stateGameAmulet()
 {
   showPlayField();
   drawRectangle(83, 0, 130, 64, BLACK);
+  drawAmulet();
   checkInputs();
 }
 

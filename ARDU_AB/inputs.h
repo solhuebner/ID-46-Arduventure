@@ -61,7 +61,7 @@ void checkInputs()
     case STATE_GAME_ARMOR:
       if (arduboy.justPressed(A_BUTTON)) gameState = STATE_GAME_EQUIP;
       break;
-    case STATE_GAME_EXTRA:
+    case STATE_GAME_AMULET:
       if (arduboy.justPressed(A_BUTTON)) gameState = STATE_GAME_EQUIP;
       break;
     case STATE_GAME_STATS:

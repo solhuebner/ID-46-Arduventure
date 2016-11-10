@@ -24,7 +24,7 @@
 #define STATE_GAME_END                12
 #define STATE_GAME_WEAPON             13
 #define STATE_GAME_ARMOR              14
-#define STATE_GAME_EXTRA              15
+#define STATE_GAME_AMULET             15
 #define STATE_GAME_OVER               16
 
 #define GAME_TOP                      0

@@ -29,15 +29,14 @@ depending on the shop, selling price is a percentage of the buying price
 | iron			|					| 7			  | 1000		  |
 | steel			|					| 8			  | 2000		  |
 
-### Type of magic spells and their characteristics
+### Magic and Elements
 
-| name	 		|  description	| magic power	  | 			  |
-| ---      		| ---			| ---        	  | ---           |
-| earth			|				| 			 	  | 			  |
-| water			|				| 				  | 			  |
-| air			|				| 				  | 			  |
-| fire			|				| 				  | 			  |
-
+| type	 	  	| strong against	  | weak against    | magic |
+| ---      		| ---			          | ---        	    | --- |
+| fire			  | leaf           		| water           | fire storm |
+| water 			|	fire			        | leaf            | tidal wave |
+| leaf				|	water			        | fire            | razor leaves |
+| normal      | none              | none            | heal |
 
 ### Type of extra accessories and their characteristics
 
@@ -56,11 +55,20 @@ depending on the shop, selling price is a percentage of the buying price
 
 | 	name	 		| 	description	| 	magic power	 | 	buy price	 |
 | ---      			| ---			| ---        	 | ---           |
-| sausage			|				| 1			 	 | 10			 |
+| apple			|				| 1			 	 | 10			 |
 | cider 			|				| 2				 | 20			 |
-| apple				|				| 3				 | 30			 |
-| broccoli			|				| 4				 | 40			 |
-| absinthe 			|				| 5				 | 200			 |
-| emarald			|				| 6				 | 400			 |
-| crystal			|				| 7				 | 1000		  	 |
+| anise				|				| 3				 | 30			 |
+| absinthe			|				| 4				 | 40			 |
+| ruby 			|				| 5				 | 200			 |
+| sapphire			|				| 6				 | 400			 |
+| emerald			|				| 7				 | 1000		  	 |
 | diamond			|				| 8				 | 2000		  	 |
+
+### Locations
+
+| 	name	 		| 	monster types	| 	boss    |
+| ---      		| ---			        | ---       |
+| grasslands (village)  | normal          | none      |
+| forest 			|	normal, leaf    | golem     |
+| lakeside		|	normal, water   | turle     |
+| mountains   | normal, fire    | dragon    |

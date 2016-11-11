@@ -89,6 +89,8 @@ PROGMEM const unsigned char library[] =
   // PLACE 26 : SELL
   4,
   19, 5, 12, 12,
+
+
   // PLACE 27 : CHARACTER 0
   1,
   27,
@@ -180,7 +182,7 @@ PROGMEM const unsigned char library[] =
   1,
   56,
 
-  
+
   // PLACE 57 : CAN
   3,
   3, 1, 14,
@@ -223,9 +225,9 @@ PROGMEM const unsigned char library[] =
   // PLACE 70 : EQUIP
   5,
   5, 17, 21, 9, 16,
-  // PLACE 71 : UN
-  2,
-  21, 14,
+  // PLACE 71 : UNEQUIP
+  7,
+  21, 14, 5, 17, 21, 9, 16,
   // PLACE 72 : LEVEL
   5,
   12, 5, 22, 5, 12,
@@ -253,9 +255,9 @@ PROGMEM const unsigned char library[] =
   // PLACE 80 : AHEAD
   5,
   1, 8, 5, 1, 4,
-  // PLACE 81 : ITEMS
-  5,
-  9, 20, 5, 13, 19,
+  // PLACE 81 : EQUIPPED
+  8,
+  5, 17, 21, 9, 16, 16, 5, 4,
   // PLACE 82 : STATS
   5,
   19, 20, 1, 20, 19,
@@ -289,85 +291,93 @@ PROGMEM const unsigned char library[] =
   // PLACE 92 : OF
   2,
   15, 6,
-  // PLACE 93 : WEAPON
+
+
+  // PLACE 93 : ITEMS
+  5,
+  9, 20, 5, 13, 19,
+
+
+
+  // PLACE 94 : WEAPON
   6,
   23, 5, 1, 16, 15, 14,
-  // PLACE 94 : ARMOR
+  // PLACE 95 : ARMOR
   5,
   1, 18, 13, 15, 18,
-  // PLACE 95 : AMULET
+  // PLACE 96 : AMULET
   6,
   1, 13, 21, 12, 5, 20,
-  // PLACE 96 : SLING
+  // PLACE 97 : SLING
   5,
   19, 12, 9, 14, 7,
-  // PLACE 97 : KNIFE
+  // PLACE 98 : KNIFE
   5,
   11, 14, 9, 6, 5,
-  // PLACE 98 : RAPIER
+  // PLACE 99 : RAPIER
   6,
   18, 1, 16, 9, 5, 18,
-  // PLACE 99 : SWORD
+  // PLACE 100 : SWORD
   5,
   19, 23, 15, 18, 4,
-  // PLACE 100 : AXE
+  // PLACE 101 : AXE
   3,
   1, 24, 5,
-  // PLACE 101 : LANCE
+  // PLACE 102 : LANCE
   5,
   12, 1, 14, 3, 5,
-  // PLACE 102 : SPEAR
+  // PLACE 103 : SPEAR
   5,
   19, 16, 5, 1, 18,
-  // PLACE 103 : BOW
+  // PLACE 104 : BOW
   3,
   2, 15, 23,
-  // PLACE 104 : WOOL
+  // PLACE 105 : WOOL
   4,
   23, 15, 15, 12,
-  // PLACE 105 : LINEN
+  // PLACE 106 : LINEN
   5,
   12, 9, 14, 5, 14,
-  // PLACE 106 : LEATHR
-  6,
-  12, 5, 1, 20, 8, 18,
-  // PLACE 107 : BONE
+  // PLACE 107 : LEATHER
+  7,
+  12, 5, 1, 20, 8, 5, 18,
+  // PLACE 108 : BONE
   4,
   2, 15, 14, 5,
-  // PLACE 108 : COPPER
+  // PLACE 109 : COPPER
   6,
   3, 15, 16, 16, 5, 18,
-  // PLACE 109 : BRONZE
+  // PLACE 110 : BRONZE
   6,
   2, 18, 15, 14, 26, 5,
-  // PLACE 110 : IRON
+  // PLACE 111 : IRON
   4,
   9, 18, 15, 14,
-  // PLACE 111 : STEEL
+  // PLACE 112 : STEEL
   5,
   19, 20, 5, 5, 12,
-  // PLACE 112 : HEALTH
+  // PLACE 113 : HEALTH
   6,
   8, 5, 1, 12, 20, 8,
-  // PLACE 113 : MAGIC
+  // PLACE 114 : MAGIC
   5,
   13, 1, 7, 9, 3,
-  // PLACE 114 : SPEED
+  // PLACE 115 : SPEED
   5,
   19, 16, 5, 5, 4,
-  // PLACE 115 : LUCK
+  // PLACE 116 : LUCK
   4,
   12, 21, 3, 11,
-  // PLACE 116 : GOLD
+  // PLACE 117 : GOLD
   4,
   7, 15, 12, 4,
-  // PLACE 117 : CLOAK
+  // PLACE 118 : CLOAK
   5,
   3, 12, 15, 1, 11,
-  // PLACE 118 : ESCAPE
+  // PLACE 119 : ESCAPE
   6,
   5, 19, 3, 1, 16, 5,
-  // PLACE 119 : RUBY
+  // PLACE 120 : RUBY
   4,
   18, 21, 2, 25,
 
@@ -391,9 +401,11 @@ PROGMEM const unsigned char sentences[] =
   // PLACE  3 : YOUR NAME ?
   5,
   7, SPACE, 8, SPACE, 40,
+  
   // PLACE  4 : ITEMS EQUIP STATS SAVE END
   13,
-  81, NEWLINE, NEWLINE, 70, NEWLINE, NEWLINE, 82, NEWLINE, NEWLINE, 67, NEWLINE, NEWLINE, 9,
+  93, NEWLINE, NEWLINE, 70, NEWLINE, NEWLINE, 82, NEWLINE, NEWLINE, 67, NEWLINE, NEWLINE, 9,
+  
   // PLACE  5 : SAVE PROGRESS ?
   5,
   69, SPACE, 70, SPACE, 40,
@@ -411,7 +423,7 @@ PROGMEM const unsigned char sentences[] =
   90, NEWLINE, 91,
   // PLACE 10 : WEAPON ARMOR AMULET
   7,
-  93, NEWLINE, NEWLINE, 94, NEWLINE, NEWLINE, 95,
+  94, NEWLINE, NEWLINE, 95, NEWLINE, NEWLINE, 96,
 
 };
 

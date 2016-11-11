@@ -59,6 +59,8 @@ void loop() {
   arduboy.poll();
   arduboy.clearDisplay();
   ((FunctionPointer) pgm_read_word (&mainGameLoop[gameState]))();
+  if (question) drawQuestion();
+  if (yesNo) drawYesNo();
   arduboy.display();
 }
 

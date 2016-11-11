@@ -94,15 +94,6 @@ void stateGameInventory()
   checkInputs();
 };
 
-void stateGameItems()
-{
-  getItems();
-  drawWord(83, 6, 2, WHITE, ALIGN_LEFT);
-  drawRectangle(0, 10, 130, 48, WHITE);
-  drawSentenceRam(dynamicTextbox, 6, 14, BLACK, ALIGN_LEFT);
-  checkInputs();
-}
-
 void stateGameEquip()
 {
   showPlayField();
@@ -132,24 +123,33 @@ void stateGameEnd()
   gameState = STATE_MENU_MAIN;
 }
 
+
+void stateGameItems()
+{
+  getItems();
+  drawWord(83, 8, 2, WHITE, ALIGN_LEFT);
+  drawRectangle(0, 10, 130, 48, WHITE);
+  drawSentenceRam(dynamicTextbox, 8, 14, BLACK, ALIGN_LEFT);
+  checkInputs();
+}
 void stateGameWeapon()
 {
-  showPlayField();
-  drawRectangle(83, 0, 130, 64, BLACK);
+  drawWord(93, 8, 2, WHITE, ALIGN_LEFT);
+  drawRectangle(0, 10, 130, 48, WHITE);
   drawWeapons();
   checkInputs();
 }
 void stateGameArmor()
 {
-  showPlayField();
-  drawRectangle(83, 0, 130, 64, BLACK);
+  drawWord(94, 8, 2, WHITE, ALIGN_LEFT);
+  drawRectangle(0, 10, 130, 48, WHITE);
   drawArmor();
   checkInputs();
 }
 void stateGameAmulet()
 {
-  showPlayField();
-  drawRectangle(83, 0, 130, 64, BLACK);
+  drawWord(95, 8, 2, WHITE, ALIGN_LEFT);
+  drawRectangle(0, 10, 130, 48, WHITE);
   drawAmulet();
   checkInputs();
 }

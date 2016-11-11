@@ -14,7 +14,6 @@
 
 void getItems()
 {
-  Serial.println (cursorY);
   byte dynamicTextBoxSize = 0;
   switch (cursorY)
   {
@@ -39,6 +38,11 @@ void getItems()
       dynamicTextbox[dynamicTextBoxSize] = NEWLINE;
   }
   dynamicTextbox[0] = dynamicTextBoxSize;
+}
+
+void drawItems()
+{
+  
 }
 
 

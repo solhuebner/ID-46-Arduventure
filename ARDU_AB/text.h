@@ -113,13 +113,20 @@ void drawNumbersRam(int number, byte x, byte y, boolean color, boolean alignment
 void clearDynamicTextbox()
 {
   dynamicTextbox[0] = 0;
-  //memset (dynamicTextbox,0,sizeof(dynamicTextbox));
-  /*
-    for(int i = 0; i < 44; i++)
-    {
-    dynamicTextbox[i] = NONE;
-    }
-  */
+}
+
+void drawQuestion()
+{
+  
+}
+
+void drawYesNo ()
+{
+  drawRectangle(95, 34, 130, 48, BLACK);
+  drawSentence(9, 106, 36, WHITE, ALIGN_LEFT);
+  if (arduboy.justPressed(UP_BUTTON)) cursorY = 0;
+  else if (arduboy.justPressed(DOWN_BUTTON)) cursorY = 1;
+  sprites.drawSelfMasked( 98, 36 + (6 * cursorY), font, 44);
 }
 
 #endif

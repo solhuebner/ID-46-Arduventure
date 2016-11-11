@@ -54,6 +54,8 @@ byte globalCounter = 0;
 byte currentLetter = 0;
 byte cursorX = 0;
 byte cursorY = 0;
+boolean question = false;
+boolean yesNo = false;
 
 
 void drawRectangle(byte startX, byte startY, byte endX, byte endY, byte color )
@@ -78,6 +80,7 @@ byte bitCount(byte toCount)
   for (byte i=0; i<8; i++) amountOfBits += bitRead(toCount, i);
   return amountOfBits;
 }
+
 
 void saveGame()
 {

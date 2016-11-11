@@ -12,7 +12,7 @@ PROGMEM const unsigned char animSeq[] = { 0, 1, 2, 1 };
 struct Player
 {
   int x, y, health, healthTotal, magic, magicTotal, gold, experience, experienceForNextLevel;
-  byte frame, currentMap, direction, level, attack, attackAddition, defense, defenseAddition, speed, speedAddition, hasWeapon, equipedWeapon, hasArmorType, equipedArmorType, hasAmulet, equipedAmulet;
+  byte frame, currentMap, direction, level, attack, attackAddition, defense, defenseAddition, speed, speedAddition, hasItem, hasWeapon, equipedWeapon, hasArmorType, equipedArmorType, hasAmulet, equipedAmulet;
   unsigned char name[6];
   boolean tags;
   boolean walking;
@@ -36,7 +36,18 @@ void setPlayer()
     5, 0,                                   // attack
     5, 0,                                   // defence
     5, 0,                                   // speed
-    0B10111111,                             // hasWeapon
+    
+    0B11111111,                             // hasItem
+    //|||||||└-------------------------------> 0 apple
+    //||||||└--------------------------------> 1 cider
+    //|||||└---------------------------------> 2 anise
+    //||||└----------------------------------> 3 absinthe
+    //|||└-----------------------------------> 4 ruby
+    //||└------------------------------------> 5 sapphire
+    //|└-------------------------------------> 6 emerald
+    //└--------------------------------------> 7 diamond
+
+    0B11111111,                             // hasWeapon
     0B00001000,                             // equipedWaepon
     //|||||||└-------------------------------> 0 sling
     //||||||└--------------------------------> 1 knife

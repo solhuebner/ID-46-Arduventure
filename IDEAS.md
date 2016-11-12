@@ -22,7 +22,7 @@ depending on the shop, selling price is a percentage of the buying price
 | ---      		| ---				| ---         | ---           |
 | wool			| keeps you warm	| 1			  | 10			  |
 | linen			|					| 2			  | 20			  |
-| leathr		|					| 3			  | 30			  |
+| leather		|					| 3			  | 30			  |
 | bone			|					| 4			  | 40			  |
 | copper		|					| 5			  | 200			  |
 | bronze		|					| 6			  | 400			  |
@@ -31,12 +31,12 @@ depending on the shop, selling price is a percentage of the buying price
 
 ### Magic and Elements
 
-| type	 	  	| strong against	  | weak against    | magic |
-| ---      		| ---			          | ---        	    | --- |
-| fire			  | leaf           		| water           | fire storm |
-| water 			|	fire			        | leaf            | tidal wave |
-| leaf				|	water			        | fire            | razor leaves |
-| normal      | none              | none            | heal |
+| type	 	  	| strong against	| weak against    | magic 			|
+| ---      		| ---			    | ---        	  | --- 			|
+| fire			| leaf           	| water           | fire storm 		|
+| water 		| fire				| leaf            | tidal wave 		|
+| leaf			| water				| fire            | razor leaves 	|
+| normal      	| none              | none            | heal 			|
 
 ### Type of extra accessories and their characteristics
 
@@ -55,20 +55,20 @@ depending on the shop, selling price is a percentage of the buying price
 
 | 	name	 		| 	description	| 	magic power	 | 	buy price	 |
 | ---      			| ---			| ---        	 | ---           |
-| apple			|				| 1			 	 | 10			 |
+| apple				|				| 1			 	 | 10			 |
 | cider 			|				| 2				 | 20			 |
 | anise				|				| 3				 | 30			 |
 | absinthe			|				| 4				 | 40			 |
-| ruby 			|				| 5				 | 200			 |
+| ruby 				|				| 5				 | 200			 |
 | sapphire			|				| 6				 | 400			 |
 | emerald			|				| 7				 | 1000		  	 |
 | diamond			|				| 8				 | 2000		  	 |
 
 ### Locations
 
-| 	name	 		| 	monster types	| 	boss    |
-| ---      		| ---			        | ---       |
-| grasslands (village)  | normal          | none      |
-| forest 			|	normal, leaf    | golem     |
-| lakeside		|	normal, water   | turle     |
-| mountains   | normal, fire    | dragon    |
+| 	name	 			| 	monster types	| 	boss    |
+| ---      				| ---			    | ---       |
+| grasslands (village)  | normal          	| none      |
+| forest 				| normal, leaf    	| golem     |
+| lakeside				| normal, water   	| turle     |
+| mountains   			| normal, fire    	| dragon    |

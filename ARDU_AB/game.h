@@ -123,37 +123,30 @@ void stateGameEnd()
   gameState = STATE_MENU_MAIN;
 }
 
-
-void stateGameItems()
+void showSubMenuStuff()
 {
-  getItems();
-  drawWord(83, 8, 2, WHITE, ALIGN_LEFT);
-  drawRectangle(0, 10, 130, 48, WHITE);
-  drawSentenceRam(dynamicTextbox, 8, 14, BLACK, ALIGN_LEFT);
+  arduboy.fillScreen(1);
+  byte dynamicTextBoxSize = 0;
+  for (byte i = 0; i < 8; i++)
+  {
+    if (bitRead (player.hasStuff[(2*(gameState - 12))], i))
+    {
+      dynamicTextBoxSize++;
+      dynamicTextbox[dynamicTextBoxSize] = 97 + (8 * (gameState - 12)) + i;
+      dynamicTextBoxSize++;
+      dynamicTextbox[dynamicTextBoxSize] = NEWLINE;
+    }
+    if (bitRead(player.hasStuff[(2*(gameState-12)) + 1], i)) drawWord(81, 68, 3 + (3 * dynamicTextBoxSize), BLACK, ALIGN_LEFT);
+  }
+  dynamicTextbox[0] = dynamicTextBoxSize;
+  
+  drawSentenceRam(dynamicTextbox, 12, 9, BLACK, ALIGN_LEFT);
+  sprites.drawErase(5, 9 + (6 * cursorY), font, 44);
+  drawRectangle(0, 0, 130, 8, BLACK);
+  drawRectangle(0, 45, 130, 64, BLACK);
+  drawWord(93 + (gameState - 12), 6, 0, WHITE, ALIGN_LEFT);
   checkInputs();
 }
-void stateGameWeapon()
-{
-  drawWord(93, 8, 2, WHITE, ALIGN_LEFT);
-  drawRectangle(0, 10, 130, 48, WHITE);
-  drawWeapons();
-  checkInputs();
-}
-void stateGameArmor()
-{
-  drawWord(94, 8, 2, WHITE, ALIGN_LEFT);
-  drawRectangle(0, 10, 130, 48, WHITE);
-  drawArmor();
-  checkInputs();
-}
-void stateGameAmulet()
-{
-  drawWord(95, 8, 2, WHITE, ALIGN_LEFT);
-  drawRectangle(0, 10, 130, 48, WHITE);
-  drawAmulet();
-  checkInputs();
-}
-
 
 void stateGameOver()
 {

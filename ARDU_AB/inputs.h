@@ -53,38 +53,23 @@ void checkInputs()
 
     case STATE_GAME_ITEMS:
       if (arduboy.justPressed(UP_BUTTON) && (cursorY > 0)) cursorY--;
-      else if (arduboy.justPressed(DOWN_BUTTON) && (cursorY < bitCount(player.hasItem) - 3)) cursorY++;
+      else if (arduboy.justPressed(DOWN_BUTTON) && (cursorY < bitCount(player.hasStuff[0]) - 1)) cursorY++;
       if (arduboy.justPressed(A_BUTTON)) gameState = STATE_GAME_INVENTORY;
       break;
     case STATE_GAME_WEAPON:
       if (arduboy.justPressed(UP_BUTTON) && (cursorY > 0)) cursorY--;
-      else if (arduboy.justPressed(DOWN_BUTTON) && (cursorY < bitCount(player.hasWeapon) - 3)) cursorY++;
+      else if (arduboy.justPressed(DOWN_BUTTON) && (cursorY < bitCount(player.hasStuff[2]) - 1)) cursorY++;
       if (arduboy.justPressed(A_BUTTON)) gameState = STATE_GAME_EQUIP;
-      else if (arduboy.justPressed(B_BUTTON))
-      {
-        question = true;
-        yesNo = true;
-      }
       break;
     case STATE_GAME_ARMOR:
       if (arduboy.justPressed(UP_BUTTON) && (cursorY > 0)) cursorY--;
-      else if (arduboy.justPressed(DOWN_BUTTON) && (cursorY < bitCount(player.hasArmorType) - 3)) cursorY++;
+      else if (arduboy.justPressed(DOWN_BUTTON) && (cursorY < bitCount(player.hasStuff[4]) - 1)) cursorY++;
       if (arduboy.justPressed(A_BUTTON)) gameState = STATE_GAME_EQUIP;
-      else if (arduboy.justPressed(B_BUTTON))
-      {
-        question = true;
-        yesNo = true;
-      }
       break;
     case STATE_GAME_AMULET:
       if (arduboy.justPressed(UP_BUTTON) && (cursorY > 0)) cursorY--;
-      else if (arduboy.justPressed(DOWN_BUTTON) && (cursorY < bitCount(player.hasAmulet) - 3)) cursorY++;
+      else if (arduboy.justPressed(DOWN_BUTTON) && (cursorY < bitCount(player.hasStuff[6]) - 1)) cursorY++;
       if (arduboy.justPressed(A_BUTTON)) gameState = STATE_GAME_EQUIP;
-      else if (arduboy.justPressed(B_BUTTON))
-      {
-        question = true;
-        yesNo = true;
-      }
       break;
 
     case STATE_GAME_STATS:

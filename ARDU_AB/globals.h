@@ -17,11 +17,11 @@
 #define STATE_GAME_NEW                5
 #define STATE_GAME_PLAYING            6
 #define STATE_GAME_INVENTORY          7
-#define STATE_GAME_ITEMS              8
-#define STATE_GAME_EQUIP              9
-#define STATE_GAME_STATS              10
-#define STATE_GAME_SAVE               11
-#define STATE_GAME_END                12
+#define STATE_GAME_EQUIP              8
+#define STATE_GAME_STATS              9
+#define STATE_GAME_SAVE               10
+#define STATE_GAME_END                11
+#define STATE_GAME_ITEMS              12
 #define STATE_GAME_WEAPON             13
 #define STATE_GAME_ARMOR              14
 #define STATE_GAME_AMULET             15
@@ -42,6 +42,13 @@
 #define NONE                          255
 #define ALIGN_LEFT                    0
 #define ALIGN_RIGHT                   1
+
+#define LIST_SHOP_SELLS               0
+#define LIST_SHOP_BUYS                1
+#define LIST_OF_ITEMS                 2
+#define LIST_OF_WAEPONS               3
+#define LIST_OF_ARMOR                 4
+#define LIST_OF_AMULET                5
 
 Arduboy arduboy;
 Sprites sprites(arduboy);

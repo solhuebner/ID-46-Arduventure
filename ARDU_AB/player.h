@@ -12,7 +12,8 @@ PROGMEM const unsigned char animSeq[] = { 0, 1, 2, 1 };
 struct Player
 {
   int x, y, health, healthTotal, magic, magicTotal, gold, experience, experienceForNextLevel;
-  byte frame, currentMap, direction, level, attack, attackAddition, defense, defenseAddition, speed, speedAddition, hasItem, hasWeapon, equipedWeapon, hasArmorType, equipedArmorType, hasAmulet, equipedAmulet;
+  byte frame, currentMap, direction, level, attack, attackAddition, defense, defenseAddition, speed, speedAddition; 
+  unsigned char hasStuff[8];
   unsigned char name[6];
   boolean tags;
   boolean walking;
@@ -36,8 +37,9 @@ void setPlayer()
     5, 0,                                   // attack
     5, 0,                                   // defence
     5, 0,                                   // speed
-    
-    0B11111111,                             // hasItem
+    {
+    0B10001111,                             // hasItem
+    0B00000000,                             // hasItem => extra byte NOT USED only serves as placeholder
     //|||||||└-------------------------------> 0 apple
     //||||||└--------------------------------> 1 cider
     //|||||└---------------------------------> 2 anise
@@ -47,7 +49,7 @@ void setPlayer()
     //|└-------------------------------------> 6 emerald
     //└--------------------------------------> 7 diamond
 
-    0B11111111,                             // hasWeapon
+    0B11111101,                             // hasWeapon
     0B00001000,                             // equipedWaepon
     //|||||||└-------------------------------> 0 sling
     //||||||└--------------------------------> 1 knife
@@ -58,8 +60,8 @@ void setPlayer()
     //|└-------------------------------------> 6 spear
     //└--------------------------------------> 7 bow
 
-    0B11111111,                             // hasArmorType
-    0B00100000,                             // equipedArmorType
+    0B10111111,                             // hasArmorType
+    0B00000001,                             // equipedArmorType
     //|||||||└-------------------------------> 0 wool
     //||||||└--------------------------------> 1 linen
     //|||||└---------------------------------> 2 leathr
@@ -69,7 +71,7 @@ void setPlayer()
     //|└-------------------------------------> 6 iron
     //└--------------------------------------> 7 steel
 
-    0B11111111,                             // hasAmulet
+    0B11101111,                             // hasAmulet
     0B00000010,                             // equipedAmulet
     //|||||||└-------------------------------> 0 health
     //||||||└--------------------------------> 1 magic
@@ -79,7 +81,7 @@ void setPlayer()
     //||└------------------------------------> 5 cloak
     //|└-------------------------------------> 6 escape
     //└--------------------------------------> 7 ruby
-
+    },
     {5, 50, 50, 50, 50, 50},                // name
     true,                                   // tags
     false,                                  // walking

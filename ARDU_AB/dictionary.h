@@ -4,7 +4,7 @@
 #include <Arduino.h>
 #include "globals.h"
 
-unsigned char dynamicTextbox[44];
+unsigned char dynamicTextbox[65];
 
 PROGMEM const unsigned char library[] =
 {
@@ -296,9 +296,6 @@ PROGMEM const unsigned char library[] =
   // PLACE 93 : ITEMS
   5,
   9, 20, 5, 13, 19,
-
-
-
   // PLACE 94 : WEAPON
   6,
   23, 5, 1, 16, 15, 14,
@@ -308,76 +305,102 @@ PROGMEM const unsigned char library[] =
   // PLACE 96 : AMULET
   6,
   1, 13, 21, 12, 5, 20,
-  // PLACE 97 : SLING
+
+
+  // PLACE 97 : APPLE
+  5,
+  1, 16, 16, 12, 5,
+  // PLACE 98 : CIDER
+  5,
+  3, 9, 4, 5, 18,
+  // PLACE 99 : ANISE
+  5,
+  1, 14, 9, 19, 5,
+  // PLACE 100 : ABSINTHE
+  8,
+  1, 2, 19, 9, 14, 20, 8, 5,
+  // PLACE 101 : RUBY
+  4,
+  18, 21, 2, 25,
+  // PLACE 102 : SAPPHIRE
+  8,
+  19, 1, 16, 16, 8, 9, 18, 5,
+  // PLACE 103 : EMERALD
+  7,
+  5, 13, 5, 18, 1, 12, 4,
+  // PLACE 104 : DIAMOND
+  7,
+  4, 9, 1, 13, 15, 14, 4,
+  // PLACE 105 : SLING
   5,
   19, 12, 9, 14, 7,
-  // PLACE 98 : KNIFE
+  // PLACE 106 : KNIFE
   5,
   11, 14, 9, 6, 5,
-  // PLACE 99 : RAPIER
+  // PLACE 107 : RAPIER
   6,
   18, 1, 16, 9, 5, 18,
-  // PLACE 100 : SWORD
+  // PLACE 108 : SWORD
   5,
   19, 23, 15, 18, 4,
-  // PLACE 101 : AXE
+  // PLACE 109 : AXE
   3,
   1, 24, 5,
-  // PLACE 102 : LANCE
+  // PLACE 110 : LANCE
   5,
   12, 1, 14, 3, 5,
-  // PLACE 103 : SPEAR
+  // PLACE 111 : SPEAR
   5,
   19, 16, 5, 1, 18,
-  // PLACE 104 : BOW
+  // PLACE 112 : BOW
   3,
   2, 15, 23,
-  // PLACE 105 : WOOL
+  // PLACE 113 : WOOL
   4,
   23, 15, 15, 12,
-  // PLACE 106 : LINEN
+  // PLACE 114 : LINEN
   5,
   12, 9, 14, 5, 14,
-  // PLACE 107 : LEATHER
+  // PLACE 115 : LEATHER
   7,
   12, 5, 1, 20, 8, 5, 18,
-  // PLACE 108 : BONE
+  // PLACE 116 : BONE
   4,
   2, 15, 14, 5,
-  // PLACE 109 : COPPER
+  // PLACE 117 : COPPER
   6,
   3, 15, 16, 16, 5, 18,
-  // PLACE 110 : BRONZE
+  // PLACE 118 : BRONZE
   6,
   2, 18, 15, 14, 26, 5,
-  // PLACE 111 : IRON
+  // PLACE 119 : IRON
   4,
   9, 18, 15, 14,
-  // PLACE 112 : STEEL
+  // PLACE 120 : STEEL
   5,
   19, 20, 5, 5, 12,
-  // PLACE 113 : HEALTH
+  // PLACE 121 : HEALTH
   6,
   8, 5, 1, 12, 20, 8,
-  // PLACE 114 : MAGIC
+  // PLACE 122 : MAGIC
   5,
   13, 1, 7, 9, 3,
-  // PLACE 115 : SPEED
+  // PLACE 123 : SPEED
   5,
   19, 16, 5, 5, 4,
-  // PLACE 116 : LUCK
+  // PLACE 124 : LUCK
   4,
   12, 21, 3, 11,
-  // PLACE 117 : GOLD
+  // PLACE 125 : GOLD
   4,
   7, 15, 12, 4,
-  // PLACE 118 : CLOAK
+  // PLACE 126 : CLOAK
   5,
   3, 12, 15, 1, 11,
-  // PLACE 119 : ESCAPE
+  // PLACE 127 : ESCAPE
   6,
   5, 19, 3, 1, 16, 5,
-  // PLACE 120 : RUBY
+  // PLACE 128 : RUBY
   4,
   18, 21, 2, 25,
 
@@ -401,11 +424,11 @@ PROGMEM const unsigned char sentences[] =
   // PLACE  3 : YOUR NAME ?
   5,
   7, SPACE, 8, SPACE, 40,
-  
+
   // PLACE  4 : ITEMS EQUIP STATS SAVE END
   13,
   93, NEWLINE, NEWLINE, 70, NEWLINE, NEWLINE, 82, NEWLINE, NEWLINE, 67, NEWLINE, NEWLINE, 9,
-  
+
   // PLACE  5 : SAVE PROGRESS ?
   5,
   69, SPACE, 70, SPACE, 40,

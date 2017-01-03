@@ -12,25 +12,25 @@ void checkInputs()
   {
     case STATE_GAME_PLAYING:
       player.walking = false;
-      if (arduboy.pressed(DOWN_BUTTON) && (player.y < GAME_BOTTOM) && !getSolid(player.x + 2, player.y + 16) && !getSolid(player.x + 14, player.y + 16))
+      if (arduboy.pressed(DOWN_BUTTON) && (player.y < GAME_BOTTOM) && !getSolid(player.x + 3, player.y + 16) && !getSolid(player.x + 12, player.y + 16))
       {
         player.direction = FACING_SOUTH;
         player.y++;
         player.walking = true;
       }
-      else if (arduboy.pressed(LEFT_BUTTON) && (player.x > GAME_LEFT) && !getSolid(player.x - 1, player.y + 2) && !getSolid(player.x - 1, player.y + 14))
+      else if (arduboy.pressed(LEFT_BUTTON) && (player.x > GAME_LEFT) && !getSolid(player.x - 1, player.y + 8) && !getSolid(player.x - 1, player.y + 14))
       {
         player.direction = FACING_WEST;
         player.x--;
         player.walking = true;
       }
-      else if (arduboy.pressed(UP_BUTTON) && (player.y > GAME_TOP) && !getSolid(player.x + 2, player.y + 8) && !getSolid(player.x + 14, player.y + 8))
+      else if (arduboy.pressed(UP_BUTTON) && (player.y > GAME_TOP) && !getSolid(player.x + 3, player.y + 7) && !getSolid(player.x + 12, player.y + 7))
       {
         player.direction = FACING_NORTH;
         player.y--;
         player.walking = true;
       }
-      else if (arduboy.pressed(RIGHT_BUTTON) && (player.x < GAME_RIGHT) && !getSolid(player.x + 16, player.y + 2) && !getSolid(player.x + 16, player.y + 14))
+      else if (arduboy.pressed(RIGHT_BUTTON) && (player.x < GAME_RIGHT) && !getSolid(player.x + 16, player.y + 8) && !getSolid(player.x + 16, player.y + 14))
       {
         player.direction = FACING_EAST;
         player.x++;

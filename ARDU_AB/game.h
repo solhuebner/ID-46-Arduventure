@@ -6,6 +6,7 @@
 #include "inputs.h"
 #include "inventory.h"
 #include "items.h"
+#include "worlddata.h"
 
 
 void stateGameNew()
@@ -74,6 +75,7 @@ void stateGameNew()
 void showPlayField()
 {
   arduboy.fillScreen(1);
+  drawTiles();
   drawWordRam(player.name, 46, 12, BLACK, ALIGN_LEFT);
   drawPlayer();
 }

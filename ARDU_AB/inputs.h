@@ -4,6 +4,7 @@
 #include <Arduino.h>
 #include "globals.h"
 #include "player.h"
+#include "worlddata.h"
 
 void checkInputs()
 {
@@ -11,25 +12,25 @@ void checkInputs()
   {
     case STATE_GAME_PLAYING:
       player.walking = false;
-      if (arduboy.pressed(DOWN_BUTTON) && (player.y < GAME_BOTTOM))
+      if (arduboy.pressed(DOWN_BUTTON) && (player.y < GAME_BOTTOM) && !getSolid(player.x + 2, player.y + 16) && !getSolid(player.x + 14, player.y + 16))
       {
         player.direction = FACING_SOUTH;
         player.y++;
         player.walking = true;
       }
-      else if (arduboy.pressed(LEFT_BUTTON) && (player.x > GAME_LEFT))
+      else if (arduboy.pressed(LEFT_BUTTON) && (player.x > GAME_LEFT) && !getSolid(player.x - 1, player.y + 2) && !getSolid(player.x - 1, player.y + 14))
       {
         player.direction = FACING_WEST;
         player.x--;
         player.walking = true;
       }
-      else if (arduboy.pressed(UP_BUTTON) && (player.y > GAME_TOP))
+      else if (arduboy.pressed(UP_BUTTON) && (player.y > GAME_TOP) && !getSolid(player.x + 2, player.y + 8) && !getSolid(player.x + 14, player.y + 8))
       {
         player.direction = FACING_NORTH;
         player.y--;
         player.walking = true;
       }
-      else if (arduboy.pressed(RIGHT_BUTTON) && (player.x < GAME_RIGHT))
+      else if (arduboy.pressed(RIGHT_BUTTON) && (player.x < GAME_RIGHT) && !getSolid(player.x + 16, player.y + 2) && !getSolid(player.x + 16, player.y + 14))
       {
         player.direction = FACING_EAST;
         player.x++;
@@ -37,6 +38,8 @@ void checkInputs()
       }
       if (arduboy.justPressed(A_BUTTON)) gameState = STATE_GAME_INVENTORY;
       else if (arduboy.justPressed(B_BUTTON));
+      cam.x = max(player.x - 56, 0);
+      cam.y = max(player.y - 24, 0);
       break;
     case STATE_GAME_INVENTORY:
       if (arduboy.justPressed(UP_BUTTON) && (cursorY > 0)) cursorY--;

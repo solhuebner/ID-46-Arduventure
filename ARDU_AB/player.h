@@ -25,7 +25,7 @@ void setPlayer()
 {
   player =
   {
-    64, 24,                                 // position
+    224, 640,                                 // position
     20, 20,                                 // health
     0, 10,                                  // magic
     100,                                    // gold
@@ -91,7 +91,7 @@ void setPlayer()
 void drawPlayer()
 {
   if (arduboy.everyXFrames(6) && player.walking) player.frame = (++player.frame) % 4;
-  sprites.drawPlusMask(player.x, player.y, player_plus_mask, pgm_read_byte(&animSeq[player.frame]) + 3 * player.direction);
+  sprites.drawPlusMask(player.x - cam.x, player.y - cam.y, player_plus_mask, pgm_read_byte(&animSeq[player.frame]) + 3 * player.direction);
 }
 
 void drawPlayerStats()

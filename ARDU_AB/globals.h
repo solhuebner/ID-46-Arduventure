@@ -28,9 +28,9 @@
 #define STATE_GAME_OVER               16
 
 #define GAME_TOP                      0
-#define GAME_BOTTOM                   48
+#define GAME_BOTTOM                   32 * 6 * 16
 #define GAME_LEFT                     0
-#define GAME_RIGHT                    112
+#define GAME_RIGHT                    32 * 6 * 16
 
 #define FACING_SOUTH                  0
 #define FACING_WEST                   1
@@ -63,6 +63,8 @@ byte cursorX = 0;
 byte cursorY = 0;
 boolean question = false;
 boolean yesNo = false;
+
+Point cam = {.x = 0, .y = 0 };
 
 
 void drawRectangle(byte startX, byte startY, byte endX, byte endY, byte color )

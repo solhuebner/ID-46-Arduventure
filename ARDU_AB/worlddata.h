@@ -7,9 +7,9 @@
 
 const unsigned char PROGMEM chunks[] = 
 {
-  // number of chunks: 35
+  // number of chunks: 36
   // number of tiles in chunks: 36
-  // space used by chunks: 1260 bytes
+  // space used by chunks: 1296 bytes
   // chunk: 0
   // chunk name: emptygrass
   0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
@@ -75,14 +75,6 @@ const unsigned char PROGMEM chunks[] =
   0x0E, 0x16, 0x00, 0x00, 0x02, 0x00, 
   0x16, 0x00, 0x00, 0x02, 0x00, 0x00, 
   // chunk: 8
-  // chunk name: Solid left up r
-  0x0A, 0x08, 0x09, 0x08, 0x09, 0x0B, 
-  0x08, 0x0E, 0x0F, 0x0E, 0x0F, 0x09, 
-  0x13, 0x16, 0x14, 0x16, 0x14, 0x11, 
-  0x13, 0x00, 0x00, 0x00, 0x01, 0x11, 
-  0x0E, 0x00, 0x02, 0x00, 0x00, 0x0F, 
-  0x16, 0x01, 0x00, 0x00, 0x01, 0x14, 
-  // chunk: 9
   // chunk name: Solid Bottom
   0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 
   0x01, 0x00, 0x00, 0x00, 0x00, 0x01, 
@@ -90,7 +82,7 @@ const unsigned char PROGMEM chunks[] =
   0x01, 0x00, 0x00, 0x00, 0x02, 0x00, 
   0x00, 0x0C, 0x12, 0x0D, 0x00, 0x00, 
   0x0C, 0x0A, 0x01, 0x0B, 0x12, 0x0D, 
-  // chunk: 10
+  // chunk: 9
   // chunk name: S Bottom Right
   0x00, 0x02, 0x00, 0x04, 0x00, 0x0C, 
   0x00, 0x00, 0x01, 0x00, 0x01, 0x11, 
@@ -98,7 +90,7 @@ const unsigned char PROGMEM chunks[] =
   0x00, 0x00, 0x04, 0x0C, 0x12, 0x0A, 
   0x01, 0x00, 0x00, 0x11, 0x01, 0x08, 
   0x0C, 0x12, 0x12, 0x0A, 0x00, 0x13, 
-  // chunk: 11
+  // chunk: 10
   // chunk name: S Top Bottom
   0x0F, 0x10, 0x10, 0x10, 0x10, 0x0E, 
   0x14, 0x15, 0x15, 0x15, 0x15, 0x16, 
@@ -106,7 +98,7 @@ const unsigned char PROGMEM chunks[] =
   0x00, 0x04, 0x01, 0x00, 0x00, 0x01, 
   0x01, 0x00, 0x00, 0x00, 0x02, 0x00, 
   0x0C, 0x12, 0x12, 0x12, 0x12, 0x0D, 
-  // chunk: 12
+  // chunk: 11
   // chunk name: S Up right bott
   0x0F, 0x10, 0x10, 0x10, 0x09, 0x0B, 
   0x14, 0x15, 0x15, 0x15, 0x0F, 0x09, 
@@ -114,7 +106,7 @@ const unsigned char PROGMEM chunks[] =
   0x00, 0x00, 0x01, 0x00, 0x0C, 0x0A, 
   0x02, 0x00, 0x00, 0x00, 0x11, 0x08, 
   0x0C, 0x12, 0x12, 0x12, 0x0A, 0x13, 
-  // chunk: 13
+  // chunk: 12
   // chunk name: S Bottom left
   0x12, 0x0D, 0x00, 0x00, 0x04, 0x00, 
   0x08, 0x0E, 0x01, 0x00, 0x00, 0x00, 
@@ -122,7 +114,7 @@ const unsigned char PROGMEM chunks[] =
   0x0B, 0x0D, 0x04, 0x00, 0x00, 0x04, 
   0x09, 0x0B, 0x12, 0x0D, 0x01, 0x00, 
   0x11, 0x01, 0x00, 0x0B, 0x12, 0x0D, 
-  // chunk: 14
+  // chunk: 13
   // chunk name: S Left bottom r
   0x0D, 0x00, 0x02, 0x00, 0x04, 0x0C, 
   0x13, 0x04, 0x00, 0x01, 0x00, 0x11, 
@@ -130,6 +122,14 @@ const unsigned char PROGMEM chunks[] =
   0x00, 0x08, 0x0E, 0x00, 0x0C, 0x0A, 
   0x09, 0x13, 0x16, 0x01, 0x11, 0x08, 
   0x11, 0x0B, 0x12, 0x12, 0x0A, 0x13, 
+  // chunk: 14
+  // chunk name: S bottom left u
+  0x0A, 0x08, 0x10, 0x10, 0x10, 0x0E, 
+  0x08, 0x0E, 0x15, 0x15, 0x15, 0x16, 
+  0x13, 0x16, 0x04, 0x00, 0x00, 0x00, 
+  0x0B, 0x0D, 0x0C, 0x12, 0x0D, 0x01, 
+  0x09, 0x0B, 0x0A, 0x08, 0x0E, 0x00, 
+  0x11, 0x01, 0x00, 0x0B, 0x12, 0x0D, 
   // chunk: 15
   // chunk name: unnamed
   0x0A, 0x00, 0x00, 0x00, 0x00, 0x0B, 
@@ -147,9 +147,9 @@ const unsigned char PROGMEM chunks[] =
   0x00, 0x0B, 0x12, 0x12, 0x0A, 0x00, 
   0x00, 0x04, 0x00, 0x02, 0x00, 0x00, 
   // chunk: 17
-  // chunk name: ladder
-  0x0F, 0x10, 0x10, 0x05, 0x10, 0x0E, 
-  0x14, 0x15, 0x15, 0x05, 0x15, 0x16, 
+  // chunk name: Stairs
+  0x0F, 0x10, 0x10, 0x07, 0x10, 0x0E, 
+  0x14, 0x15, 0x15, 0x07, 0x15, 0x16, 
   0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 
   0x01, 0x00, 0x01, 0x00, 0x00, 0x01, 
   0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 
@@ -290,13 +290,21 @@ const unsigned char PROGMEM chunks[] =
   0x04, 0x06, 0x06, 0x06, 0x06, 0x04, 
   0x00, 0x13, 0x19, 0x1A, 0x11, 0x01, 
   0x00, 0x13, 0x19, 0x1A, 0x11, 0x00, 
+  // chunk: 35
+  // chunk name: unnamed
+  0x12, 0x12, 0x12, 0x12, 0x12, 0x12, 
+  0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 
+  0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 
+  0x00, 0x01, 0x00, 0x00, 0x04, 0x00, 
+  0x10, 0x10, 0x10, 0x10, 0x10, 0x10, 
+  0x15, 0x15, 0x15, 0x15, 0x15, 0x15, 
 };
 
 
 
 
 #define TOTAL_REGIONS     3
-#define LEVEL_CHUNK_W   32
+#define LEVEL_CHUNK_W    32
 #define LEVEL_CHUNK_H    32
 
 
@@ -318,9 +326,9 @@ const unsigned char PROGMEM solid_map[] =
 {
   0xFF, 0x8F, 0x00, 0x00, 
   0x2B, 0x8C, 0x03, 0x00, 
-  0xA1, 0x88, 0x06, 0x00, 
+  0xA1, 0x89, 0x06, 0x00, 
   0x09, 0x09, 0x0A, 0x00, 
-  0x85, 0x1E, 0x0F, 0x00, 
+  0x85, 0x19, 0x0F, 0x00, 
   0xA5, 0x58, 0x0F, 0x00, 
   0xED, 0x31, 0x09, 0x00, 
   0x01, 0x01, 0x09, 0x00, 
@@ -410,7 +418,7 @@ bool getChunkBit(const byte &chunk_x, const byte &chunk_y)
 
 byte getTileInChunk(const byte &chunk, const Point &tile_pos)
 {
-  return pgm_read_byte(chunks + (chunk * 36) + tile_pos.x + tile_pos.y * 6);
+  return pgm_read_byte(chunks + ((chunk & 0x7F) * 36) + tile_pos.x + tile_pos.y * 6);
 }
 
 
@@ -438,34 +446,43 @@ Point world_to_chunk(const Point &world_pos)
 
 
 
+// getChunk
+// Returns a value greater than 127 if the chunk was specifically placed.
+// If the chunk is part of a region the returned value will be
+// less than 128.
+// To get the actual chunk value of a specific chunk, AND (&) the returned
+// chunk with 0x7F (B01111111)
 byte getChunk(const Point &chunk_pos)
 {
     // specific chunks
     switch (chunk_pos.x + chunk_pos.y * 32)
     {
-        case 67: return 9; break; // Solid Bottom
-        case 37: return 9; break; // Solid Bottom
-        case 132: return 16; break; // pond
-        case 102: return 16; break; // pond
-        case 39: return 9; break; // Solid Bottom
-        case 295: return 17; break; // ladder
-        case 229: return 17; break; // ladder
-        case 193: return 3; break; // Solid Right
-        case 161: return 3; break; // Solid Right
-        case 129: return 3; break; // Solid Right
-        case 289: return 3; break; // Solid Right
-        case 225: return 2; break; // shop
-        case 194: return 18; break; // CliffHouse
-        case 227: return 17; break; // ladder
-        case 257: return 16; break; // pond
-        case 207: return 1; break; // solidtrees
-        case 80: return 2; break; // shop
-        case 50: return 1; break; // solidtrees
-        case 78: return 1; break; // solidtrees
-        case 46: return 1; break; // solidtrees
-        case 113: return 34; break; // Brdge
-        case 208: return 34; break; // Brdge
-        case 270: return 19; break; // rsolidright
+        case 67: return 136; break; // Solid Bottom
+        case 37: return 136; break; // Solid Bottom
+        case 132: return 144; break; // pond
+        case 102: return 144; break; // pond
+        case 39: return 136; break; // Solid Bottom
+        case 295: return 145; break; // Stairs
+        case 229: return 145; break; // Stairs
+        case 193: return 131; break; // Solid Right
+        case 161: return 131; break; // Solid Right
+        case 129: return 131; break; // Solid Right
+        case 289: return 131; break; // Solid Right
+        case 225: return 130; break; // shop
+        case 194: return 146; break; // CliffHouse
+        case 227: return 145; break; // Stairs
+        case 257: return 144; break; // pond
+        case 207: return 129; break; // solidtrees
+        case 80: return 130; break; // shop
+        case 50: return 129; break; // solidtrees
+        case 78: return 129; break; // solidtrees
+        case 46: return 129; break; // solidtrees
+        case 113: return 162; break; // Brdge
+        case 208: return 162; break; // Brdge
+        case 270: return 147; break; // rsolidright
+        case 40: return 136; break; // Solid Bottom
+        case 70: return 163; break; // unnamed
+        case 101: return 145; break; // Stairs
     }
 
 
@@ -494,13 +511,13 @@ byte getChunk(const Point &chunk_pos)
                     case 4: return 5; break;
                     case 5: return 6; break;
                     case 6: return 7; break;
-                    case 7: return 8; break;
-                    case 8: return 9; break;
-                    case 9: return 10; break;
-                    case 10: return 11; break;
-                    case 11: return 12; break;
-                    case 12: return 13; break;
-                    case 13: return 14; break;
+                    case 8: return 8; break;
+                    case 9: return 9; break;
+                    case 10: return 10; break;
+                    case 11: return 11; break;
+                    case 12: return 12; break;
+                    case 13: return 13; break;
+                    case 14: return 14; break;
                 }
             }
         } break;

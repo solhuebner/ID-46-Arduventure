@@ -2,7 +2,8 @@
 #define GLOBALS_H
 
 #include <Arduino.h>
-#include "Arglib.h"
+#include <Arduboy2.h>
+#include <ATMlib.h>
 #include "bitmaps.h"
 
 
@@ -50,8 +51,9 @@
 #define LIST_OF_ARMOR                 4
 #define LIST_OF_AMULET                5
 
-Arduboy arduboy;
-Sprites sprites(arduboy);
+Arduboy2Base arduboy;
+Sprites sprites;
+ATMsynth ATM;
 
 //byte gameState = STATE_MENU_INTRO;           // start the game with the TEAM a.r.g. logo
 byte gameState = STATE_MENU_MAIN;

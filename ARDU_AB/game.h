@@ -75,6 +75,7 @@ void stateGameNew()
 void showPlayField()
 {
   arduboy.fillScreen(1);
+  if (arduboy.everyXFrames(15)) waterframe = (++waterframe) % 2;
   drawTiles();
   drawWordRam(player.name, 46, 12, BLACK, ALIGN_LEFT);
   drawPlayer();

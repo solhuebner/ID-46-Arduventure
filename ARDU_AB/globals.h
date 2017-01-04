@@ -63,6 +63,7 @@ byte cursorX = 0;
 byte cursorY = 0;
 boolean question = false;
 boolean yesNo = false;
+byte waterframe = 0;
 
 Point cam = {.x = 0, .y = 0 };
 

@@ -5,6 +5,7 @@
 #include "globals.h"
 #include "player.h"
 #include "worlddata.h"
+#include "items.h"
 
 void checkInputs()
 {
@@ -41,7 +42,6 @@ void checkInputs()
       cam.x = max(player.x - 56, 0);
       cam.y = max(player.y - 24, 0);
       break;
-
     case STATE_GAME_INVENTORY:
       if (arduboy.justPressed(UP_BUTTON) && (cursorY > 0)) cursorY--;
       else if (arduboy.justPressed(DOWN_BUTTON) && (cursorY < 4)) cursorY++;
@@ -53,7 +53,6 @@ void checkInputs()
         cursorY = 0;
       }
       break;
-
     case STATE_GAME_EQUIP:
       if (arduboy.justPressed(UP_BUTTON) && (cursorY > 0)) cursorY--;
       else if (arduboy.justPressed(DOWN_BUTTON) && (cursorY < 2)) cursorY++;
@@ -69,43 +68,44 @@ void checkInputs()
       }
       break;
 
-    case STATE_GAME_ITEMS:
-      if (arduboy.justPressed(UP_BUTTON) && (cursorY > 0)) cursorY--;
-      else if (arduboy.justPressed(DOWN_BUTTON) && (cursorY < bitCount(player.hasStuff[0]) - 1)) cursorY++;
-      else if (arduboy.justPressed(A_BUTTON))
+
+
+    case STATE_GAME_ITEMS: case STATE_GAME_WEAPON: case STATE_GAME_ARMOR: case STATE_GAME_AMULET:
+      if (!yesNo)
       {
-        gameState = STATE_GAME_INVENTORY;
-        cursorY = 0;
+        if (arduboy.justPressed(UP_BUTTON) && (cursorY > 0)) cursorY--;
+        else if (arduboy.justPressed(DOWN_BUTTON) && (cursorY < bitCount(player.hasStuff[2 * (gameState - 12)]) - 1)) cursorY++;
+        else if (arduboy.justPressed(A_BUTTON))
+        {
+          cursorY = (gameState == STATE_GAME_ITEMS) ? 0 : (gameState - 13);
+          gameState = (gameState == STATE_GAME_ITEMS) ? STATE_GAME_INVENTORY : STATE_GAME_EQUIP;
+        }
+        else if (arduboy.justPressed(B_BUTTON))
+        {
+          question = true;
+          yesNo = true;
+        }
+      }
+      else
+      {
+        if (arduboy.justPressed(UP_BUTTON)) cursorYesNoY = 0;
+        else if (arduboy.justPressed(DOWN_BUTTON)) cursorYesNoY = 1;
+        else if (arduboy.justPressed(A_BUTTON))
+        {
+          question = false;
+          yesNo = false;
+          cursorYesNoY = 0;
+        }
+        else if (arduboy.justPressed(B_BUTTON))
+        {
+          selectItemsEquipment();
+          question = false;
+          yesNo = false;
+          cursorYesNoY = 0;
+        }
       }
       break;
 
-    case STATE_GAME_WEAPON:
-      if (arduboy.justPressed(UP_BUTTON) && (cursorY > 0)) cursorY--;
-      else if (arduboy.justPressed(DOWN_BUTTON) && (cursorY < bitCount(player.hasStuff[2]) - 1)) cursorY++;
-      else if (arduboy.justPressed(A_BUTTON))
-      {
-        gameState = STATE_GAME_EQUIP;
-        cursorY = 0;
-      }
-      break;
-    case STATE_GAME_ARMOR:
-      if (arduboy.justPressed(UP_BUTTON) && (cursorY > 0)) cursorY--;
-      else if (arduboy.justPressed(DOWN_BUTTON) && (cursorY < bitCount(player.hasStuff[4]) - 1)) cursorY++;
-      else if (arduboy.justPressed(A_BUTTON))
-      {
-        gameState = STATE_GAME_EQUIP;
-        cursorY = 1;
-      }
-      break;
-    case STATE_GAME_AMULET:
-      if (arduboy.justPressed(UP_BUTTON) && (cursorY > 0)) cursorY--;
-      else if (arduboy.justPressed(DOWN_BUTTON) && (cursorY < bitCount(player.hasStuff[6]) - 1)) cursorY++;
-      else if (arduboy.justPressed(A_BUTTON))
-      {
-        gameState = STATE_GAME_EQUIP;
-        cursorY = 2;
-      }
-      break;
 
     case STATE_GAME_STATS:
       if (arduboy.justPressed(A_BUTTON))
@@ -115,16 +115,22 @@ void checkInputs()
       }
       else if (arduboy.justPressed(B_BUTTON)) gameState = STATE_GAME_PLAYING;
       break;
+      
     case STATE_GAME_SAVE:
-      if (arduboy.justPressed(A_BUTTON))
+      if (arduboy.justPressed(UP_BUTTON)) cursorYesNoY = 0;
+      else if (arduboy.justPressed(DOWN_BUTTON)) cursorYesNoY = 1;
+      else if (arduboy.justPressed(A_BUTTON))
       {
         gameState = STATE_GAME_INVENTORY;
+        yesNo = false;
         cursorY = 3;
       }
       else if (arduboy.justPressed(B_BUTTON))
       {
         if (!cursorY) saveGame();
+        yesNo = false;
         gameState = STATE_GAME_PLAYING;
+        cursorY = 0;
       }
       break;
   }

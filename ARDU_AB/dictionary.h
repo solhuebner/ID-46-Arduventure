@@ -225,9 +225,9 @@ PROGMEM const unsigned char library[] =
   // PLACE 70 : EQUIP
   5,
   5, 17, 21, 9, 16,
-  // PLACE 71 : UNEQUIP
-  7,
-  21, 14, 5, 17, 21, 9, 16,
+  // PLACE 71 : ITEM
+  4,
+  9, 20, 5, 13,
   // PLACE 72 : LEVEL
   5,
   12, 5, 22, 5, 12,
@@ -404,9 +404,6 @@ PROGMEM const unsigned char library[] =
   4,
   18, 21, 2, 25,
 
-
-
-
 };
 
 
@@ -445,6 +442,18 @@ PROGMEM const unsigned char sentences[] =
   // PLACE 10 : WEAPON ARMOR AMULET
   7,
   94, NEWLINE, NEWLINE, 95, NEWLINE, NEWLINE, 96,
+  // PLACE 11 : USE ITEM ?
+  5,
+  69, SPACE, 71, SPACE, 40,
+  // PLACE 12 : EQUIP WEAPON ?
+  5,
+  70, SPACE, 94, SPACE, 40,
+  // PLACE 13 : EQUIP ARMOR ?
+  5,
+  70, SPACE, 95, SPACE, 40,
+  // PLACE 14 : EQUIP AMULET ?
+  5,
+  70, SPACE, 96, SPACE, 40,
 };
 
 

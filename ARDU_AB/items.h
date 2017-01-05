@@ -5,9 +5,23 @@
 #include "globals.h"
 #include "text.h"
 
+void selectItemsEquipment()
+{
+  switch (gameState)
+  {
+    case STATE_GAME_ITEMS:
+      break;
+    default:
+      player.hasStuff[(2*(gameState -12)) + 1] = 0;
+      bitSet(player.hasStuff[(2*(gameState -12)) + 1], cursorY);
+      break;
+  }
+}
+
 
 void getItems()
 {
+  /*
   byte dynamicTextBoxSize = 0;
   switch (cursorY)
   {
@@ -32,6 +46,7 @@ void getItems()
       dynamicTextbox[dynamicTextBoxSize] = NEWLINE;
   }
   dynamicTextbox[0] = dynamicTextBoxSize;
+  */
 }
 
 

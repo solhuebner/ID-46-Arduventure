@@ -43,6 +43,7 @@ const FunctionPointer PROGMEM mainGameLoop[] = {
   showSubMenuStuff,
   showSubMenuStuff,
   showSubMenuStuff,
+  showSubMenuStuff,   // select YES or NO
   stateGameOver,
 };
 

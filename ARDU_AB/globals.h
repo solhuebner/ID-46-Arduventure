@@ -26,7 +26,8 @@
 #define STATE_GAME_WEAPON             13
 #define STATE_GAME_ARMOR              14
 #define STATE_GAME_AMULET             15
-#define STATE_GAME_OVER               16
+#define STATE_GAME_SELECT             16
+#define STATE_GAME_OVER               17
 
 #define GAME_TOP                      0
 #define GAME_BOTTOM                   32 * 6 * 16
@@ -63,6 +64,7 @@ byte globalCounter = 0;
 byte currentLetter = 0;
 byte cursorX = 0;
 byte cursorY = 0;
+boolean cursorYesNoY = 0;
 boolean question = false;
 boolean yesNo = false;
 byte waterframe = 0;

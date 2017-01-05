@@ -53,18 +53,18 @@ amulet of ruby		| nothing, but very expensive	| 8		| 8000
 
 ### Type of items accessories and their characteristics
 
-name		| description	| magic power	| buy price
----			| ---			| ---			| ---
-apple		|				| 1				| 10
-cider		|				| 2				| 20
-anise		|				| 3				| 30
-absinthe	|				| 4				| 40
-ruby 		|				| 5				| 200
-sapphire	|				| 6				| 400
-emerald		|				| 7				| 1000
-diamond		|				| 8				| 2000
+name		| description	| magic power	| buy price	| max amount
+---			| ---			| ---			| ---		| ---
+apple		|				| 1				| 10		| 64
+cider		|				| 2				| 20		| 64
+anise		|				| 3				| 30		| 64
+absinthe	|				| 4				| 40		| 64
+ruby 		|				| 5				| 200		| 64
+sapphire	|				| 6				| 400		| 64
+emerald		|				| 7				| 1000		| 64
+diamond		|				| 8				| 2000		| 64
 
-### Locations
+### Regions and their location
 
 name				| monster types		| boss		| map place
 ---					| ---				| ---		| ---

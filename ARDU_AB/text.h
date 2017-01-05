@@ -117,16 +117,13 @@ void clearDynamicTextbox()
 
 void drawQuestion()
 {
-  
+  drawSentence(gameState - 1, 6, 50, WHITE, ALIGN_LEFT);
 }
 
-void drawYesNo ()
+void drawYesNo()
 {
-  drawRectangle(95, 34, 130, 48, BLACK);
-  drawSentence(9, 106, 36, WHITE, ALIGN_LEFT);
-  if (arduboy.justPressed(UP_BUTTON)) cursorY = 0;
-  else if (arduboy.justPressed(DOWN_BUTTON)) cursorY = 1;
-  sprites.drawSelfMasked( 98, 36 + (6 * cursorY), font, 44);
+  drawSentence(9, 106, 50, WHITE, ALIGN_LEFT);
+  sprites.drawSelfMasked( 98, 50 + (6 * cursorYesNoY), font, 44);
 }
 
 #endif

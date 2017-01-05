@@ -77,7 +77,6 @@ void showPlayField()
   arduboy.fillScreen(1);
   if (arduboy.everyXFrames(15)) waterframe = (++waterframe) % 2;
   drawTiles();
-  drawWordRam(player.name, 46, 12, BLACK, ALIGN_LEFT);
   drawPlayer();
 }
 
@@ -117,7 +116,7 @@ void stateGameSave()
   showPlayField();
   drawRectangle(0, 48, 130, 64, BLACK);
   drawSentence(5, 6, 50, WHITE, ALIGN_LEFT);
-  drawYesNo ();
+  yesNo = true;
   checkInputs();
 }
 
@@ -151,6 +150,7 @@ void showSubMenuStuff()
   drawWord(93 + (gameState - 12), 6, 0, WHITE, ALIGN_LEFT);
   checkInputs();
 }
+
 
 void stateGameOver()
 {

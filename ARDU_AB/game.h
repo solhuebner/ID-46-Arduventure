@@ -124,6 +124,7 @@ void stateGameSave()
 void stateGameEnd()
 {
   gameState = STATE_MENU_MAIN;
+  menuSelection = 2;
 }
 
 void showSubMenuStuff()

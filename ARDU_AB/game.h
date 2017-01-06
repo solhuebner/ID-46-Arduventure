@@ -132,22 +132,22 @@ void showSubMenuStuff()
   byte dynamicTextBoxSize = 0;
   for (byte i = 0; i < 8; i++)
   {
-    if (bitRead (player.hasStuff[(2*(gameState - 12))], i))
+    if (bitRead (player.hasStuff[(2*(gameState - STATE_GAME_ITEMS))], i))
     {
       dynamicTextBoxSize++;
-      dynamicTextbox[dynamicTextBoxSize] = 97 + (8 * (gameState - 12)) + i;
+      dynamicTextbox[dynamicTextBoxSize] = 97 + (8 * (gameState - STATE_GAME_ITEMS)) + i;
       dynamicTextBoxSize++;
       dynamicTextbox[dynamicTextBoxSize] = NEWLINE;
     }
-    if (bitRead(player.hasStuff[(2*(gameState-12)) + 1], i)) drawWord(81, 68, 3 + (3 * dynamicTextBoxSize), BLACK, ALIGN_LEFT);
+    if ((gameState != STATE_GAME_ITEMS) && bitRead(player.hasStuff[(2*(gameState-STATE_GAME_ITEMS)) + 1], i)) drawWord(81, 68, 3 + (3 * dynamicTextBoxSize), BLACK, ALIGN_LEFT);
   }
   dynamicTextbox[0] = dynamicTextBoxSize;
   
   drawSentenceRam(dynamicTextbox, 12, 9, BLACK, ALIGN_LEFT);
   sprites.drawErase(5, 9 + (6 * cursorY), font, 44);
   drawRectangle(0, 0, 130, 8, BLACK);
-  drawRectangle(0, 45, 130, 64, BLACK);
-  drawWord(93 + (gameState - 12), 6, 0, WHITE, ALIGN_LEFT);
+  drawRectangle(0, 57, 130, 64, BLACK);
+  drawWord(93 + (gameState - STATE_GAME_ITEMS), 6, 0, WHITE, ALIGN_LEFT);
   checkInputs();
 }
 

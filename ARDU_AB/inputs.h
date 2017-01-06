@@ -74,7 +74,7 @@ void checkInputs()
       if (!yesNo)
       {
         if (arduboy.justPressed(UP_BUTTON) && (cursorY > 0)) cursorY--;
-        else if (arduboy.justPressed(DOWN_BUTTON) && (cursorY < bitCount(player.hasStuff[2 * (gameState - 12)]) - 1)) cursorY++;
+        else if (arduboy.justPressed(DOWN_BUTTON) && (cursorY < bitCount(player.hasStuff[2 * (gameState - STATE_GAME_ITEMS)]) - 1)) cursorY++;
         else if (arduboy.justPressed(A_BUTTON))
         {
           cursorY = (gameState == STATE_GAME_ITEMS) ? 0 : (gameState - 13);

@@ -117,6 +117,7 @@ void clearDynamicTextbox()
 
 void drawQuestion()
 {
+  drawRectangle(0, 45, 130, 64, BLACK);
   drawSentence(gameState - 1, 6, 50, WHITE, ALIGN_LEFT);
 }
 

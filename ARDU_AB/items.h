@@ -36,6 +36,7 @@
 void drawList()
 {
   byte dynamicTextBoxSize = 0;
+  byte AmountOfObjectsShown = 0;
   for (byte i = 0; i < 8; i++)
   {
     if (bitRead (player.hasStuff[(2 * (gameState - STATE_GAME_ITEMS))], i))
@@ -54,6 +55,10 @@ void drawList()
       {
         drawWord(81, 68, 3 + (3 * dynamicTextBoxSize), BLACK, ALIGN_LEFT);
       }
+      
+      if (bitRead (player.hasStuff[(2 * (gameState - STATE_GAME_ITEMS))], i)) AmountOfObjectsShown++;
+      if (AmountOfObjectsShown - 1 == cursorY) drawSentence( 19 + (8 * (gameState - STATE_GAME_ITEMS)) + i, 6, 59, WHITE, ALIGN_LEFT);
+      
     }
   }
   if (!player.hasStuff[(2 * (gameState - STATE_GAME_ITEMS))])
@@ -61,6 +66,7 @@ void drawList()
     drawSentence(gameState + 3, 34, 29, BLACK, ALIGN_LEFT);
   }
   dynamicTextbox[0] = dynamicTextBoxSize;
+  drawSentenceRam(dynamicTextbox, 12, 9, BLACK, ALIGN_LEFT);
 }
 
 void selectItemsEquipment()
@@ -84,11 +90,6 @@ void selectItemsEquipment()
       }
     }
   }
-}
-
-void drawObjectSpecifications()
-{
-  
 }
 
 

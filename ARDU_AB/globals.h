@@ -58,8 +58,7 @@ Arduboy2Base arduboy;
 Sprites sprites;
 ATMsynth ATM;
 
-//byte gameState = STATE_MENU_INTRO;           // start the game with the TEAM a.r.g. logo
-byte gameState = STATE_MENU_MAIN;
+byte gameState = STATE_MENU_INTRO;           // start the game with the TEAM a.r.g. logo
 byte gameStatePrevious = gameState;
 byte menuSelection = STATE_MENU_CONTINUE;      // PLAY menu item is pre-selected
 byte globalCounter = 0;

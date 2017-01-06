@@ -98,7 +98,11 @@ void checkInputs()
         }
         else if (arduboy.justPressed(B_BUTTON))
         {
-          if (cursorYesNoY) selectItemsEquipment();
+          if (cursorYesNoY)
+          {
+            selectItemsEquipment();
+            cursorY = 0;
+          }
           question = false;
           yesNo = false;
           cursorYesNoY = true;

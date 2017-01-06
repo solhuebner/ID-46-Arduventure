@@ -84,13 +84,11 @@ void showPlayField()
 
 void stateGamePlaying()
 {
-  showPlayField();
   checkInputs();
 };
 
 void stateGameInventory()
 {
-  showPlayField();
   drawRectangle(83, 0, 130, 64, BLACK);
   drawSentence(4, 93, 2, WHITE, ALIGN_LEFT);
   sprites.drawSelfMasked(86, 2 + (cursorY * 12), font, 44);
@@ -99,7 +97,6 @@ void stateGameInventory()
 
 void stateGameEquip()
 {
-  showPlayField();
   drawRectangle(83, 0, 130, 64, BLACK);
   drawSentence(10, 93, 2, WHITE, ALIGN_LEFT);
   sprites.drawSelfMasked(86, 2 + (cursorY * 12), font, 44);
@@ -108,13 +105,13 @@ void stateGameEquip()
 
 void stateGameStats()
 {
+  arduboy.fillScreen(0);
   drawPlayerStats();
   checkInputs();
 }
 
 void stateGameSave()
 {
-  showPlayField();
   drawRectangle(0, 48, 130, 64, BLACK);
   drawSentence(5, 6, 50, WHITE, ALIGN_LEFT);
   yesNo = true;
@@ -134,15 +131,11 @@ void showSubMenuStuff()
   drawRectangle(0, 57, 130, 64, BLACK);
   
   drawList();
-  drawObjectSpecifications();
-
-  drawSentenceRam(dynamicTextbox, 12, 9, BLACK, ALIGN_LEFT);
-  if (player.hasStuff[(2 * (gameState - STATE_GAME_ITEMS))])
-  {
-    sprites.drawErase(5, 9 + (6 * cursorY), font, 44);
-  }
+  
+  if (player.hasStuff[(2 * (gameState - STATE_GAME_ITEMS))]) sprites.drawErase(5, 9 + (6 * cursorY), font, 44);
+  
   drawWord(93 + (gameState - STATE_GAME_ITEMS), 6, 0, WHITE, ALIGN_LEFT);
-  drawObjectSpecifications();
+
   checkInputs();
 }
 

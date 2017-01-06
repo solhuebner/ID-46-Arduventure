@@ -8,6 +8,7 @@
 
 void stateMenuIntro()
 {
+  arduboy.fillScreen(0);
   globalCounter++;
   sprites.drawSelfMasked(34, 4, T_arg, 0);
   if (globalCounter > 180) gameState = STATE_MENU_MAIN;
@@ -16,6 +17,7 @@ void stateMenuIntro()
 void stateMenuMain()
 {
   if (!TIMSK4) ATM.play(titleSong);                                                   // IF NOT PLAYING A SONG, START NOW
+  arduboy.fillScreen(0);
   sprites.drawSelfMasked(36, 3, aTeamArgGame, 0);
   sprites.drawSelfMasked(10, 10, titleScreen, 0);
   drawWord(1, 40, 37, WHITE, ALIGN_LEFT);

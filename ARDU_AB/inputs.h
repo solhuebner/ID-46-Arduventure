@@ -88,20 +88,20 @@ void checkInputs()
       }
       else
       {
-        if (arduboy.justPressed(UP_BUTTON)) cursorYesNoY = 0;
-        else if (arduboy.justPressed(DOWN_BUTTON)) cursorYesNoY = 1;
+        if (arduboy.justPressed(UP_BUTTON)) cursorYesNoY = true;
+        else if (arduboy.justPressed(DOWN_BUTTON)) cursorYesNoY = false;
         else if (arduboy.justPressed(A_BUTTON))
         {
           question = false;
           yesNo = false;
-          cursorYesNoY = 0;
+          cursorYesNoY = true;
         }
         else if (arduboy.justPressed(B_BUTTON))
         {
-          selectItemsEquipment();
+          if (cursorYesNoY) selectItemsEquipment();
           question = false;
           yesNo = false;
-          cursorYesNoY = 0;
+          cursorYesNoY = true;
         }
       }
       break;
@@ -117,20 +117,22 @@ void checkInputs()
       break;
       
     case STATE_GAME_SAVE:
-      if (arduboy.justPressed(UP_BUTTON)) cursorYesNoY = 0;
-      else if (arduboy.justPressed(DOWN_BUTTON)) cursorYesNoY = 1;
+      if (arduboy.justPressed(UP_BUTTON)) cursorYesNoY = true;
+      else if (arduboy.justPressed(DOWN_BUTTON)) cursorYesNoY = false;
       else if (arduboy.justPressed(A_BUTTON))
       {
         gameState = STATE_GAME_INVENTORY;
         yesNo = false;
         cursorY = 3;
+        cursorYesNoY = true;
       }
       else if (arduboy.justPressed(B_BUTTON))
       {
-        if (!cursorY) saveGame();
+        if (cursorYesNoY) saveGame();
         yesNo = false;
         gameState = STATE_GAME_PLAYING;
         cursorY = 0;
+        cursorYesNoY = true;
       }
       break;
   }

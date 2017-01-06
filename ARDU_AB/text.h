@@ -124,7 +124,7 @@ void drawQuestion()
 void drawYesNo()
 {
   drawSentence(9, 106, 50, WHITE, ALIGN_LEFT);
-  sprites.drawSelfMasked( 98, 50 + (6 * cursorYesNoY), font, 44);
+  sprites.drawSelfMasked( 98, 50 + (6 * !cursorYesNoY), font, 44);
 }
 
 #endif

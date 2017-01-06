@@ -297,14 +297,14 @@ PROGMEM const unsigned char library[] =
   5,
   9, 20, 5, 13, 19,
   // PLACE 94 : WEAPON
-  7,
-  23, 5, 1, 16, 15, 14, 19,
+  6,
+  23, 5, 1, 16, 15, 14,
   // PLACE 95 : ARMOR
   5,
   1, 18, 13, 15, 18,
   // PLACE 96 : AMULET
-  7,
-  1, 13, 21, 12, 5, 20, 19,
+  6,
+  1, 13, 21, 12, 5, 20,
 
 
   // PLACE 97 : APPLE

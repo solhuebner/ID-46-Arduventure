@@ -75,7 +75,6 @@ void stateGameNew()
 
 void showPlayField()
 {
-  arduboy.fillScreen(1);
   if (arduboy.everyXFrames(15)) waterframe = (++waterframe) % 2;
   drawTiles();
   drawPlayer();
@@ -142,7 +141,7 @@ void showSubMenuStuff()
 
 void stateGameOver()
 {
-
+  arduboy.fillScreen(1);
 };
 
 

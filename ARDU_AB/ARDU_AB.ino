@@ -43,14 +43,15 @@ const FunctionPointer PROGMEM mainGameLoop[] = {
   showSubMenuStuff,
   showSubMenuStuff,
   showSubMenuStuff,
+  
   stateGameOver,
 };
 
 
 void setup() {
+  ATM.play(titleSong);
   arduboy.begin();
   arduboy.setFrameRate(60);                                 // set the frame rate of the game at 60 fps
-  ATM.play(titleSong);
 }
 
 

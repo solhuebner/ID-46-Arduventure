@@ -195,9 +195,9 @@ PROGMEM const unsigned char library[] =
   // PLACE 60 : S
   1,
   19,
-  // PLACE 61 : -----------
-  6,
-  19, 1, 6, 5, 12, 25,
+  // PLACE 61 : TO
+  2,
+  20, 15,
   // PLACE 62 : -----------
   3,
   25, 15, 21,
@@ -429,7 +429,7 @@ PROGMEM const unsigned char sentences[] =
   67, SPACE, 68, SPACE, 40,
   // PLACE  6 : GOLD: € MP: HP: EXP TO LV UP:
   26,
-  125, 42, 49, NEWLINE, NEWLINE, 84, SPACE, SPACE, 42, NEWLINE, NEWLINE, 83, SPACE, SPACE, 42, NEWLINE, NEWLINE, NEWLINE, 85, SPACE, 11, SPACE, 86, SPACE, 73, 42,
+  125, 42, 49, NEWLINE, NEWLINE, 84, SPACE, SPACE, 42, NEWLINE, NEWLINE, 83, SPACE, SPACE, 42, NEWLINE, NEWLINE, NEWLINE, 85, SPACE, 61, SPACE, 86, SPACE, 73, 42,
   // PLACE  7 : LV: ATK: DEF: SPD:
   13,
   86, SPACE, 42, NEWLINE, NEWLINE, 87, 42, NEWLINE, 88, 42, NEWLINE, 89, 42,

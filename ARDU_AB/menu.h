@@ -47,6 +47,7 @@ void stateMenuNew()
 
 void stateMenuSound()
 {
+  arduboy.fillScreen(0);
   // if sound is not enabled, put it ON, otherwise put it OFF
   if (!arduboy.audio.enabled()) arduboy.audio.on();
   else arduboy.audio.off();

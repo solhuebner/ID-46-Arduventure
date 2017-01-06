@@ -48,6 +48,7 @@ void stateGameNew()
       cursorX = 0;
       cursorY = 0;
       gameState = STATE_GAME_PLAYING;
+      ATM.stop();
       return;
     }
     else
@@ -129,34 +130,19 @@ void stateGameEnd()
 void showSubMenuStuff()
 {
   arduboy.fillScreen(1);
-  byte dynamicTextBoxSize = 0;
-  for (byte i = 0; i < 8; i++)
-  {
-    if (bitRead (player.hasStuff[(2 * (gameState - STATE_GAME_ITEMS))], i))
-    {
-      dynamicTextBoxSize++;
-      dynamicTextbox[dynamicTextBoxSize] = 97 + (8 * (gameState - STATE_GAME_ITEMS)) + i;
-      dynamicTextBoxSize++;
-      dynamicTextbox[dynamicTextBoxSize] = NEWLINE;
-    }
-
-    if (gameState == STATE_GAME_ITEMS)
-    {
-      sprites.drawErase(92, 3 + (3 * dynamicTextBoxSize), font, 24);
-      drawNumbersRam(player.itemsAmount[i], 116 , 3 + (3 * dynamicTextBoxSize), BLACK, ALIGN_RIGHT);
-    }
-    else if (bitRead(player.hasStuff[(2 * (gameState - STATE_GAME_ITEMS)) + 1], i))
-    {
-      drawWord(81, 68, 3 + (3 * dynamicTextBoxSize), BLACK, ALIGN_LEFT);
-    }
-  }
-  dynamicTextbox[0] = dynamicTextBoxSize;
-
-  drawSentenceRam(dynamicTextbox, 12, 9, BLACK, ALIGN_LEFT);
-  sprites.drawErase(5, 9 + (6 * cursorY), font, 44);
   drawRectangle(0, 0, 130, 8, BLACK);
   drawRectangle(0, 57, 130, 64, BLACK);
+  
+  drawList();
+  drawObjectSpecifications();
+
+  drawSentenceRam(dynamicTextbox, 12, 9, BLACK, ALIGN_LEFT);
+  if (player.hasStuff[(2 * (gameState - STATE_GAME_ITEMS))])
+  {
+    sprites.drawErase(5, 9 + (6 * cursorY), font, 44);
+  }
   drawWord(93 + (gameState - STATE_GAME_ITEMS), 6, 0, WHITE, ALIGN_LEFT);
+  drawObjectSpecifications();
   checkInputs();
 }
 

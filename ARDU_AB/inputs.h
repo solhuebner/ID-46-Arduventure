@@ -80,7 +80,7 @@ void checkInputs()
           cursorY = (gameState == STATE_GAME_ITEMS) ? 0 : (gameState - 13);
           gameState = (gameState == STATE_GAME_ITEMS) ? STATE_GAME_INVENTORY : STATE_GAME_EQUIP;
         }
-        else if (arduboy.justPressed(B_BUTTON))
+        else if (arduboy.justPressed(B_BUTTON) && player.hasStuff[(2 * (gameState - STATE_GAME_ITEMS))])
         {
           question = true;
           yesNo = true;
@@ -106,7 +106,6 @@ void checkInputs()
       }
       break;
 
-
     case STATE_GAME_STATS:
       if (arduboy.justPressed(A_BUTTON))
       {
@@ -115,7 +114,7 @@ void checkInputs()
       }
       else if (arduboy.justPressed(B_BUTTON)) gameState = STATE_GAME_PLAYING;
       break;
-      
+
     case STATE_GAME_SAVE:
       if (arduboy.justPressed(UP_BUTTON)) cursorYesNoY = true;
       else if (arduboy.justPressed(DOWN_BUTTON)) cursorYesNoY = false;

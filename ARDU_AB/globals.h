@@ -5,6 +5,7 @@
 #include <Arduboy2.h>
 #include <ATMlib.h>
 #include "bitmaps.h"
+#include "songs.h"
 
 
 //define menu states (on main menu)
@@ -22,11 +23,12 @@
 #define STATE_GAME_STATS              9
 #define STATE_GAME_SAVE               10
 #define STATE_GAME_END                11
+
 #define STATE_GAME_ITEMS              12
 #define STATE_GAME_WEAPON             13
 #define STATE_GAME_ARMOR              14
 #define STATE_GAME_AMULET             15
-#define STATE_GAME_SELECT             16
+
 #define STATE_GAME_OVER               17
 
 #define GAME_TOP                      0
@@ -48,7 +50,7 @@
 #define LIST_SHOP_SELLS               0
 #define LIST_SHOP_BUYS                1
 #define LIST_OF_ITEMS                 2
-#define LIST_OF_WAEPONS               3
+#define LIST_OF_WAEPON                3
 #define LIST_OF_ARMOR                 4
 #define LIST_OF_AMULET                5
 

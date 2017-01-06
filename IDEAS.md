@@ -1,6 +1,19 @@
-# WEAPONS, ARMORY, MAGIC, EXTRAS & ITEMS
+# ITEMS, WEAPON, ARMOR, AMULET, MAGIC, EXTRAS & ITEMS
 
 depending on the shop, selling price is a percentage of the buying price
+
+### Type of items accessories and their characteristics
+
+name		| description	| magic power	| buy price	| max amount
+---			| ---			| ---			| ---		| ---
+apple		|				| 1				| 10		| 64
+cider		|				| 2				| 20		| 64
+anise		|				| 3				| 30		| 64
+absinthe	|				| 4				| 40		| 64
+ruby 		|				| 5				| 200		| 64
+sapphire	|				| 6				| 400		| 64
+emerald		|				| 7				| 1000		| 64
+diamond		|				| 8				| 2000		| 64
 
 ### Type of weapons and their characteristics
 
@@ -16,7 +29,7 @@ spear	| pierce your enemy		| 7			| 4000
 bow		| perforate your enemy	| 8			| 4000
 
 
-### Type of armory and their characteristics
+### Type of armor and their characteristics
 
 name	| description		| deflect	| buy price
 ---		| ---				| ---		| ---
@@ -29,16 +42,7 @@ bronze	|					| 6			| 400
 iron	|					| 7			| 1000
 steel	|					| 8			| 2000
 
-### Magic and Elements
-
-type	| strong against	| weak against	| magic
----		| ---				| ---			| ---
-fire	| leaf				| water			| fire storm
-water	| fire				| leaf			| tidal wave
-leaf	| water				| fire			| razor leaves
-normal	| none				| none			| heal
-
-### Type of extra accessories and their characteristics
+### Type of amulet accessories and their characteristics
 
 name	 			| description					| power	| buy price	
 ---					| ---							| ---	| ---
@@ -49,20 +53,17 @@ amulet of luck		| more chance of finding items	| 4		| 40
 amulet of gold		| doubles the gold you find		| 5		| 200
 amulet of cloak		| enemies miss more often 		| 6		| 400
 amulet of escape	| you can escape every fight	| 7		| 1000
-amulet of ruby		| nothing, but very expensive	| 8		| 8000
+amulet of ruby		| sell stuff 2 times the price	| 8		| 8000
 
-### Type of items accessories and their characteristics
+### Magic and Elements
 
-name		| description	| magic power	| buy price	| max amount
----			| ---			| ---			| ---		| ---
-apple		|				| 1				| 10		| 64
-cider		|				| 2				| 20		| 64
-anise		|				| 3				| 30		| 64
-absinthe	|				| 4				| 40		| 64
-ruby 		|				| 5				| 200		| 64
-sapphire	|				| 6				| 400		| 64
-emerald		|				| 7				| 1000		| 64
-diamond		|				| 8				| 2000		| 64
+type	| strong against	| weak against	| magic
+---		| ---				| ---			| ---
+fire	| leaf				| water			| fire storm
+water	| fire				| leaf			| tidal wave
+leaf	| water				| fire			| razor leaves
+normal	| none				| none			| heal
+
 
 ### Regions and their location
 

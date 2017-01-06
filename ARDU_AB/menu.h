@@ -15,12 +15,13 @@ void stateMenuIntro()
 
 void stateMenuMain()
 {
+  if (!TIMSK4) ATM.play(titleSong);                                                   // IF NOT PLAYING A SONG, START NOW
   sprites.drawSelfMasked(36, 3, aTeamArgGame, 0);
   sprites.drawSelfMasked(10, 10, titleScreen, 0);
   drawWord(1, 40, 37, WHITE, ALIGN_LEFT);
   drawSentence(0, 40, 46, WHITE, ALIGN_LEFT);
-  if (arduboy.audio.enabled()) drawSentence(1, 40, 55, WHITE, ALIGN_LEFT);
-  else drawSentence(2, 40, 55, WHITE, ALIGN_LEFT);
+  if (arduboy.audio.enabled()) drawSentence(2, 40, 55, WHITE, ALIGN_LEFT);            // SHOW SND ON
+  else drawSentence(1, 40, 55, WHITE, ALIGN_LEFT);                                    // SHOW SND OFF
   sprites.drawSelfMasked( 32, 37 + (menuSelection - 2) * 9, font, 44);
   sprites.drawSelfMasked( 90, 37 + (menuSelection - 2) * 9, font, 45);
 
@@ -31,6 +32,7 @@ void stateMenuMain()
 
 void stateMenuContinue()
 {
+  ATM.stop();
   gameState = STATE_GAME_PLAYING;
 }
 
@@ -43,8 +45,9 @@ void stateMenuNew()
 
 void stateMenuSound()
 {
-  if (arduboy.audio.enabled()) arduboy.audio.off();
-  else arduboy.audio.on();
+  // if sound is not enabled, put it ON, otherwise put it OFF
+  if (!arduboy.audio.enabled()) arduboy.audio.on();
+  else arduboy.audio.off();
   arduboy.audio.saveOnOff();
   gameState = STATE_MENU_MAIN;
 }

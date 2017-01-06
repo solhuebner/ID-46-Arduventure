@@ -42,6 +42,8 @@ void checkInputs()
       cam.x = max(player.x - 56, 0);
       cam.y = max(player.y - 24, 0);
       break;
+
+      
     case STATE_GAME_INVENTORY:
       if (arduboy.justPressed(UP_BUTTON) && (cursorY > 0)) cursorY--;
       else if (arduboy.justPressed(DOWN_BUTTON) && (cursorY < 4)) cursorY++;
@@ -67,6 +69,14 @@ void checkInputs()
         cursorY = 0;
       }
       break;
+    case STATE_GAME_STATS:
+      if (arduboy.justPressed(A_BUTTON | B_BUTTON))
+      {
+        gameState = STATE_GAME_INVENTORY;
+        cursorY = 2;
+      }
+      break;
+
 
 
 
@@ -108,15 +118,6 @@ void checkInputs()
           cursorYesNoY = true;
         }
       }
-      break;
-
-    case STATE_GAME_STATS:
-      if (arduboy.justPressed(A_BUTTON))
-      {
-        gameState = STATE_GAME_INVENTORY;
-        cursorY = 2;
-      }
-      else if (arduboy.justPressed(B_BUTTON)) gameState = STATE_GAME_PLAYING;
       break;
 
     case STATE_GAME_SAVE:

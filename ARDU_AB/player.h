@@ -26,18 +26,18 @@ void setPlayer()
 {
   player =
   {
-    224, 640,                               // position
-    20, 20,                                 // health
-    0, 10,                                  // magic
-    100,                                    // gold
-    0, 50,                                  // experience
-    0,                                      // frame
-    0,                                      // currentMap
-    FACING_SOUTH,                           // direction
-    1,                                      // level
-    5, 0,                                   // attack
-    5, 0,                                   // defence
-    5, 0,                                   // speed
+    224, 640,                                 // position
+    20, 20,                                   // health
+    0, 10,                                    // magic
+    100,                                      // gold
+    0, 50,                                    // experience
+    0,                                        // frame
+    0,                                        // currentMap
+    FACING_SOUTH,                             // direction
+    1,                                        // level
+    255, 0,                                   // attack
+    255, 0,                                   // defence
+    255, 0,                                   // speed
 
     {
       0B11111111,                             // hasItem
@@ -107,7 +107,7 @@ void drawPlayerStats()
   drawWordRam(player.name, 60, 2, WHITE, ALIGN_LEFT);
   drawRectangle(0, 10, 130, 64, WHITE);
   drawSentence(6, 6, 14, BLACK, ALIGN_LEFT);
-  drawSentence(7, 90, 14, BLACK, ALIGN_LEFT);
+  drawSentence(7, 84, 14, BLACK, ALIGN_LEFT);
   drawNumbersRam(player.gold, 42 , 14, BLACK, ALIGN_LEFT);
 
   drawNumbersRam(player.health, 36, 26, BLACK, ALIGN_LEFT);

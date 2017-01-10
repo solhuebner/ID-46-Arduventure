@@ -3,6 +3,7 @@
 
 #include <Arduino.h>
 #include "globals.h"
+#include "worlddata.h"
 #include "text.h"
 
 #define ITEMAMOUNT                   6
@@ -26,7 +27,7 @@ void setPlayer()
 {
   player =
   {
-    224, 640,                                 // position
+    PLAYER_START_X, PLAYER_START_Y,           // position
     20, 20,                                   // health
     0, 10,                                    // magic
     100,                                      // gold

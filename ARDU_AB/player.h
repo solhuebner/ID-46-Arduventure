@@ -3,10 +3,13 @@
 
 #include <Arduino.h>
 #include "globals.h"
-#include "worlddata.h"
+//#include "worlddata.h"
 #include "text.h"
 
 #define ITEMAMOUNT                   6
+
+extern const int PLAYER_START_X;
+extern const int PLAYER_START_Y;
 
 PROGMEM const unsigned char animSeq[] = { 0, 1, 2, 1 };
 
@@ -19,6 +22,7 @@ struct Player
   unsigned char name[6];
   boolean tags;
   boolean walking;
+  byte doorPause;
 };
 
 Player player;
@@ -92,12 +96,16 @@ void setPlayer()
     {5, 50, 50, 50, 50, 50},                    // name
     true,                                       // tags
     false,                                      // walking
+    0,                                          // doorPause
   };
 }
 
 void drawPlayer()
 {
-  if (arduboy.everyXFrames(6) && player.walking) player.frame = (++player.frame) % 4;
+  if (player.walking) {
+    if (arduboy.everyXFrames(6)) player.frame = (++player.frame) % 4;
+  }
+  else player.frame = 1;
   sprites.drawPlusMask(player.x - cam.x, player.y - cam.y, player_plus_mask, pgm_read_byte(&animSeq[player.frame]) + 3 * player.direction);
 }
 

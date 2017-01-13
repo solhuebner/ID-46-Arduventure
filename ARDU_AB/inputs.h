@@ -9,6 +9,12 @@
 
 void checkInputs()
 {
+  cam.x = max(player.x - 56, 0);
+  cam.y = max(player.y - 24, 0);
+  if (player.doorPause > 0) {
+    player.doorPause--;
+    return;
+  }
   switch (gameState)
   {
     case STATE_GAME_PLAYING:
@@ -39,8 +45,8 @@ void checkInputs()
       }
       if (arduboy.justPressed(A_BUTTON)) gameState = STATE_GAME_INVENTORY;
       else if (arduboy.justPressed(B_BUTTON));
-      cam.x = max(player.x - 56, 0);
-      cam.y = max(player.y - 24, 0);
+      //cam.x = max(player.x - 56, 0);
+      //cam.y = max(player.y - 24, 0);
       break;
 
       

@@ -22,7 +22,7 @@ struct Player
   unsigned char name[6];
   boolean tags;
   boolean walking;
-  byte doorPause;
+  //byte doorPause;
 };
 
 Player player;
@@ -96,7 +96,7 @@ void setPlayer()
     {5, 50, 50, 50, 50, 50},                    // name
     true,                                       // tags
     false,                                      // walking
-    0,                                          // doorPause
+    //0,                                          // doorPause
   };
 }
 

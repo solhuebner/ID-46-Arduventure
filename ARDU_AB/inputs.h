@@ -11,10 +11,6 @@ void checkInputs()
 {
   cam.x = max(player.x - 56, 0);
   cam.y = max(player.y - 24, 0);
-  if (player.doorPause > 0) {
-    player.doorPause--;
-    return;
-  }
   switch (gameState)
   {
     case STATE_GAME_PLAYING:

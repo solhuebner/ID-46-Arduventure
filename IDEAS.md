@@ -1,19 +1,19 @@
-# ITEMS, WEAPON, ARMOR, AMULET, MAGIC, EXTRAS & ITEMS
+# ITEMS, WEAPONS, ARMOR, AMULETS, MAGIC, EXTRAS & ITEMS
 
 depending on the shop, selling price is a percentage of the buying price
 
 ### Type of items accessories and their characteristics
 
-name		| description	| magic power	| buy price	| max amount
----			| ---			| ---			| ---		| ---
-apple		|				| 1				| 10		| 64
-cider		|				| 2				| 20		| 64
-anise		|				| 3				| 30		| 64
-absinthe	|				| 4				| 40		| 64
-ruby 		|				| 5				| 200		| 64
-sapphire	|				| 6				| 400		| 64
-emerald		|				| 7				| 1000		| 64
-diamond		|				| 8				| 2000		| 64
+name		| description		| magic power	| buy price	| max amount
+---			| ---				| ---			| ---		| ---
+apple		| restores 5 HP		| 1				| 10		| 64
+cider		| restores 15 HP	| 2				| 20		| 64
+anise		| restores 5 MP		| 3				| 30		| 64
+absinthe	| restores 15 MP	| 4				| 40		| 64
+ruby 		| worth some gold	| 5				| 200		| 64
+sapphire	| worth more gold	| 6				| 400		| 64
+emerald		| worth lots of gold| 7				| 1000		| 64
+diamond		| worth pile of gold| 8				| 2000		| 64
 
 ### Type of weapons and their characteristics
 
@@ -42,18 +42,18 @@ bronze	|					| 6			| 400
 iron	|					| 7			| 1000
 steel	|					| 8			| 2000
 
-### Type of amulet accessories and their characteristics
+### Type of amulets and their characteristics
 
 name	 			| description					| power	| buy price	
 ---					| ---							| ---	| ---
 amulet of health	| slowly recovers HP			| 1		| 10
-amulet of magic		| magic recovery goes quicker	| 2		| 20
-amulet of speed		| attacks are faster			| 3		| 30
-amulet of luck		| more chance of finding items	| 4		| 40
-amulet of gold		| doubles the gold you find		| 5		| 200
-amulet of cloak		| enemies miss more often 		| 6		| 400
-amulet of escape	| you can escape every fight	| 7		| 1000
-amulet of ruby		| sell stuff 2 times the price	| 8		| 8000
+amulet of magic		| MP recovers faster			| 2		| 20
+amulet of speed		| attack is faster				| 3		| 30
+amulet of luck		| find more items				| 4		| 40
+amulet of gold		| find double gold				| 5		| 200
+amulet of cloak		| enemies miss more		 		| 6		| 400
+amulet of escape	| escape every fight			| 7		| 1000
+amulet of ruby		| selling price double			| 8		| 8000
 
 ### Magic and Elements
 

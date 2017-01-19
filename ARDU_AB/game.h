@@ -77,7 +77,7 @@ void showPlayField()
 {
   if (arduboy.everyXFrames(15)) waterframe = (++waterframe) % 2;
   drawTiles();
-  checkDoors();
+  //checkDoors();
   drawPlayer();
 }
 

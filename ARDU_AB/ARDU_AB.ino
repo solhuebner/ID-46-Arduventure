@@ -1,14 +1,17 @@
-/*
-  ARDUVENTURE: http://www.team-arg.org/ardu-manual.html
+  /*
+  ARDUVENTURE DEMO, NOT THE FINISHED GAME !!!!!!
 
-  Arduboy version 0.1:  http://www.team-arg.org/ardu-downloads.html
+  Arduboy version 0.1:
 
   MADE by TEAM a.r.g. : http://www.team-arg.org/more-about.html
 
-  2016 - SIEGFRIED CROES - JO3RI
+  2017 - JO3RI GANTOIS - GAVIN ATKIN - OLIVIER HUARD - SIEGFRIED CROES 
 
-  License: MIT : https://opensource.org/licenses/MIT
+  Game License: MIT : https://opensource.org/licenses/MIT
+
+  Story, characters, sprites, tiles, design and art: copyrighted to TEAM a.r.g.
 */
+
 
 //determine the game
 #define GAME_ID 46

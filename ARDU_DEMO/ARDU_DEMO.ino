@@ -1,3 +1,18 @@
+/*
+
+  THIS WILL BRICK YOUR ARDUBOY !!!!!
+
+  THIS is a DEMO WORLD for ARDUVENTURE
+
+  MADE by TEAM a.r.g. : http://www.team-arg.org/more-about.html
+
+  2017 - JO3RI GANTOIS - GAVIN ATKIN - OLIVIER HUARD - SIEGFRIED CROES 
+
+  Game License: MIT : https://opensource.org/licenses/MIT
+
+  Story, characters, sprites, tiles, design and art: copyrighted to TEAM a.r.g.
+*/
+
 #define STATE_TITLE 0
 #define STATE_ENTERNAME 1
 #define STATE_GAMEPLAY 2

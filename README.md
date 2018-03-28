@@ -2,7 +2,7 @@
 
 ![Image](http://www.team-arg.org/masterfiles/team-arg-ardu/images/banner-ID-46.png)
 
-Mystic Balloon : http://www.team-arg.org/ardu-manual.html  
+Arduventure : http://www.team-arg.org/ardu-manual.html  
 **Download latest Arduboy version and source :** https://github.com/TEAMarg/ID-46-Arduventure/releases/latest  
 MADE by TEAM a.r.g. : http://www.team-arg.org/more-about.html
 

@@ -1,9 +1,11 @@
 /*
   ARDUVENTURE: http://www.team-arg.org/ardu-manual.html
 
+  Arduboy version 1.1:  http://www.team-arg.org/ardu-downloads.html
 
   MADE by TEAM a.r.g. : http://www.team-arg.org/more-about.html
 
+  2017 - 2018 - JO3RI GANTOIS - GAVIN ATKIN - OLIVIER HUARD - SIEGFRIED CROES 
 
   Additional Level Design - Jace Atkin
 

@@ -178,6 +178,9 @@ void investigateObjects(byte object)
     }
     foundSomething = true;
   }
+  if (!foundSomething)
+    openMiniMap();
+    
   investigating = false;
 }
 

@@ -24,6 +24,7 @@
 byte textspeed = TEXT_ROLL_DELAY;
 byte prevSentence = 255;
 bool rollText = false;
+bool textReset = true;
 
 int findBegin(byte searchObject, boolean wordOrSentence)
 {
@@ -112,7 +113,17 @@ void drawTextBox(byte x, byte y, boolean color)
       textRollAmount++;
   }*/
   //if (rollText) textRollAmount = min(++textRollAmount, textBox[0]);
-  if (textRollAmount < textBox[0] && rollText) ++textRollAmount;
+  if (rollText) {
+    textReset = false;
+    if (arduboy.justPressed(B_BUTTON)) {
+      if (textRollAmount < textBox[0]) {
+        textRollAmount = textBox[0];
+      }
+      else
+        textReset = true;
+    }
+    else if (textRollAmount < textBox[0]) ++textRollAmount;
+  }
 
   for (byte i = 1; i < ((rollText) ? (textRollAmount + 1) : (textBox[0] + 1)); i++)
   {
@@ -132,7 +143,15 @@ void drawTextBox(byte x, byte y, boolean color)
 void drawQuestion()
 {
   drawRectangle(0, 45, 130, 64, BLACK);
-  fillWithSentence((gameState != STATE_GAME_SHOP) ? gameState - 1 : 84 - needMoreMoney);
+  bool roll = false;
+  byte sent = gameState - 1;
+  if (gameState == STATE_GAME_SHOP)
+  {
+    roll = true;
+    sent = 84 - needMoreMoney;
+  }
+  //fillWithSentence((gameState != STATE_GAME_SHOP) ? gameState - 1 : 84 - needMoreMoney);
+  fillWithSentence(sent, roll);
   drawTextBox(4, 50, WHITE);
 }
 

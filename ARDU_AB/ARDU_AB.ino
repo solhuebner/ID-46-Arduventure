@@ -1,11 +1,9 @@
 /*
   ARDUVENTURE: http://www.team-arg.org/ardu-manual.html
 
-  Arduboy version 1.0:  http://www.team-arg.org/ardu-downloads.html
 
   MADE by TEAM a.r.g. : http://www.team-arg.org/more-about.html
 
-  2017 -2018 JO3RI GANTOIS - GAVIN ATKIN - OLIVIER HUARD - SIEGFRIED CROES 
 
   Additional Level Design - Jace Atkin
 
@@ -84,8 +82,9 @@ void loop() {
   //arduboy.clear();
   drawTiles();
   updateEyes();
-  checkInputs();
+  
   ((FunctionPointer) pgm_read_word(&mainGameLoop[gameState]))();
+  checkInputs();
   if (question) drawQuestion();
   if (yesNo) drawYesNo();
   if (flashBlack) flashScreen(BLACK);     // Set in battleStart

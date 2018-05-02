@@ -41,14 +41,14 @@ void stateMenuIntro()
       fillWithWord(0, 148);
       drawTextBox(49, 53, WHITE);
     }
-    if (arduboy.justPressed(A_BUTTON | B_BUTTON))
-    {
-      globalCounter = 0;
-      gameState = STATE_MENU_MAIN;
-      if (EEPROM.read(EEPROM_START) == GAME_ID) firstGame = false;
-      cursorY = STATE_MENU_CONTINUE + firstGame;
-      //textspeed = TEXT_ROLL_DELAY;
-    }
+//    if (arduboy.justPressed(A_BUTTON | B_BUTTON))
+//    {
+//      globalCounter = 0;
+//      gameState = STATE_MENU_MAIN;
+//      if (EEPROM.read(EEPROM_START) == GAME_ID) firstGame = false;
+//      cursorY = STATE_MENU_CONTINUE + firstGame;
+//      //textspeed = TEXT_ROLL_DELAY;
+//    }
   }
 }
 
@@ -110,7 +110,7 @@ void stateMenuReboot()
   drawTextBox(4, 8, WHITE);
   fillWithSentence(66);
   drawTextBox(4, 34, WHITE);
-  if (arduboy.pressed(UP_BUTTON)) {
+  if (arduboy.pressed(DOWN_BUTTON)) {
     arduboy.exitToBootloader();
   }
   else if (arduboy.justPressed(A_BUTTON))

@@ -8,7 +8,7 @@
 #include "battles.h"
 #include "people.h"
 
-bool textReset = true;
+extern bool textReset;
 
 bool checkPlayerCollision(byte orientation)
 {
@@ -30,37 +30,30 @@ bool checkPlayerCollision(byte orientation)
   return false;
 }
 
+
+
 void buttonsUpDownA()
 {
   if (arduboy.justPressed(UP_BUTTON)) cursorYesNoY = true;
   else if (arduboy.justPressed(DOWN_BUTTON | A_BUTTON)) cursorYesNoY = false;
-  //else if (arduboy.justPressed(DOWN_BUTTON) || arduboy.justPressed(A_BUTTON)) cursorYesNoY = false;
-  /*else if (arduboy.justPressed(A_BUTTON))
-  {
-    //gameState = STATE_GAME_INVENTORY;
-    yesNo = false;
-    //cursorY = 4;
-    cursorYesNoY = true;
-  }*/
 }
 
 void checkInputs()
 {
-  textReset = false;
-  // Reset text roll or finish out sentence.
-  if (arduboy.justPressed(B_BUTTON) && gameState != STATE_MENU_INTRO)
-  {
-      if (textRollAmount < textBox[0])
-        textRollAmount = textBox[0];
-      else
-      {
-        textReset = true;
-        //textRollAmount = 0;
-        //battleBlink += 10;  /// Speed up battles if mashing the B button
-      }
-  }
+  
   switch (gameState)
   {
+    case STATE_MENU_INTRO:
+      if (arduboy.justPressed(A_BUTTON | B_BUTTON))
+      {
+        globalCounter = 0;
+        gameState = STATE_MENU_MAIN;
+        if (EEPROM.read(EEPROM_START) == GAME_ID) firstGame = false;
+        cursorY = STATE_MENU_CONTINUE + firstGame;
+        //textspeed = TEXT_ROLL_DELAY;
+      }
+      break;
+      
     case STATE_MENU_MAIN:
       if (arduboy.justPressed(UP_BUTTON) && (cursorY > 2 + firstGame)) cursorY--;
       else if (arduboy.justPressed(DOWN_BUTTON) && (cursorY < 6)) cursorY++;
@@ -163,11 +156,16 @@ void checkInputs()
           case 0:
             gameState = STATE_GAME_ITEMS;
             break;
+          case 3:
+            openMiniMap();
+            break;
           case 4:
             gameState = STATE_GAME_SAVE;
             break;
           default:
             gameState = STATE_GAME_ITEMS - 5 + cursorY;
+            //miniCamX = (playerReducedX * 8) - 64;
+            //miniCamY = (playerReducedY * 8) - 32;
 
             /*miniCamX = ((int(playerReducedX * 8) - 64) < 0) ? 0 : byte(int(playerReducedX * 8) - 64);
             if (miniCamX > 128) miniCamX = 128;
@@ -209,12 +207,7 @@ void checkInputs()
     case STATE_GAME_SHOP:
       if (!yesNo)
       {
-        if (question && textReset)
-        {
-          needMoreMoney = false;
-          question = false;
-        }
-        else if (arduboy.justPressed(A_BUTTON))
+        if (arduboy.justPressed(A_BUTTON))
         {
           gameState = STATE_GAME_PLAYING;
           question = false;
@@ -223,8 +216,16 @@ void checkInputs()
         else if (arduboy.justPressed(DOWN_BUTTON) && (cursorY < TOTAL_SHOP_ITEMS - 1)) cursorY++;
         else if (arduboy.justPressed(B_BUTTON))
         {
-          question = true;
-          yesNo = true;
+          if (!question)
+          {
+            question = true;
+            yesNo = true;
+          }
+          else
+          {
+            question = false;
+            needMoreMoney = false;
+          }
         }
       }
       else
@@ -232,7 +233,7 @@ void checkInputs()
         buttonsUpDownA();
         if (arduboy.justPressed(B_BUTTON))
         {
-          if (cursorYesNoY)
+          if (cursorYesNoY) // Did player select yes?
           {
             // yes to buying item
             buyItem();
@@ -324,6 +325,7 @@ void checkInputs()
         {
           gameState = STATE_MENU_MAIN;
           ATM.play(titleSong);
+          cursorY = 3;
           //gameState = STATE_GAME_OVER;
           //ATM.play(youDied);
         }

@@ -88,6 +88,13 @@ void updatePlayer()
   playerReducedY = player.y / 96;
 }
 
+void openMiniMap()
+{
+  miniCamX = min(max(((int)playerReducedX << 3) - 62, 0), 128);
+  miniCamY = min(max(((int)playerReducedY << 3) - 30, 0), 176);
+  gameState = STATE_GAME_MAP;
+}
+
 void setPlayer()
 {
   playerDirection = FACING_SOUTH;
@@ -206,11 +213,11 @@ void setPlayer()
       //|||||||└-------------------------------> 0 water
       //||||||└--------------------------------> 1 leafs
       //|||||└---------------------------------> 2 fire
-      //||||└----------------------------------> 3 courage
-      //|||└-----------------------------------> 4 gold
-      //||└------------------------------------> 5 cloak
-      //|└-------------------------------------> 6 escape
-      //└--------------------------------------> 7 ruby
+      //||||└----------------------------------> 3 victory
+      //|||└-----------------------------------> 4 gold // unused
+      //||└------------------------------------> 5 cloak // unused
+      //|└-------------------------------------> 6 escape // unused
+      //└--------------------------------------> 7 ruby // unused
     },
 
     //{1, 5, 3, 4, 7, 6, 9, 64},                 // amount of each item (max 64)
@@ -344,8 +351,11 @@ void drawPlayerObjects()
 
 void checkCam()
 {
-  camX = max(player.x - 56, 0);
-  camY = max(player.y - 24, 0);
+  //camX = max(player.x - 56, 0);
+  //camY = max(player.y - 24, 0);
+  camX = player.x - 56;
+  //camY = min(player.y - 24, 3008);
+  camY = player.y - 24;
 
 }
 
@@ -366,6 +376,7 @@ void discoverMap(int world_x, int world_y)
 
 boolean getMapFog(byte fog_x, byte fog_y)
 {
+  //if (fog_x >= LEVEL_CHUNK_W || fog_x >= LEVEL_CHUNK_H) return 0;
   byte x = (fog_x / 8);
   byte y = ((fog_y / 8) * 4);
 

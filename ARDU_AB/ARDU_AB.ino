@@ -1,7 +1,7 @@
 /*
   ARDUVENTURE: http://www.team-arg.org/ardu-manual.html
 
-  Arduboy version 1.1:  http://www.team-arg.org/ardu-downloads.html
+  Arduboy version 1.0.1:  http://www.team-arg.org/ardu-downloads.html
 
   MADE by TEAM a.r.g. : http://www.team-arg.org/more-about.html
 

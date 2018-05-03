@@ -340,10 +340,11 @@ void drawPlayerObjects()
   //for (byte i = 0; i < 4; i++)
   for (byte i = 3; i < 4; --i)
   {
-    sprites.drawErase(34 + (i*24), 34, tileSheet, 0);
+    sprites.drawErase(20 + (i*24), 40, tileSheet, 0);
+    //sprites.drawOverwrite(20 + (i*24), 40, tileSheet, 0);
     //if (player.bossCardRegionRoaming & (1 << i))
     if (!(player.bossActiveAlive & _BV(i)))
-      sprites.drawSelfMasked(36 + (i*24), 38, miniMapSheet, (4 - i));
+      sprites.drawSelfMasked(24 + (i*24), 44, miniMapSheet, (4 - i));
   }
   //fillWithWord(31, 207);
   drawTextBox(4, 28, BLACK);

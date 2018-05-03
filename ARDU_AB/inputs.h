@@ -120,6 +120,7 @@ void checkInputs()
         if (fadeCounter < 4 && textReset)
         {
           fadeCounter++;
+          playerDirection = 0;
         }
       }
       break;

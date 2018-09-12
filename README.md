@@ -13,3 +13,27 @@ Additional Level Design - Jace Atkin
 Game License: MIT : https://opensource.org/licenses/MIT
 
 Story, characters, sprites, tiles, design and art: copyrighted to TEAM a.r.g. NOT under MIT !
+
+## Important!
+
+**After uploading Arduventure to your Arduboy you won't be able to upload another game using the normal process.**
+
+**If you want to put a new game on your Arduboy with Arduventure, you must follow these steps:**
+
+1. Plug in your Arduboy to the PC you will use for reprogramming
+2. Turn on the Arduboy and from the main menu of Arduventure select “UPLOAD”
+3. When the on screen instructions appear, press and continue to hold the _down_ button. (This will place the Arduboy in bootloader mode, ready to be reprogrammed)
+4. While continuing to hold the _down_ button, press the upload button from your PC
+5. When the upload completes, let go of the _down_ button and after a short delay the new game will start
+
+---
+
+You can choose to reword the warning if you wish, but please add something like this when possible.
+
+---
+
+There's also a video demonstrating the procedure:
+
+https://www.youtube.com/watch?v=TEmWprJv6Ik
+
+Thanks to @Pharap for upload instructions.

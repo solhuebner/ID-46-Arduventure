@@ -45,7 +45,7 @@ void investigateObjects(byte object)
   
   if (object > TILE_WALL && object != TILE_BLACK)
   {
-    byte regionComingFrom = (player.lastDoor - 28);
+    //byte regionComingFrom = (player.lastDoor - 28);
     switch (object)
     {
       /*case TILE_BED_LOW:            // 48

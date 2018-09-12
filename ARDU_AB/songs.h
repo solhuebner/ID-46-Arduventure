@@ -42,7 +42,7 @@ Song titleSong[] = {            // total song in bytes = 190
   0x9F,                         // FX: STOP CURRENT CHANNEL
 
   //"Track 2"
-  0x41, -2,                     // FX: VOLUME SLIDE ON: steps = -2
+  0x41, (uint8_t)-2,                     // FX: VOLUME SLIDE ON: steps = -2
   0x9C, 2,                      // ADD song tempo: value = 2
   0xFD, 3, 3,                   // REPEAT: count = 3 + 1 / track = 3
   0x9C, 2,                      // ADD song tempo: value = 2
@@ -96,7 +96,7 @@ Song titleSong[] = {            // total song in bytes = 190
   0x55,                         // FX: NOTE CUT OFF
   0x9D, 32,                     // SET song tempo: value = 32
   0x40, 48,                     // FX: SET VOLUME: volume = 48
-  0x41, -1,                     // FX: SLIDE VOLUME ON: -1
+  0x41, (uint8_t)-1,                     // FX: SLIDE VOLUME ON: -1
   0xFC, 10,                     // GOTO: track = 10
   0x9F,                         // FX: STOP CURRENT CHANNEL
 
@@ -151,14 +151,14 @@ Song titleSong[] = {            // total song in bytes = 190
   0xFE,                         // RETURN
 
   //"Track 16"
-  0x41, -8,                     // FX: VOLUME SLIDE ON: steps = -8
+  0x41, (uint8_t)-8,                     // FX: VOLUME SLIDE ON: steps = -8
   0x9F + 6,                     // DELAY: ticks = 6
   0x43,                         // FX: VOLUME SLIDE OFF
   0x9F + 42,                    // DELAY: ticks = 42
   0xFE,                         // RETURN
 
   //"Track 17"
-  0x41, -1,                     // FX: VOLUME SLIDE ON: steps = -1
+  0x41, (uint8_t)-1,                     // FX: VOLUME SLIDE ON: steps = -1
   0x9F + 32,                    // DELAY: ticks = 32
   0x43,                         // FX: VOLUME SLIDE OFF
   0x9F + 16,                    // DELAY: ticks = 16
@@ -189,11 +189,11 @@ Song nameSong[] = {             // total song in bytes = 49
   0x9F,                         // FX: STOP CURRENT CHANNEL
 
   //"Track 2"
-  0x41, -8,                     // slide volume on
+  0x41, (uint8_t)-8,                     // slide volume on
   0xFD, 1, 3,                   // REPEAT: count = 1 + 1 / track = 1
-  0x4C, -7,                     // FX: SET TRANSPOSITION: notes = -7
+  0x4C, (uint8_t)-7,                     // FX: SET TRANSPOSITION: notes = -7
   0xFC, 3,                      // GOTO track 3
-  0x4C, -5,                     // FX: SET TRANSPOSITION: notes = -5
+  0x4C, (uint8_t)-5,                     // FX: SET TRANSPOSITION: notes = -5
   0xFC, 3,                      // GOTO track 3
   0x4D,                         // FX: TRANSPOSITION OFF
   0xFE,                         // RETURN
@@ -227,14 +227,14 @@ Song badNews[] = {              // total song in bytes = 66
 
   //"Track 0"
   0x40, 48,                     // FX: SET VOLUME: volume = 48
-  0x41, -1,                     // FX: VOLUME SLIDE ON: steps = -1
+  0x41, (uint8_t)-1,                     // FX: VOLUME SLIDE ON: steps = -1
   0x9D, 24,                     // SET song tempo: value = 24
   0xFD, 63, 3,                  // REPEAT: count = 63 + 1 / track = 3
   0x9F,                         // FX: STOP CURRENT CHANNEL
 
   //"Track 1"
   0x40, 24,                     // FX: SET VOLUME: volume = 24
-  0x41, -3,                     // FX: VOLUME SLIDE ON: steps = -3
+  0x41, (uint8_t)-3,                     // FX: VOLUME SLIDE ON: steps = -3
   0xFD, 63, 4,                  // REPEAT: count = 63 + 1 / track = 4
   0x9F,                         // FX: STOP CURRENT CHANNEL
 
@@ -294,15 +294,15 @@ Song fieldSong[] = {            // total song in bytes = 53
   0x9D, 36,                     // SET song tempo: value = 36
   0x9E, 1, 0, 0, 0,             // FX: GOTO advanced: ch0 = 0x00 / ch1 = 0x01 / ch2 = 0x01 / ch3 = 0x01
   0x40, 48,                     // FX: SET VOLUME: volume = 48
-  0x41, -12,                    // FX: VOLUME SLIDE ON: steps = -12
+  0x41, (uint8_t)-12,                    // FX: VOLUME SLIDE ON: steps = -12
   0xFD, 63, 2,                  // REPEAT: count = 63 + 1 / track = 2
   0x9F,                         // FX: STOP CURRENT CHANNEL
 
   //"Track 2"
   0xFD, 3, 3,                   // REPEAT: count = 3 + 1 / track = 3
-  0x4C, -7,                     // FX: SET TRANSPOSITION: notes = -7
+  0x4C, (uint8_t)-7,                     // FX: SET TRANSPOSITION: notes = -7
   0xFD, 1, 3,                   // REPEAT: count = 1 + 1 / track = 3
-  0x4C, -2,                     // FX: SET TRANSPOSITION: notes = -2
+  0x4C, (uint8_t)-2,                     // FX: SET TRANSPOSITION: notes = -2
   0xFD, 1, 3,                   // REPEAT: count = 1 + 1 / track = 3
   0x4D,                         // FX: TRANSPOSITION OFF
   0xFE,                         // RETURN
@@ -334,13 +334,13 @@ Song youDied[] = {              // total song in bytes = 64
   //"Track 0"
   0x40, 80,                     // FX: SET VOLUME: volume = 80
   0x9D, 14,                     // SET song tempo: value = 14
-  0x41, -6,                     // FX: VOLUME SLIDE ON: steps = -6
+  0x41, (uint8_t)-6,                     // FX: VOLUME SLIDE ON: steps = -6
   0xFD, 63, 3,                  // REPEAT: count = 63 + 1 / track = 3
   0x9F,                         // FX: STOP CURRENT CHANNEL
 
   //"Track 1"
   0x40, 48,                     // FX: SET VOLUME: volume = 48
-  0x41, -1,                     // FX: VOLUME SLIDE ON: steps = -1
+  0x41, (uint8_t)-1,                     // FX: VOLUME SLIDE ON: steps = -1
   0xFD, 20, 4,                  // REPEAT: count = 20 + 1 / track = 4
   0x9F,                         // FX: STOP CURRENT CHANNEL
 
@@ -363,7 +363,7 @@ Song youDied[] = {              // total song in bytes = 64
 
   //"Track 4"
   0xFC, 5,                      // GOTO track 5
-  0x4C, -2,                     // FX: SET TRANSPOSITION: notes = -2
+  0x4C, (uint8_t)-2,                     // FX: SET TRANSPOSITION: notes = -2
   0xFC, 5,                      // GOTO track 5
   0x4C, 2,                      // FX: SET TRANSPOSITION: notes = 2
   0xFC, 5,                      // GOTO track 5
@@ -397,14 +397,14 @@ Song darkForest[] = {           // total song in bytes = 114
   //"Track 0"
   0x9E, 1, 2, 0, 3,             // FX: GOTO advanced: ch0 = 0x01 / ch1 = 0x02 / ch2 = 0x00 / ch3 = 0x03
   0xE0, 127,                    // LONG DELAY: ticks = 65 + 127
-  0x41, -6,                     // FX: VOLUME SLIDE ON: steps = -6
+  0x41, (uint8_t)-6,                     // FX: VOLUME SLIDE ON: steps = -6
   0x40, 16,                     // FX: SET VOLUME: volume = 16
   0xFC, 8,                      // GOTO track 8
   0x40, 32,                     // FX: SET VOLUME: volume = 32
   0xFC, 8,                      // GOTO track 8
   0x40, 48,                     // FX: SET VOLUME: volume = 48
   0xFC, 8,                      // GOTO track 8
-  0x4C, -1,                     // FX: SET TRANSPOSITION: notes = -1
+  0x4C, (uint8_t)-1,                     // FX: SET TRANSPOSITION: notes = -1
   0x40, 32,                     // FX: SET VOLUME: volume = 32
   0xFC, 8,                      // GOTO track 8
   0x40, 16,                     // FX: SET VOLUME: volume = 16
@@ -429,18 +429,18 @@ Song darkForest[] = {           // total song in bytes = 114
 
   //"Track 4"
   0x40, 48,                     // FX: SET VOLUME: volume = 48
-  0x41, -1,                     // FX: VOLUME SLIDE ON: steps = -1
+  0x41, (uint8_t)-1,                     // FX: VOLUME SLIDE ON: steps = -1
   0x00 + 2,                     // NOTE ON: note = 2
   0x9F + 64,                    // DELAY: ticks = 64
   0xFE,                         // RETURN
 
   //"Track 5"
   0xFC, 6,                      // GOTO track 6
-  0x4C, -4,                     // FX: SET TRANSPOSITION: notes = -4
+  0x4C, (uint8_t)-4,                     // FX: SET TRANSPOSITION: notes = -4
   0xFC, 6,                      // GOTO track 6
-  0x4C, -5,                     // FX: SET TRANSPOSITION: notes = -5
+  0x4C, (uint8_t)-5,                     // FX: SET TRANSPOSITION: notes = -5
   0xFC, 6,                      // GOTO track 6
-  0x4C, -7,                     // FX: SET TRANSPOSITION: notes = -7
+  0x4C, (uint8_t)-7,                     // FX: SET TRANSPOSITION: notes = -7
   0xFC, 6,                      // GOTO track 6
   0x4D,                         // FX: TRANSPOSITION OFF
   0xFE,                         // RETURN
@@ -448,14 +448,14 @@ Song darkForest[] = {           // total song in bytes = 114
   //"Track 6"
   0x9F + 16,                    // DELAY: ticks = 16
   0x40, 32,                     // FX: SET VOLUME: volume = 32
-  0x41, -1,                     // FX: VOLUME SLIDE ON: steps = -1
+  0x41, (uint8_t)-1,                     // FX: VOLUME SLIDE ON: steps = -1
   0x00 + 21,                    // NOTE ON: note = 21
   0x9F + 48,                    // DELAY: ticks = 48
   0xFE,                         // RETURN
 
   //"Track 7"
   0x9F + 48,                    // DELAY: ticks = 48
-  0x41, -8,                     // FX: VOLUME SLIDE ON: steps = -8
+  0x41, (uint8_t)-8,                     // FX: VOLUME SLIDE ON: steps = -8
   0x40, 32,                     // FX: SET VOLUME: volume = 32
   0x9F + 16,                    // DELAY: ticks = 16
   0xFE,                         // RETURN
@@ -483,27 +483,27 @@ Song battleSong[] = {           // total song in bytes = 112
   //"Track 0"
   0x9E, 0, 1, 1, 1,             // FX: GOTO advanced: ch0 = 0x00 / ch1 = 0x01 / ch2 = 0x02 / ch3 = 0x03
   0x40, 48,                     // FX: SET VOLUME: volume = 48
-  0x41, -8,                     // FX: SLIDE VOLUME ON: -8
+  0x41, (uint8_t)-8,                     // FX: SLIDE VOLUME ON: -8
   0x50, 5, 1,                   // FX: SET VIBRATO: 5 1
   0x9D, 24,                     // FX: SET TEMPO: tempo = 24
   0xFD, 1, 2,                   // REPEAT: count = 1 + 1 / track = 2
-  0x4C, -2,                     // FX: SET TRANSPOSITION: -2
+  0x4C, (uint8_t)-2,                     // FX: SET TRANSPOSITION: -2
   0xFD, 1, 2,                   // REPEAT: count = 1 + 1 / track = 2
   0x4C, 0,                      // FX: SET TRANSPOSITION: 0
   0xFD, 1, 2,                   // REPEAT: count = 1 + 1 / track = 2
-  0x4C, -2,                     // FX: SET TRANSPOSITION: -2
+  0x4C, (uint8_t)-2,                     // FX: SET TRANSPOSITION: -2
   0xFD, 1, 2,                   // REPEAT: count = 1 + 1 / track = 2
   0x4C, 0,                      // FX: SET TRANSPOSITION: 0
   0xFC, 3,                      // GOTO track 3
-  0x4C, -4,                     // FX: SET TRANSPOSITION: -4
+  0x4C, (uint8_t)-4,                     // FX: SET TRANSPOSITION: -4
   0xFC, 3,                      // GOTO track 3
-  0x4C, -2,                     // FX: SET TRANSPOSITION: -2
+  0x4C, (uint8_t)-2,                     // FX: SET TRANSPOSITION: -2
   0xFC, 3,                      // GOTO track 3
   0x4C, 0,                      // FX: SET TRANSPOSITION: 0
   0xFD, 1, 3,                   // REPEAT: count = 1 + 1 / track = 3
-  0x4C, -4,                     // FX: SET TRANSPOSITION: -4
+  0x4C, (uint8_t)-4,                     // FX: SET TRANSPOSITION: -4
   0xFC, 3,                      // GOTO track 3
-  0x4C, -2,                     // FX: SET TRANSPOSITION: -2
+  0x4C, (uint8_t)-2,                     // FX: SET TRANSPOSITION: -2
   0xFC, 3,                      // GOTO track 3
   0x4C, 0,                      // FX: SET TRANSPOSITION: 0
   0xFC, 3,                      // GOTO track 3
@@ -575,7 +575,7 @@ Song swampSong[] = {            // total song in bytes = 101
   //"Track 0"
   0x9E, 0, 2, 1, 3,             // FX: GOTO advanced: ch0 = 0x01 / ch1 = 0x02 / ch2 = 0x00 / ch3 = 0x03
   0x40, 32,                     // FX: SET VOLUME: volume = 48
-  0x41, -4,                     // FX: SLIDE VOLUME ON: -4
+  0x41, (uint8_t)-4,                     // FX: SLIDE VOLUME ON: -4
   0xFD, 31, 7,                  // REPEAT: count = 31 + 1 / track = 7
   0x9F,                         // FX: STOP CURRENT CHANNEL
 
@@ -597,20 +597,20 @@ Song swampSong[] = {            // total song in bytes = 101
   0xFD, 1, 5,                   // REPEAT: count = 1 + 1 / track = 5   (2 * 64 ticks)
   0x4B, 3,                      // FX: ADD TRANSPOSITION: notes = 3
   0xFD, 1, 5,                   // REPEAT: count = 1 + 1 / track = 5   (2 * 64 ticks)
-  0x4B, -1,                     // FX: ADD TRANSPOSITION: notes = 3
+  0x4B, (uint8_t)-1,                     // FX: ADD TRANSPOSITION: notes = 3
   0xFD, 1, 5,                   // REPEAT: count = 1 + 1 / track = 5   (2 * 64 ticks)
   0x4B, 3,                      // FX: ADD TRANSPOSITION: notes = 3
   0xFD, 1, 5,                   // REPEAT: count = 1 + 1 / track = 5   (2 * 64 ticks)
-  0x4B, -5,                     // FX: ADD TRANSPOSITION: notes = 3
+  0x4B, (uint8_t)-5,                     // FX: ADD TRANSPOSITION: notes = 3
   0xFE,                         // RETURN
 
   //"Track 5"                   // ticks = 64 / bytes = 14
   0x00 + 49,                    // NOTE ON: note = 49
   0x40, 63,                     // FX: SET VOLUME: volume = 63
-  0x41, -16,                    // FX: VOLUME SLIDE ON: steps = -8
+  0x41, (uint8_t)-16,                    // FX: VOLUME SLIDE ON: steps = -8
   0x9F + 16,                    // DELAY: 16 ticks
   0x40, 16,                     // FX: SET VOLUME: volume = 16
-  0x41, -4,                     // FX: VOLUME SLIDE ON: steps = -4
+  0x41, (uint8_t)-4,                     // FX: VOLUME SLIDE ON: steps = -4
   0x9F + 48,                    // DELAY: 4 ticks
   0xFE,                         // RETURN
 
@@ -665,13 +665,13 @@ Song canyonSong[] = {           // total song in bytes = 107
   
   //"Track channel 1"
   0x40, 24,                     // FX: SET VOLUME: volume = 48
-  0x41, -6,                     // FX: SLIDE VOLUME ON: -6
+  0x41, (uint8_t)-6,                     // FX: SLIDE VOLUME ON: -6
   0xFD, 3, 5,                   // REPEAT: count = 3 + 1 / track = 5
   0x9F,                         // FX: STOP CURRENT CHANNEL
   
   //"Track channel 2"
   0x40, 48,                     // FX: SET VOLUME: volume = 48
-  0x41, -12,                    // FX: SLIDE VOLUME ON: -12
+  0x41, (uint8_t)-12,                    // FX: SLIDE VOLUME ON: -12
   0xFD, 6, 8,                   // REPEAT: count = 6 + 1 / track = 8
   0x9F,                         // FX: STOP CURRENT CHANNEL
   

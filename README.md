@@ -28,10 +28,6 @@ Story, characters, sprites, tiles, design and art: copyrighted to TEAM a.r.g. NO
 
 ---
 
-You can choose to reword the warning if you wish, but please add something like this when possible.
-
----
-
 There's also a video demonstrating the procedure:
 
 https://www.youtube.com/watch?v=TEmWprJv6Ik

@@ -109,7 +109,7 @@ void investigateObjects(byte object)
         // Game bosses
         else if (player.lastDoor >= 28 && player.lastDoor < 32)
         {
-          if (player.bossActiveAlive == 0B11110000 || bitRead(player.bossActiveAlive, player.lastDoor - 28))
+          if (player.bossActiveAlive == 0B11110000 || bitRead(player.bossActiveAlive, player.lastDoor - 28) || !bitRead(player.hasStuff[6], player.lastDoor - 28))
           {
             gameState = STATE_GAME_BOSS;
           }

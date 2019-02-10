@@ -290,7 +290,7 @@ void fillWithPlayerStats(byte startPoint, byte value, byte valueTotal)
 void drawPlayer()
 {
   if (playerWalking) {
-    if (arduboy.everyXFrames(ANIMATION_SPEED)) playerFrame = (++playerFrame) % 4;
+    if (arduboy.everyXFrames(ANIMATION_SPEED)) playerFrame = (playerFrame + 1) % 4;
   }
   else playerFrame = 1;
 

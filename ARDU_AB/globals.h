@@ -271,7 +271,7 @@ void blinkingEyes(byte x, byte y)
 
 void updateEyes()
 {
-  if (arduboy.everyXFrames(EYES_SPEED)) globalFrame = (++globalFrame) % 80;
+  if (arduboy.everyXFrames(EYES_SPEED)) globalFrame = (globalFrame + 1) % 80;
 }
 
 void flashScreen(byte color)

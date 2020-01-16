@@ -118,10 +118,10 @@ void setPlayer()
     //||||||└----------------------------------> 1 YOU HAVE BOSS CARD TWO   (0 = false / 1 = true)
     //|||||└-----------------------------------> 2 YOU HAVE BOSS CARD THREE (0 = false / 1 = true)
     //||||└------------------------------------> 3 YOU HAVE BOSS CARD FOUR  (0 = false / 1 = true)
-    //|||└-------------------------------------> 4  \
-    //||└--------------------------------------> 5   | ROAMING REGION  (1 = FIELDS, 2 = SWAMP, 3= FORREST, 4 = CANYON)
-    //|└---------------------------------------> 6   |
-    //└----------------------------------------> 7  /
+    //|||└-------------------------------------> 4  \-
+    //||└--------------------------------------> 5   |- ROAMING REGION  (1 = FIELDS, 2 = SWAMP, 3= FORREST, 4 = CANYON)
+    //|└---------------------------------------> 6   |-
+    //└----------------------------------------> 7  /-
 
     0B00001111,                               // bossActiveAlive
     //|||||||└-------------------------------->  0 BOSS ONE is alive        (0 = false / 1 = true)
@@ -129,9 +129,9 @@ void setPlayer()
     //|||||└---------------------------------->  2 BOSS THREE is alive      (0 = false / 1 = true)
     //||||└----------------------------------->  3 BOSS FOUR is alive       (0 = false / 1 = true)
     //|||└------------------------------------>  4
-    //||└------------------------------------->  5 \
-    //|└-------------------------------------->  6  | amount of blade pieces found : 0 till 4
-    //└--------------------------------------->  7 /
+    //||└------------------------------------->  5 \-
+    //|└-------------------------------------->  6  |- amount of blade pieces found : 0 till 4
+    //└--------------------------------------->  7 /-
 
     { // gameTriggers
       0B00000000,                             // chests
@@ -290,7 +290,7 @@ void fillWithPlayerStats(byte startPoint, byte value, byte valueTotal)
 void drawPlayer()
 {
   if (playerWalking) {
-    if (arduboy.everyXFrames(ANIMATION_SPEED)) playerFrame = (++playerFrame) % 4;
+    if (arduboy.everyXFrames(ANIMATION_SPEED)) playerFrame = (playerFrame + 1) % 4;
   }
   else playerFrame = 1;
 
